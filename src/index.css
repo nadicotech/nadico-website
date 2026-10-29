@@ -1,0 +1,457 @@
+/* Stylish Sleek Modern Headings (Outfit) - Elegant, Not Overly Bold */
+    h1, h2, h3, h4, h5, h6, .font-heading {
+      font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif !important;
+      font-weight: 600 !important;
+      letter-spacing: -0.015em;
+    }
+    h1 {
+      font-weight: 700 !important;
+      letter-spacing: -0.025em;
+    }
+
+    /* Clean Crisp Light Styling */
+    body {
+      background-color: #ffffff;
+      color: #334155;
+      font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+      overflow-x: hidden;
+    }
+    
+    .light-grid {
+      background-size: 32px 32px;
+      background-image: 
+        linear-gradient(to right, rgba(0, 101, 132, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 101, 132, 0.04) 1px, transparent 1px);
+    }
+    
+    .hero-glow {
+      background: radial-gradient(circle at 50% 30%, rgba(0, 101, 132, 0.09) 0%, rgba(123, 182, 54, 0.06) 45%, transparent 70%);
+    }
+
+    .teal-gradient-text {
+      background: linear-gradient(135deg, #006584 0%, #0084ad 50%, #5c8c24 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #006584;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #7BB636;
+    }
+
+    /* Full-Screen Fit-To-Screen Architecture */
+    html, body {
+      width: 100%;
+      max-width: 100%;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    
+    /* Continuous Seamless Marquee (Infinite Loop with 0 gap) */
+    @keyframes continuousMarquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-33.333333%); }
+    }
+    .animate-continuous-marquee {
+      display: flex;
+      width: max-content;
+      animation: continuousMarquee 15s linear infinite;
+    }
+    .animate-continuous-marquee:hover {
+      animation-play-state: paused;
+    }
+
+    /* Edge Screen Ultra-Curved Bezel */
+    .edge-screen-frame {
+      box-shadow: 
+        0 20px 40px -10px rgba(0, 101, 132, 0.25),
+        0 0 0 2px rgba(15, 23, 42, 0.8),
+        inset 0 0 6px rgba(255, 255, 255, 0.5);
+    }
+
+    /* ========================================================================= */
+    /* ENHANCED FOOTER TECH PATTERN WITH DELICATE ICONS (SVG WATERMARK)          */
+    /* ========================================================================= */
+    footer {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      margin-bottom: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      bottom: 0 !important;
+    }
+
+
+
+
+    /* Subtle Faint Tech Icons Background Pattern (Servers, Chips, Cloud, Code, Database) */
+    .footer-tech-icons-pattern {
+      background-image: url("data:image/svg+xml,%3Csvg width='180' height='180' viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round' opacity='0.08'%3E%3C!-- Cloud --%3E%3Cpath d='M30 45 a12 12 0 0 1 22 -6 a15 15 0 0 1 20 14 h-42 z' /%3E%3C!-- Chip / CPU --%3E%3Crect x='115' y='25' width='28' height='28' rx='4' /%3E%3Cline x1='122' y1='20' x2='122' y2='25' /%3E%3Cline x1='136' y1='20' x2='136' y2='25' /%3E%3Cline x1='122' y1='53' x2='122' y2='58' /%3E%3Cline x1='136' y1='53' x2='136' y2='58' /%3E%3Cline x1='110' y1='32' x2='115' y2='32' /%3E%3Cline x1='110' y1='46' x2='115' y2='46' /%3E%3Cline x1='143' y1='32' x2='148' y2='32' /%3E%3Cline x1='143' y1='46' x2='148' y2='46' /%3E%3C!-- Code brackets < / > --%3E%3Cpolyline points='25,120 15,130 25,140' /%3E%3Cpolyline points='45,120 55,130 45,140' /%3E%3Cline x1='38' y1='118' x2='32' y2='142' /%3E%3C!-- Database Cylinder --%3E%3Cellipse cx='130' cy='115' rx='16' ry='5' /%3E%3Cpath d='M114 115 v16 c0 3 7 5 16 5 s16 -2 16 -5 v-16' /%3E%3Cpath d='M114 123 c0 3 7 5 16 5 s16 -2 16 -5' /%3E%3C!-- Circuit connection traces --%3E%3Ccircle cx='70' cy='90' r='3' fill='%23ffffff' /%3E%3Ccircle cx='100' cy='90' r='3' fill='%23ffffff' /%3E%3Cline x1='73' y1='90' x2='97' y2='90' /%3E%3Ccircle cx='90' cy='155' r='2.5' fill='%23ffffff' /%3E%3Cline x1='90' y1='152' x2='90' y2='135' /%3E%3Cline x1='90' y1='135' x2='75' y2='135' /%3E%3C/g%3E%3C/svg%3E");
+      background-size: 180px 180px;
+    }
+
+    /* ========================================================================= */
+    /* HIGH-TECH TEXTURE FOR BOXES & CARDS (Visible IT Watermark & Grid)         */
+    /* ========================================================================= */
+    .tech-box-texture {
+      position: relative;
+      background-color: #ffffff;
+      background-image: 
+        radial-gradient(circle at 100% 0%, rgba(0, 101, 132, 0.08) 0%, transparent 45%),
+        radial-gradient(circle at 0% 100%, rgba(123, 182, 54, 0.06) 0%, transparent 40%),
+        radial-gradient(rgba(0, 101, 132, 0.09) 1.2px, transparent 1.2px),
+        linear-gradient(to right, rgba(0, 101, 132, 0.035) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 101, 132, 0.035) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 20px 20px, 60px 60px, 60px 60px;
+    }
+
+    /* Smooth Hardware-Accelerated Card Transitions (Hover Glow & Polish) */
+    .tech-transition-box {
+      transition: box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                  border-color 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .tech-transition-box:hover {
+      box-shadow: 0 25px 45px -12px rgba(0, 101, 132, 0.18), 0 0 0 1.5px rgba(0, 101, 132, 0.35);
+      border-color: rgba(0, 101, 132, 0.5);
+    }
+
+    /* ========================================================================= */
+    /* COLORED LIGHT-BLUE & DOMAIN-SPECIFIC TECH ICONS WATERMARKS FOR BOXES     */
+    /* ========================================================================= */
+    
+    /* 1. Purpose-Built ERP Section Texture (Light-Blue / Cyan Tech Watermark) */
+    .tech-icons-bg-erp {
+      background-image: 
+        radial-gradient(rgba(0, 101, 132, 0.07) 1.2px, transparent 1.2px),
+        url("data:image/svg+xml,%3Csvg width='220' height='220' viewBox='0 0 220 220' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23006584' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round' opacity='0.08'%3E%3C!-- Cloud ERP --%3E%3Cpath d='M35 50 a14 14 0 0 1 26 -7 a18 18 0 0 1 24 17 h-50 z' /%3E%3C!-- Chip / CPU --%3E%3Crect x='140' y='30' width='32' height='32' rx='5' /%3E%3Cline x1='148' y1='24' x2='148' y2='30' /%3E%3Cline x1='164' y1='24' x2='164' y2='30' /%3E%3Cline x1='148' y1='62' x2='148' y2='68' /%3E%3Cline x1='164' y1='62' x2='164' y2='68' /%3E%3Cline x1='134' y1='38' x2='140' y2='38' /%3E%3Cline x1='134' y1='54' x2='140' y2='54' /%3E%3Cline x1='172' y1='38' x2='178' y2='38' /%3E%3Cline x1='172' y1='54' x2='178' y2='54' /%3E%3C!-- Database --%3E%3Cellipse cx='156' cy='140' rx='18' ry='6' /%3E%3Cpath d='M138 140 v18 c0 3 8 6 18 6 s18 -3 18 -6 v-18' /%3E%3C!-- Code brackets --%3E%3Cpolyline points='30,140 18,152 30,164' /%3E%3Cpolyline points='52,140 64,152 52,164' /%3E%3Cline x1='44' y1='138' x2='38' y2='166' /%3E%3C!-- Server Rack --%3E%3Crect x='80' y='95' width='44' height='22' rx='3' /%3E%3Ccircle cx='90' cy='106' r='2' fill='%23006584' /%3E%3Ccircle cx='98' cy='106' r='2' fill='%23006584' /%3E%3Cline x1='106' y1='106' x2='118' y2='106' /%3E%3C/g%3E%3C/svg%3E");
+      background-size: 24px 24px, 220px 220px;
+    }
+
+    /* 2. School ERP Card Texture (Graduation Cap, Book, Diploma, SIS, Student) */
+    .tech-icons-bg-school {
+      background-image: 
+        radial-gradient(rgba(0, 101, 132, 0.07) 1.2px, transparent 1.2px),
+        url("data:image/svg+xml,%3Csvg width='180' height='180' viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23006584' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round' opacity='0.08'%3E%3C!-- Graduation Cap --%3E%3Cpolygon points='40,40 75,25 110,40 75,55' /%3E%3Cpath d='M50 45 v20 c0 12 15 18 25 18 s25 -6 25 -18 v-20' /%3E%3Cline x1='105' y1='43' x2='105' y2='65' /%3E%3Ccircle cx='105' cy='67' r='2' fill='%23006584' /%3E%3C!-- Open Book --%3E%3Cpath d='M110 130 c12 -4 25 -2 35 4 v-28 c-10 -6 -23 -8 -35 -4 z' /%3E%3Cpath d='M110 130 c-12 -4 -25 -2 -35 4 v-28 c10 -6 23 -8 35 -4 z' /%3E%3C!-- Student Card / ID --%3E%3Crect x='25' y='105' width='38' height='46' rx='4' /%3E%3Ccircle cx='44' cy='122' r='7' /%3E%3Cline x1='33' y1='138' x2='55' y2='138' /%3E%3C/g%3E%3C/svg%3E");
+      background-size: 20px 20px, 180px 180px;
+    }
+
+    /* 3. Hospital HMS Card Texture (Stethoscope, Heartbeat Pulse, Pill, Bed) */
+    .tech-icons-bg-hospital {
+      background-image: 
+        radial-gradient(rgba(2, 132, 199, 0.07) 1.2px, transparent 1.2px),
+        url("data:image/svg+xml,%3Csvg width='180' height='180' viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%230284c7' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round' opacity='0.08'%3E%3C!-- Heart Pulse --%3E%3Cpath d='M25 45 h15 l6 -14 l10 28 l8 -20 l6 6 h15' /%3E%3C!-- Stethoscope --%3E%3Cpath d='M130 30 v25 a15 15 0 0 1 -30 0 v-25' /%3E%3Ccircle cx='115' cy='75' r='5' /%3E%3Cline x1='115' y1='55' x2='115' y2='70' /%3E%3C!-- Pill Capsule --%3E%3Crect x='115' y='115' width='36' height='16' rx='8' transform='rotate(-45 133 123)' /%3E%3Cline x1='122' y1='112' x2='144' y2='134' /%3E%3C!-- Hospital Bed --%3E%3Cpath d='M25 140 h45 v-15 h-35 v-10 h-10 v35' /%3E%3Cline x1='70' y1='125' x2='70' y2='150' /%3E%3Ccircle cx='38' cy='120' r='4' /%3E%3C/g%3E%3C/svg%3E");
+      background-size: 20px 20px, 180px 180px;
+    }
+
+    /* 4. Retail POS Card Texture (Barcode, Shopping Cart, Cash Register, Tag) */
+    .tech-icons-bg-pos {
+      background-image: 
+        radial-gradient(rgba(5, 150, 105, 0.07) 1.2px, transparent 1.2px),
+        url("data:image/svg+xml,%3Csvg width='180' height='180' viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23059669' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round' opacity='0.08'%3E%3C!-- Barcode --%3E%3Cline x1='30' y1='25' x2='30' y2='55' /%3E%3Cline x1='35' y1='25' x2='35' y2='55' stroke-width='2.5' /%3E%3Cline x1='42' y1='25' x2='42' y2='55' /%3E%3Cline x1='47' y1='25' x2='47' y2='55' stroke-width='2' /%3E%3Cline x1='55' y1='25' x2='55' y2='55' stroke-width='3' /%3E%3Cline x1='63' y1='25' x2='63' y2='55' /%3E%3C!-- Shopping Cart --%3E%3Ccircle cx='125' cy='60' r='4' /%3E%3Ccircle cx='148' cy='60' r='4' /%3E%3Cpath d='M108 30 h10 l8 20 h28 l6 -16 h-48' /%3E%3C!-- Receipt Voucher --%3E%3Cpath d='M30 110 h32 v40 l-5 -3 l-5 3 l-5 -3 l-5 3 l-5 -3 l-7 3 z' /%3E%3Cline x1='36' y1='118' x2='56' y2='118' /%3E%3Cline x1='36' y1='126' x2='52' y2='126' /%3E%3C/g%3E%3C/svg%3E");
+      background-size: 20px 20px, 180px 180px;
+    }
+
+    /* 5. Web & App Dev Card Texture (Code, Layout, Devices, Server) */
+    .tech-icons-bg-web {
+      background-image: 
+        radial-gradient(rgba(0, 101, 132, 0.07) 1.2px, transparent 1.2px),
+        url("data:image/svg+xml,%3Csvg width='180' height='180' viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23006584' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round' opacity='0.08'%3E%3C!-- Browser Window --%3E%3Crect x='25' y='25' width='55' height='40' rx='4' /%3E%3Cline x1='25' y1='36' x2='80' y2='36' /%3E%3Ccircle cx='32' cy='30.5' r='1.5' fill='%23006584' /%3E%3Ccircle cx='38' cy='30.5' r='1.5' fill='%23006584' /%3E%3C!-- Mobile Device --%3E%3Crect x='125' y='95' width='28' height='50' rx='5' /%3E%3Ccircle cx='139' cy='137' r='2' /%3E%3C!-- Code brackets --%3E%3Cpolyline points='45,115 35,125 45,135' /%3E%3Cpolyline points='65,115 75,125 65,135' /%3E%3C/g%3E%3C/svg%3E");
+      background-size: 20px 20px, 180px 180px;
+    }
+
+    /* 6. Digital Marketing Card Texture (Rocket, Target, Megaphone, Growth) */
+    .tech-icons-bg-marketing {
+      background-image: 
+        radial-gradient(rgba(0, 101, 132, 0.07) 1.2px, transparent 1.2px),
+        url("data:image/svg+xml,%3Csvg width='180' height='180' viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23006584' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round' opacity='0.08'%3E%3C!-- Trending Growth Line --%3E%3Cpolyline points='25,60 45,45 65,52 85,28' /%3E%3Cpolyline points='72,28 85,28 85,41' /%3E%3C!-- Target / Dart --%3E%3Ccircle cx='135' cy='45' r='18' /%3E%3Ccircle cx='135' cy='45' r='10' /%3E%3Ccircle cx='135' cy='45' r='3' fill='%23006584' /%3E%3C!-- Megaphone --%3E%3Cpolygon points='30,120 50,110 50,135 30,128' /%3E%3Cpath d='M50 115 l20 -8 v25 l-20 -8' /%3E%3C/g%3E%3C/svg%3E");
+      background-size: 20px 20px, 180px 180px;
+    }
+
+    /* 7. Contact Box Texture (Phone, Mail, Headset, Location, Cloud Shield) */
+    .tech-icons-bg-contact {
+      background-image: 
+        radial-gradient(rgba(0, 101, 132, 0.07) 1.2px, transparent 1.2px),
+        url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23006584' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round' opacity='0.08'%3E%3C!-- Phone Headset --%3E%3Cpath d='M35 55 a22 22 0 0 1 44 0 v15 a6 6 0 0 1 -6 6 h-6 v-22 h8 a18 18 0 0 0 -36 0 h8 v22 h-6 a6 6 0 0 1 -6 -6 z' /%3E%3C!-- Mail Envelope --%3E%3Crect x='130' y='35' width='44' height='30' rx='4' /%3E%3Cpolyline points='130,38 152,53 174,38' /%3E%3C!-- Cloud Shield --%3E%3Cpath d='M40 135 a12 12 0 0 1 20 -5 a14 14 0 0 1 18 13 h-38 z' /%3E%3Cpath d='M145 120 v12 c0 10 7 16 12 20 c5 -4 12 -10 12 -20 v-12 l-12 -5 z' /%3E%3C/g%3E%3C/svg%3E");
+      background-size: 20px 20px, 200px 200px;
+    }
+
+    /* ========================================================================= */
+    /* TAILORED SVG TECH ICON WATERMARKS: PARTNERSHIP, WEB & DIGITAL GROWTH     */
+    /* ========================================================================= */
+    
+    /* 1. Partnership, Trust & SLA Icons (Why Organizations Partner With NADICO) */
+    .tech-icons-bg-partnership {
+      background-image: 
+        radial-gradient(rgba(0, 101, 132, 0.07) 1.2px, transparent 1.2px),
+        url("data:image/svg+xml,%3Csvg width='220' height='220' viewBox='0 0 220 220' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23006584' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round' opacity='0.08'%3E%3C!-- Handshake / Partnership --%3E%3Cpath d='M30 45 l16 16 l12 -8 l18 18 l-10 10 l-18 -18 l-6 6 l-12 -24 z' /%3E%3Cpath d='M76 71 l14 -14 l-16 -16' /%3E%3C!-- Enterprise Shield with Check --%3E%3Cpath d='M150 25 v24 c0 16 14 26 24 30 c10 -4 24 -14 24 -30 v-24 l-24 -8 z' /%3E%3Cpolyline points='162,45 170,53 186,37' /%3E%3C!-- SLA 99.9% Speedometer Gauge --%3E%3Cpath d='M30 155 a30 30 0 0 1 50 -18' /%3E%3Cline x1='55' y1='155' x2='68' y2='140' stroke-width='1.8' /%3E%3Ccircle cx='55' cy='155' r='3' fill='%23006584' /%3E%3C!-- Training / Mentor --%3E%3Ccircle cx='145' cy='130' r='10' /%3E%3Cpath d='M130 158 c0 -10 7 -16 15 -16 s15 6 15 16' /%3E%3Crect x='168' y='125' width='22' height='16' rx='2' /%3E%3Cline x1='173' y1='132' x2='185' y2='132' /%3E%3C!-- Cloud Enterprise Security Lock --%3E%3Crect x='90' y='95' width='24' height='18' rx='3' /%3E%3Cpath d='M96 95 v-7 a6 6 0 0 1 12 0 v7' /%3E%3C/g%3E%3C/svg%3E");
+      background-size: 24px 24px, 220px 220px;
+    }
+
+    /* 2. Web Engineering Tailored Texture (Browser, Code, Terminal, Responsive) */
+    .tech-icons-bg-web-engine {
+      background-image: 
+        radial-gradient(rgba(0, 101, 132, 0.07) 1.2px, transparent 1.2px),
+        url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23006584' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round' opacity='0.08'%3E%3C!-- Browser Canvas --%3E%3Crect x='25' y='25' width='65' height='45' rx='5' /%3E%3Cline x1='25' y1='38' x2='90' y2='38' /%3E%3Ccircle cx='34' cy='31.5' r='2' fill='%23006584' /%3E%3Ccircle cx='41' cy='31.5' r='2' fill='%23006584' /%3E%3C!-- Terminal Prompt >_ --%3E%3Cpolyline points='33,48 40,54 33,60' /%3E%3Cline x1='43' y1='60' x2='53' y2='60' /%3E%3C!-- Mobile & Tablet Responsive Stack --%3E%3Crect x='130' y='25' width='32' height='55' rx='5' /%3E%3Ccircle cx='146' cy='72' r='2.5' /%3E%3Cline x1='138' y1='32' x2='154' y2='32' /%3E%3C!-- Code Brackets </ > --%3E%3Cpolyline points='40,120 28,132 40,144' /%3E%3Cpolyline points='65,120 77,132 65,144' /%3E%3Cline x1='56' y1='117' x2='48' y2='147' /%3E%3C!-- API / Node Connection --%3E%3Ccircle cx='140' cy='135' r='6' /%3E%3Ccircle cx='175' cy='120' r='5' /%3E%3Ccircle cx='170' cy='155' r='5' /%3E%3Cline x1='146' y1='132' x2='170' y2='122' /%3E%3Cline x1='146' y1='138' x2='165' y2='152' /%3E%3C/g%3E%3C/svg%3E");
+      background-size: 20px 20px, 200px 200px;
+    }
+
+    /* 3. Digital Growth Tailored Texture (Rocket, Funnel, SEO, High-ROI Chart, Target) */
+    .tech-icons-bg-digital-growth {
+      background-image: 
+        radial-gradient(rgba(123, 182, 54, 0.08) 1.2px, transparent 1.2px),
+        url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23588924' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round' opacity='0.085'%3E%3C!-- Rocket Launch Trajectory --%3E%3Cpath d='M35 65 l15 -25 c18 5 28 20 28 28 l-25 15 c-5 -4 -14 -12 -18 -18 z' /%3E%3Ccircle cx='54' cy='52' r='3.5' /%3E%3Cpath d='M35 65 l-10 6 l4 -12' /%3E%3Cpath d='M53 83 l6 -10 l-12 4' /%3E%3C!-- Conversion Funnel --%3E%3Cpolygon points='130,25 175,25 160,50 145,50' /%3E%3Crect x='146' y='50' width='14' height='18' rx='2' /%3E%3Cpath d='M153 72 v10 l-3 -3 m3 3 l3 -3' /%3E%3C!-- High-Growth Exponential Chart --%3E%3Cpolyline points='25,160 45,145 65,150 85,125 105,105' stroke-width='2' /%3E%3Cpolyline points='92,105 105,105 105,118' /%3E%3Crect x='30' y='160' width='8' height='12' fill='%23588924' opacity='0.4' /%3E%3Crect x='50' y='155' width='8' height='17' fill='%23588924' opacity='0.4' /%3E%3Crect x='70' y='140' width='8' height='32' fill='%23588924' opacity='0.4' /%3E%3Crect x='90' y='120' width='8' height='52' fill='%23588924' opacity='0.4' /%3E%3C!-- SEO Magnifier inspecting #1 --%3E%3Ccircle cx='155' cy='135' r='16' /%3E%3Cline x1='166' y1='147' x2='180' y2='161' stroke-width='2.5' /%3E%3Cline x1='155' y1='127' x2='155' y2='143' stroke-width='1.8' /%3E%3Cline x1='150' y1='132' x2='155' y2='127' stroke-width='1.8' /%3E%3C/g%3E%3C/svg%3E");
+      background-size: 20px 20px, 200px 200px;
+    }
+
+    /* 4. Section 6 Background Texture (Engineering & Growth Unified) */
+    .tech-icons-bg-section6 {
+      background-image: 
+        radial-gradient(rgba(0, 101, 132, 0.06) 1.2px, transparent 1.2px),
+        url("data:image/svg+xml,%3Csvg width='240' height='240' viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23006584' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round' opacity='0.06'%3E%3Crect x='30' y='30' width='55' height='38' rx='4' /%3E%3Cline x1='30' y1='40' x2='85' y2='40' /%3E%3Cpolyline points='150,55 170,35 190,45 210,25' /%3E%3Cpolyline points='200,25 210,25 210,35' /%3E%3Cpolyline points='35,160 25,170 35,180' /%3E%3Cpolyline points='55,160 65,170 55,180' /%3E%3Ccircle cx='165' cy='160' r='18' /%3E%3Ccircle cx='165' cy='160' r='10' /%3E%3C/g%3E%3C/svg%3E");
+      background-size: 24px 24px, 240px 240px;
+    }
+
+    /* Strict 16:10 Laptop Screen Ratio */
+    /* Thin scrollbar for mockups */
+    .custom-erp-scrollbar::-webkit-scrollbar {
+      width: 3px;
+      height: 3px;
+    }
+    .custom-erp-scrollbar::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+    .custom-erp-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+
+    .laptop-16-10 {
+      aspect-ratio: 16 / 10;
+      width: 100%;
+    }
+
+    /* ========================================================================= */
+    /* IT & TECH TEXTURE BACKGROUND (Subtle Digital Mesh & Circuit Grid)        */
+    /* ========================================================================= */
+    body {
+      background-color: #f8fafc;
+      background-image: 
+        radial-gradient(rgba(0, 101, 132, 0.085) 1.2px, transparent 1.2px),
+        linear-gradient(to right, rgba(0, 101, 132, 0.025) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 101, 132, 0.025) 1px, transparent 1px);
+      background-size: 24px 24px, 72px 72px, 72px 72px;
+      background-attachment: fixed;
+    }
+
+    /* Fixed Tech Grid Circuit Background Layer */
+    .bg-tech-circuit-overlay {
+      background-image: 
+        radial-gradient(circle at 50% 50%, rgba(0, 101, 132, 0.03) 0%, transparent 80%),
+        linear-gradient(to right, rgba(0, 101, 132, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 101, 132, 0.03) 1px, transparent 1px);
+      background-size: 100% 100%, 48px 48px, 48px 48px;
+    }
+
+    /* ========================================================================= */
+    /* ULTRA-SMOOTH BI-DIRECTIONAL SCROLL TRANSITIONS                            */
+    /* Hardware accelerated on GPU compositor: zero stutter, zero layout conflict*/
+    /* ========================================================================= */
+    html, body {
+      overflow-x: hidden;
+      max-width: 100vw;
+    }
+
+    .reveal-on-scroll {
+      opacity: 0;
+      /* Silky smooth cubic-bezier easing: starts instantly, glides into place */
+      transition: 
+        opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.65s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      will-change: opacity, transform;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      transform-origin: center center;
+    }
+
+    /* Left Entrance & Exit: gentle natural drift with elevation */
+    .reveal-left {
+      transform: translate3d(-24px, 24px, 0) scale(0.98);
+    }
+
+    /* Right Entrance & Exit: gentle natural drift with elevation */
+    .reveal-right {
+      transform: translate3d(24px, 24px, 0) scale(0.98);
+    }
+
+    /* Up Entrance & Exit: graceful vertical lift */
+    .reveal-up {
+      transform: translate3d(0, 30px, 0) scale(0.98);
+    }
+
+    /* Scale Entrance & Exit: soft depth zoom */
+    .reveal-scale {
+      transform: translate3d(0, 20px, 0) scale(0.96);
+    }
+
+    /* Active In-View Revealed State */
+    .reveal-on-scroll.revealed {
+      opacity: 1 !important;
+      transform: translate3d(0, 0, 0) scale(1) !important;
+    }
+
+    /* Smooth hover lift for revealed cards (pure translate without scale flicker) */
+    .reveal-on-scroll.revealed:hover {
+      transform: translate3d(0, -5px, 0) !important;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+
+    @media (max-width: 640px) {
+      .reveal-left {
+        transform: translate3d(-12px, 16px, 0) scale(0.985);
+      }
+      .reveal-right {
+        transform: translate3d(12px, 16px, 0) scale(0.985);
+      }
+      .reveal-up {
+        transform: translate3d(0, 18px, 0) scale(0.985);
+      }
+    }
+
+    /* CRUCIAL: Stagger Delays ONLY apply when revealing (entering), NEVER when exiting! */
+    /* When scrolling away, exit delay is 0ms so every box glides away instantly and smoothly! */
+    .reveal-on-scroll.revealed.delay-75  { transition-delay: 50ms; }
+    .reveal-on-scroll.revealed.delay-100 { transition-delay: 80ms; }
+    .reveal-on-scroll.revealed.delay-150 { transition-delay: 110ms; }
+    .reveal-on-scroll.revealed.delay-200 { transition-delay: 140ms; }
+    .reveal-on-scroll.revealed.delay-250 { transition-delay: 170ms; }
+    .reveal-on-scroll.revealed.delay-300 { transition-delay: 200ms; }
+    .reveal-on-scroll.revealed.delay-400 { transition-delay: 250ms; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal-on-scroll {
+        opacity: 1 !important;
+        transform: none !important;
+        filter: none !important;
+        transition: none !important;
+      }
+    }
+
+/* School ERP Specific Styles */
+/* Stylish Sleek Modern Headings (Outfit) - Elegant, Not Overly Bold */
+    h1, h2, h3, h4, h5, h6, .font-heading {
+      font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif !important;
+      font-weight: 600 !important;
+      letter-spacing: -0.015em;
+    }
+    h1 {
+      font-weight: 700 !important;
+      letter-spacing: -0.025em;
+    }
+
+    body {
+      background-color: #f8fafc;
+      background-image: 
+        radial-gradient(rgba(0, 101, 132, 0.08) 1.2px, transparent 1.2px),
+        linear-gradient(to right, rgba(0, 101, 132, 0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 101, 132, 0.02) 1px, transparent 1px);
+      background-size: 24px 24px, 72px 72px, 72px 72px;
+      background-attachment: fixed;
+    }
+
+    .footer-gradient-rich {
+      background: 
+        radial-gradient(circle at 15% 20%, rgba(14, 165, 233, 0.28) 0%, transparent 45%),
+        radial-gradient(circle at 85% 85%, rgba(123, 182, 54, 0.22) 0%, transparent 40%),
+        radial-gradient(circle at 50% 50%, rgba(0, 101, 132, 0.2) 0%, transparent 60%),
+        linear-gradient(135deg, #004d61 0%, #006584 45%, #007e9e 100%);
+    }
+
+    /* ========================================================================= */
+    /* METALLIC SILVER SWEEP (BOTTOM-LEFT TO TOP-RIGHT) EFFECT FOR NADICO LOGO    */
+    /* ========================================================================= */
+    .silver-sheen-logo-wrap {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+
+    .silver-sheen-overlay {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      -webkit-mask-image: url('/LOGO.png');
+      mask-image: url('/LOGO.png');
+      -webkit-mask-size: contain;
+      mask-size: contain;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-position: center;
+      mask-position: center;
+      overflow: hidden;
+      z-index: 2;
+    }
+
+    .silver-sheen-overlay::after {
+      content: '';
+      position: absolute;
+      top: -60%;
+      left: -60%;
+      width: 220%;
+      height: 220%;
+      background: linear-gradient(
+        125deg,
+        rgba(255, 255, 255, 0) 32%,
+        rgba(203, 213, 225, 0.35) 43%,
+        rgba(255, 255, 255, 0.98) 50%,
+        rgba(226, 232, 240, 0.5) 57%,
+        rgba(255, 255, 255, 0) 68%
+      );
+      transform: translate(-75%, 75%);
+      animation: silverSweepDiagonal 5.6s cubic-bezier(0.25, 1, 0.45, 1) infinite;
+      will-change: transform, opacity;
+      filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.9));
+    }
+
+    @keyframes silverSweepDiagonal {
+      0%, 20% {
+        transform: translate(-80%, 80%);
+        opacity: 0;
+      }
+      25% {
+        opacity: 1;
+      }
+      65% {
+        transform: translate(80%, -80%);
+        opacity: 1;
+      }
+      70%, 100% {
+        transform: translate(80%, -80%);
+        opacity: 0;
+      }
+    }
+
+
+
+
+
+

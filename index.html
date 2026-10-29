@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>NADICO Technologies | Enterprise Cloud ERP, Web Engineering & Digital Solutions</title>
+  <meta name="description" content="NADICO Technologies is Pakistan's premier corporate technology provider. Creators of NADICO ERP (School ERP, Hospital HMS, Inventory & POS), bespoke Web Development, and Digital Marketing.">
+  <meta name="keywords" content="NADICO Technologies, NADICO TECH, NADICO ERP, School Management ERP Pakistan, Hospital Management System, Inventory POS, The Readly ERP, Web Design Karachi, Digital Marketing Pakistan">
+  
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/favicon.png" type="image/png">
+
+  <!-- Google Fonts: Outfit, Plus Jakarta Sans & DM Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              teal: '#006584',
+              tealLight: '#0084ad',
+              tealDark: '#004c63',
+              tealSoft: '#f0f9fc',
+              tealBorder: '#ccecf5',
+              lime: '#7BB636',
+              limeLight: '#8ecf42',
+              limeDark: '#5c8c24',
+              limeSoft: '#f4faed',
+              limeBorder: '#d6edbe',
+              charcoal: '#0f172a',
+              slate: '#334155',
+              muted: '#64748b',
+              surface: '#ffffff',
+              surfaceAlt: '#f8fafc',
+              borderLight: '#e2e8f0',
+            }
+          },
+          fontFamily: {
+            heading: ['Outfit', 'Plus Jakarta Sans', 'sans-serif'],
+            sans: ['Plus Jakarta Sans', 'Outfit', '-apple-system', 'sans-serif'],
+          },
+          boxShadow: {
+            'card': '0 4px 20px -2px rgba(0, 101, 132, 0.08), 0 2px 6px -1px rgba(0, 0, 0, 0.04)',
+            'card-hover': '0 20px 35px -5px rgba(0, 101, 132, 0.14), 0 10px 15px -3px rgba(0, 0, 0, 0.05)',
+            'laptop': '0 25px 60px -15px rgba(15, 23, 42, 0.25), 0 0 0 1px rgba(15, 23, 42, 0.08)',
+            'phone': '0 20px 45px -10px rgba(0, 101, 132, 0.25), 0 0 0 1px rgba(15, 23, 42, 0.06)',
+            'button': '0 4px 14px 0 rgba(0, 101, 132, 0.3)',
+            'button-lime': '0 4px 14px 0 rgba(123, 182, 54, 0.35)',
+          },
+          animation: {
+            'float-phone': 'floatPhone 6s ease-in-out infinite',
+            'float-badge': 'floatBadge 4s ease-in-out infinite alternate',
+          },
+          keyframes: {
+            floatPhone: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-12px)' },
+            },
+            floatBadge: {
+              '0%': { transform: 'translateY(0px)' },
+              '100%': { transform: 'translateY(-8px)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Auto-redirect to standalone static bundle if opened directly from local disk (file://) -->
+  <script>
+    if (window.location.protocol === 'file:') {
+      window.location.replace('index.static.html');
+    }
+  </script>
+</head>
+<body class="font-sans antialiased selection:bg-brand-teal selection:text-white relative">
+  <div id="root"></div>
+  <script type="module" src="./src/main.jsx"></script>
+</body>
+</html>

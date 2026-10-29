@@ -1,0 +1,1344 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>NADICO School Management ERP | The Readly Enterprise Platform</title>
+  <meta name="description" content="Discover the comprehensive features, high-level 2FA security, automated 3-part bank fee challans, biometric attendance, and complete academic grading engine of NADICO School ERP.">
+  <meta name="keywords" content="School ERP Pakistan, The Readly ERP, School Management Software, 3-Part Fee Challan, Biometric Attendance, 2FA School Security, NADICO Technologies">
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="shortcut icon" href="favicon.png" type="image/png">
+
+  <!-- Google Fonts: Outfit, Plus Jakarta Sans & DM Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              teal: '#006584',
+              tealLight: '#0084ad',
+              tealDark: '#004c63',
+              tealSoft: '#f0f9fc',
+              tealBorder: '#ccecf5',
+              lime: '#7BB636',
+              limeLight: '#8ecf42',
+              limeDark: '#5c8c24',
+              limeSoft: '#f4faed',
+              limeBorder: '#d6edbe',
+              charcoal: '#0f172a',
+              slate: '#334155',
+              muted: '#64748b',
+              surface: '#ffffff',
+              surfaceAlt: '#f8fafc',
+              borderLight: '#e2e8f0',
+            }
+          },
+          fontFamily: {
+            heading: ['Outfit', 'Plus Jakarta Sans', 'sans-serif'],
+            sans: ['Plus Jakarta Sans', 'Outfit', '-apple-system', 'sans-serif'],
+          },
+          boxShadow: {
+            'card': '0 4px 20px -2px rgba(0, 101, 132, 0.08), 0 2px 6px -1px rgba(0, 0, 0, 0.04)',
+            'card-hover': '0 20px 35px -5px rgba(0, 101, 132, 0.14), 0 10px 15px -3px rgba(0, 0, 0, 0.05)',
+            'button': '0 4px 14px 0 rgba(0, 101, 132, 0.3)',
+            'button-lime': '0 4px 14px 0 rgba(123, 182, 54, 0.35)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Stylish Sleek Modern Headings (Outfit) - Elegant, Not Overly Bold */
+    h1, h2, h3, h4, h5, h6, .font-heading {
+      font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif !important;
+      font-weight: 600 !important;
+      letter-spacing: -0.015em;
+    }
+    h1 {
+      font-weight: 700 !important;
+      letter-spacing: -0.025em;
+    }
+
+    body {
+      background-color: #f8fafc;
+      background-image: 
+        radial-gradient(rgba(0, 101, 132, 0.08) 1.2px, transparent 1.2px),
+        linear-gradient(to right, rgba(0, 101, 132, 0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 101, 132, 0.02) 1px, transparent 1px);
+      background-size: 24px 24px, 72px 72px, 72px 72px;
+      background-attachment: fixed;
+    }
+    .footer-gradient-rich {
+      background: 
+        radial-gradient(circle at 15% 20%, rgba(14, 165, 233, 0.28) 0%, transparent 45%),
+        radial-gradient(circle at 85% 85%, rgba(123, 182, 54, 0.22) 0%, transparent 40%),
+        radial-gradient(circle at 50% 50%, rgba(0, 101, 132, 0.2) 0%, transparent 60%),
+        linear-gradient(135deg, #004d61 0%, #006584 45%, #007e9e 100%);
+    }
+
+    /* Ultra-Lightweight & Silky Smooth Bi-Directional Scroll Animations */
+    .reveal-on-scroll {
+      opacity: 0;
+      transition: 
+        opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.65s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      will-change: opacity, transform;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      transform-origin: center center;
+    }
+    .reveal-left {
+      transform: translate3d(-24px, 24px, 0) scale(0.98);
+    }
+    .reveal-right {
+      transform: translate3d(24px, 24px, 0) scale(0.98);
+    }
+    .reveal-up {
+      transform: translate3d(0, 30px, 0) scale(0.98);
+    }
+    .reveal-scale {
+      transform: translate3d(0, 20px, 0) scale(0.96);
+    }
+    .reveal-on-scroll.revealed {
+      opacity: 1 !important;
+      transform: translate3d(0, 0, 0) scale(1) !important;
+    }
+    .reveal-on-scroll.revealed:hover {
+      transform: translate3d(0, -6px, 0) scale(1.008) !important;
+      transition: 
+        opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+    @media (max-width: 640px) {
+      .reveal-left { transform: translate3d(-12px, 16px, 0) scale(0.985); }
+      .reveal-right { transform: translate3d(12px, 16px, 0) scale(0.985); }
+      .reveal-up { transform: translate3d(0, 18px, 0) scale(0.985); }
+    }
+    .reveal-on-scroll.revealed.delay-75  { transition-delay: 50ms; }
+    .reveal-on-scroll.revealed.delay-100 { transition-delay: 80ms; }
+    .reveal-on-scroll.revealed.delay-150 { transition-delay: 110ms; }
+    .reveal-on-scroll.revealed.delay-200 { transition-delay: 140ms; }
+    .reveal-on-scroll.revealed.delay-250 { transition-delay: 170ms; }
+    .reveal-on-scroll.revealed.delay-300 { transition-delay: 200ms; }
+    .reveal-on-scroll.revealed.delay-400 { transition-delay: 250ms; }
+
+
+    /* ========================================================================= */
+    /* METALLIC SILVER SWEEP (BOTTOM-LEFT TO TOP-RIGHT) EFFECT FOR NADICO LOGO    */
+    /* ========================================================================= */
+    .silver-sheen-logo-wrap {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+
+    .silver-sheen-overlay {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      -webkit-mask-image: url('LOGO.png');
+      mask-image: url('LOGO.png');
+      -webkit-mask-size: contain;
+      mask-size: contain;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-position: center;
+      mask-position: center;
+      overflow: hidden;
+      z-index: 2;
+    }
+
+    .silver-sheen-overlay::after {
+      content: '';
+      position: absolute;
+      top: -60%;
+      left: -60%;
+      width: 220%;
+      height: 220%;
+      background: linear-gradient(
+        125deg,
+        rgba(255, 255, 255, 0) 32%,
+        rgba(203, 213, 225, 0.35) 43%,
+        rgba(255, 255, 255, 0.98) 50%,
+        rgba(226, 232, 240, 0.5) 57%,
+        rgba(255, 255, 255, 0) 68%
+      );
+      transform: translate(-75%, 75%);
+      animation: silverSweepDiagonal 5.6s cubic-bezier(0.25, 1, 0.45, 1) infinite;
+      will-change: transform, opacity;
+      filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.9));
+    }
+
+    @keyframes silverSweepDiagonal {
+      0%, 20% {
+        transform: translate(-80%, 80%);
+        opacity: 0;
+      }
+      25% {
+        opacity: 1;
+      }
+      65% {
+        transform: translate(80%, -80%);
+        opacity: 1;
+      }
+      70%, 100% {
+        transform: translate(80%, -80%);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body class="font-sans antialiased selection:bg-brand-teal selection:text-white relative text-slate-800">
+
+  <!-- ========================================================================= -->
+  <!-- MAIN NAVIGATION (FIXED FLOATING ROUNDED CAPSULE PATTI STYLE - SAME AS HOME) -->
+  <!-- ========================================================================= -->
+  <header id="mainHeader" class="fixed top-3 sm:top-4 left-0 right-0 z-50 px-3 sm:px-6 lg:px-8 transition-all duration-300 pointer-events-none">
+    <div class="max-w-7xl mx-auto bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl sm:rounded-3xl shadow-lg transition-all duration-300 pointer-events-auto">
+      <div class="px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20 sm:h-22">
+          
+          <!-- LOGO & BRANDING (SILVER SWEEP EFFECT) -->
+          <a href="index.html" class="flex items-center gap-3.5 group py-1">
+            <div class="silver-sheen-logo-wrap transition-transform group-hover:scale-105">
+              <img src="LOGO.png" alt="NADICO Global Technologies" class="h-14 sm:h-16 w-auto object-contain drop-shadow-sm">
+              <div class="silver-sheen-overlay" aria-hidden="true"></div>
+            </div>
+          </a>
+
+          <!-- DESKTOP NAVIGATION LINKS -->
+          <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-700">
+            <a href="index.html" class="hover:text-brand-teal transition-colors flex items-center gap-1.5">
+              <i data-lucide="arrow-left" class="w-4 h-4 text-brand-teal"></i>
+              <span>Main Site</span>
+            </a>
+            <a href="#security" class="hover:text-brand-teal transition-colors flex items-center gap-1.5">
+              <i data-lucide="shield" class="w-4 h-4 text-emerald-600"></i>
+              <span>Security & 2FA</span>
+            </a>
+            <a href="#modules" class="hover:text-brand-teal transition-colors flex items-center gap-1.5">
+              <i data-lucide="layers" class="w-4 h-4 text-brand-teal"></i>
+              <span>14 Modules</span>
+            </a>
+            <a href="#comparison" class="hover:text-brand-teal transition-colors">
+              Why NADICO
+            </a>
+            <a href="#faq" class="hover:text-brand-teal transition-colors">
+              FAQ
+            </a>
+            <a href="index.html#contact" class="hover:text-brand-teal transition-colors">
+              Contact
+            </a>
+          </nav>
+
+          <!-- DESKTOP RIGHT CTA BUTTONS -->
+          <div class="hidden sm:flex items-center gap-3">
+            <a href="https://thereadlyerp.vercel.app/rehan" target="_blank" class="px-4 py-2 rounded-xl text-xs font-bold text-brand-teal bg-brand-tealSoft border border-brand-tealBorder hover:bg-brand-teal hover:text-white transition-all flex items-center gap-1.5 shadow-xs">
+              <span class="w-2 h-2 rounded-full bg-brand-lime animate-pulse"></span>
+              <span>Live School Portal</span>
+              <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+            </a>
+
+            <a href="https://wa.me/923337221552?text=Hello%20NADICO%20Technologies,%20I%20would%20like%20to%20schedule%20a%20demo%20for%20NADICO%20School%20ERP." target="_blank" class="px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-brand-lime hover:bg-brand-limeDark text-brand-charcoal transition-all shadow-button-lime flex items-center gap-1.5">
+              <i data-lucide="calendar" class="w-4 h-4 text-brand-charcoal"></i>
+              <span class="text-brand-charcoal">Schedule Campus Demo</span>
+            </a>
+          </div>
+
+          <!-- MOBILE HAMBURGER BUTTON -->
+          <button id="mobileMenuBtn" aria-label="Open Navigation Menu" class="lg:hidden p-2.5 rounded-xl text-slate-700 hover:text-brand-teal hover:bg-slate-100 focus:outline-none transition-colors">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Spacer so page content starts cleanly below the fixed floating header -->
+  <div class="h-28 sm:h-32 w-full pointer-events-none" aria-hidden="true"></div>
+
+  <!-- ========================================================================= -->
+  <!-- MOBILE SLIDE-OUT DRAWER -->
+  <!-- ========================================================================= -->
+  <div id="mobileDrawerOverlay" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden opacity-0 transition-opacity duration-300"></div>
+
+  <div id="mobileDrawer" class="fixed top-0 right-0 bottom-0 w-full max-w-sm bg-white z-50 shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between overflow-y-auto">
+    
+    <!-- Drawer Header -->
+    <div class="p-5 border-b border-slate-200 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <div class="silver-sheen-logo-wrap">
+          <img src="LOGO.png" alt="NADICO Technologies" class="h-10 w-auto object-contain">
+          <div class="silver-sheen-overlay" aria-hidden="true"></div>
+        </div>
+      </div>
+      <button id="closeDrawerBtn" aria-label="Close Menu" class="p-2 rounded-xl text-slate-500 hover:text-slate-900 hover:bg-slate-100 focus:outline-none">
+        <i data-lucide="x" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <!-- Drawer Navigation Links -->
+    <div class="p-5 space-y-4 flex-1">
+      <div class="space-y-3">
+        <a href="index.html" class="mobile-nav-link flex items-center gap-2 py-2 text-base font-bold text-slate-900 hover:text-brand-teal">
+          <i data-lucide="arrow-left" class="w-4 h-4 text-brand-teal"></i>
+          <span>Back to Main Site</span>
+        </a>
+        <a href="#security" class="mobile-nav-link flex items-center gap-2.5 py-2 text-sm font-semibold text-slate-700 hover:text-brand-teal">
+          <i data-lucide="shield" class="w-4 h-4 text-emerald-600"></i>
+          <span>Security & 2FA</span>
+        </a>
+        <a href="#modules" class="mobile-nav-link flex items-center gap-2.5 py-2 text-sm font-semibold text-slate-700 hover:text-brand-teal">
+          <i data-lucide="layers" class="w-4 h-4 text-brand-teal"></i>
+          <span>All 14 Modules</span>
+        </a>
+        <a href="#comparison" class="mobile-nav-link flex items-center gap-2.5 py-2 text-sm font-semibold text-slate-700 hover:text-brand-teal">
+          <i data-lucide="check-circle" class="w-4 h-4 text-brand-limeDark"></i>
+          <span>Why NADICO ERP</span>
+        </a>
+        <a href="#faq" class="mobile-nav-link flex items-center gap-2.5 py-2 text-sm font-semibold text-slate-700 hover:text-brand-teal">
+          <i data-lucide="help-circle" class="w-4 h-4 text-sky-600"></i>
+          <span>Frequently Asked Questions</span>
+        </a>
+        <a href="index.html#contact" class="mobile-nav-link flex items-center gap-2.5 py-2 text-sm font-semibold text-slate-700 hover:text-brand-teal">
+          <i data-lucide="mail" class="w-4 h-4 text-brand-teal"></i>
+          <span>Direct Inquiries</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Drawer Footer Actions -->
+    <div class="p-5 border-t border-slate-200 bg-slate-50 space-y-3">
+      <a href="https://thereadlyerp.vercel.app/rehan" target="_blank" class="w-full py-3 rounded-xl text-xs font-bold text-white bg-brand-teal text-center flex items-center justify-center gap-2 shadow-button">
+        <span>Launch Real Rehan School ERP</span>
+        <i data-lucide="external-link" class="w-4 h-4"></i>
+      </a>
+
+      <a href="tel:+923337221552" class="w-full py-2.5 rounded-xl text-xs font-bold text-slate-800 bg-white border border-slate-300 text-center flex items-center justify-center gap-2 shadow-sm">
+        <i data-lucide="phone-call" class="w-4 h-4 text-brand-teal"></i>
+        <span>Call: +92 333 722 1552</span>
+      </a>
+
+      <a href="https://wa.me/923337221552?text=Hello%20NADICO%20Technologies,%20I%20want%20to%20consult%20regarding%20ERP%20software." target="_blank" class="w-full py-2.5 rounded-xl text-xs font-bold text-white bg-[#25D366] text-center flex items-center justify-center gap-2">
+        <i data-lucide="message-circle" class="w-4 h-4"></i>
+        <span>WhatsApp Tech Support</span>
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Hero Section -->
+  <section class="relative pt-12 pb-20 lg:pt-20 lg:pb-28 overflow-hidden bg-gradient-to-b from-white via-brand-tealSoft/30 to-transparent">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-4xl mx-auto space-y-6">
+        
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-tealSoft border border-brand-tealBorder text-brand-teal text-xs sm:text-sm font-bold shadow-xs">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span>Enterprise Institutional Cloud Architecture • 2FA Protected • Built for Pakistan</span>
+          <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i>
+        </div>
+
+        <!-- Main Headline in Poppins -->
+        <h1 class="scroll-type-heading font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl text-slate-900 tracking-tight leading-[1.15]"
+            data-prefix="The Complete "
+            data-highlight="School Management ERP"
+            data-highlight-class="teal-gradient-text"
+            data-suffix=" System">
+          <span class="type-text">The Complete <span class="teal-gradient-text">School Management ERP</span> System</span><span class="type-cursor inline-block w-1.5 h-8 sm:h-10 bg-brand-teal ml-1.5 animate-pulse align-middle rounded-full hidden"></span>
+        </h1>
+
+        <!-- Subheading -->
+        <p class="text-base sm:text-lg lg:text-xl text-slate-600 leading-relaxed font-normal max-w-3xl mx-auto">
+          Run your entire school from one place: generate 3-part bank fee challans, sync biometric gate attendance, automate school accounting, and print official report cards with zero stress.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
+          <a href="https://thereadlyerp.vercel.app/rehan" target="_blank" class="w-full sm:w-auto px-8 py-4 rounded-xl text-sm font-bold text-white bg-brand-teal hover:bg-brand-tealDark shadow-button hover:shadow-card-hover transition-all flex items-center justify-center gap-2">
+            <i data-lucide="external-link" class="w-4 h-4"></i>
+            <span>Launch Live Production Portal</span>
+          </a>
+          <a href="#modules" class="w-full sm:w-auto px-7 py-4 rounded-xl text-sm font-bold text-slate-800 bg-white hover:bg-slate-50 border border-slate-300 hover:border-brand-teal transition-all shadow-xs flex items-center justify-center gap-2">
+            <i data-lucide="layers" class="w-4 h-4 text-brand-teal"></i>
+            <span>Explore All 14 Modules</span>
+          </a>
+        </div>
+
+        <!-- Micro Feature Badges -->
+        <div class="pt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 text-xs font-semibold text-slate-600">
+          <div class="p-2.5 rounded-xl bg-white border border-slate-200/90 shadow-xs flex items-center justify-center gap-1.5">
+            <i data-lucide="shield" class="w-3.5 h-3.5 text-emerald-600"></i> 2FA Security
+          </div>
+          <div class="p-2.5 rounded-xl bg-white border border-slate-200/90 shadow-xs flex items-center justify-center gap-1.5">
+            <i data-lucide="receipt" class="w-3.5 h-3.5 text-brand-teal"></i> 3-Part Challans
+          </div>
+          <div class="p-2.5 rounded-xl bg-white border border-slate-200/90 shadow-xs flex items-center justify-center gap-1.5">
+            <i data-lucide="fingerprint" class="w-3.5 h-3.5 text-indigo-600"></i> Biometric Sync
+          </div>
+          <div class="p-2.5 rounded-xl bg-white border border-slate-200/90 shadow-xs flex items-center justify-center gap-1.5">
+            <i data-lucide="graduation-cap" class="w-3.5 h-3.5 text-amber-600"></i> CAIE & BISE Grading
+          </div>
+          <div class="p-2.5 rounded-xl bg-white border border-slate-200/90 shadow-xs flex items-center justify-center gap-1.5">
+            <i data-lucide="calculator" class="w-3.5 h-3.5 text-teal-600"></i> Double-Entry Accounts
+          </div>
+          <div class="p-2.5 rounded-xl bg-white border border-slate-200/90 shadow-xs flex items-center justify-center gap-1.5">
+            <i data-lucide="smartphone" class="w-3.5 h-3.5 text-emerald-600"></i> Parent & Staff Apps
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- HIGH-LEVEL SECURITY & 2FA SECTION (CRITICAL REQUIREMENT) -->
+  <!-- ========================================================================= -->
+  <section id="security" class="py-16 lg:py-24 bg-gradient-to-br from-slate-900 via-[#0a1120] to-slate-900 text-white relative overflow-hidden">
+    <!-- Subtle Tech Grid Background -->
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(0,101,132,0.15),transparent_60%)] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 font-bold text-xs uppercase tracking-wider">
+          <i data-lucide="lock" class="w-3.5 h-3.5"></i> High-Level Security Architecture
+        </div>
+        <h2 class="scroll-type-heading font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight"
+            data-prefix="Fortified Security & "
+            data-highlight="Two-Factor Authentication (2FA)"
+            data-highlight-class="text-emerald-400"
+            data-suffix="">
+          <span class="type-text">Fortified Security & <span class="text-emerald-400">Two-Factor Authentication (2FA)</span></span><span class="type-cursor inline-block w-1.5 h-7 sm:h-8 bg-emerald-400 ml-1.5 animate-pulse align-middle rounded-full hidden"></span>
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+          Your school holds sensitive student records, fee collection details, and staff payroll. NADICO ERP protects your data with bank-standard encryption, Two-Factor Authentication (2FA), and complete audit logs so no unauthorized person can ever access or alter your files.
+        </p>
+      </div>
+
+      <!-- 6 Security Pillars Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Security Pillar 1: 2FA -->
+        <div class="p-8 rounded-3xl bg-slate-800/60 border border-slate-700/80 hover:border-emerald-500/50 transition-all space-y-4 reveal-on-scroll reveal-left">
+          <div class="w-14 h-14 rounded-2xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
+            <i data-lucide="key-round" class="w-7 h-7"></i>
+          </div>
+          <h3 class="font-heading font-bold text-xl text-white">Two-Factor Authentication (2FA)</h3>
+          <p class="text-slate-300 text-xs leading-relaxed">
+            Protect administrative and accountant accounts with time-based one-time passwords (TOTP) compatible with Google Authenticator, Microsoft Authenticator, or direct SMS verification codes.
+          </p>
+          <ul class="text-[11px] text-emerald-300 space-y-1.5 pt-2 border-t border-slate-700">
+            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5"></i> Mandatory 2FA for Super Admin & Accounts</li>
+            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5"></i> Secure backup recovery codes</li>
+          </ul>
+        </div>
+
+        <!-- Security Pillar 2: 256-Bit SSL -->
+        <div class="p-8 rounded-3xl bg-slate-800/60 border border-slate-700/80 hover:border-brand-teal/50 transition-all space-y-4 reveal-on-scroll reveal-up delay-100">
+          <div class="w-14 h-14 rounded-2xl bg-sky-500/20 text-sky-400 flex items-center justify-center">
+            <i data-lucide="shield-check" class="w-7 h-7"></i>
+          </div>
+          <h3 class="font-heading font-bold text-xl text-white">Bank-Grade 256-Bit SSL Encryption</h3>
+          <p class="text-slate-300 text-xs leading-relaxed">
+            All data in-transit and at-rest is encrypted with TLS 1.3 cryptographic protocols and AES-256 standard encryption, ensuring zero risk of packet sniffing or eavesdropping.
+          </p>
+          <ul class="text-[11px] text-sky-300 space-y-1.5 pt-2 border-t border-slate-700">
+            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5"></i> HTTPS end-to-end security certificates</li>
+            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5"></i> Encrypted student family records</li>
+          </ul>
+        </div>
+
+        <!-- Security Pillar 3: RBAC Role Permissions -->
+        <div class="p-8 rounded-3xl bg-slate-800/60 border border-slate-700/80 hover:border-brand-lime/50 transition-all space-y-4 reveal-on-scroll reveal-right delay-200">
+          <div class="w-14 h-14 rounded-2xl bg-lime-500/20 text-lime-400 flex items-center justify-center">
+            <i data-lucide="user-check" class="w-7 h-7"></i>
+          </div>
+          <h3 class="font-heading font-bold text-xl text-white">Granular Role-Based Access (RBAC)</h3>
+          <p class="text-slate-300 text-xs leading-relaxed">
+            Customizable permissions prevent staff from seeing unauthorized data. Teachers only see their assigned classes; accountants handle fee transactions; only principals see school financial totals.
+          </p>
+          <ul class="text-[11px] text-lime-300 space-y-1.5 pt-2 border-t border-slate-700">
+            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5"></i> Custom roles: Principal, Accountant, Teacher, Clerk</li>
+            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5"></i> Fine-grained read/write/edit/delete control</li>
+          </ul>
+        </div>
+
+        <!-- Security Pillar 4: Audit Trails -->
+        <div class="p-8 rounded-3xl bg-slate-800/60 border border-slate-700/80 hover:border-amber-500/50 transition-all space-y-4 reveal-on-scroll reveal-left">
+          <div class="w-14 h-14 rounded-2xl bg-amber-500/20 text-amber-400 flex items-center justify-center">
+            <i data-lucide="file-text" class="w-7 h-7"></i>
+          </div>
+          <h3 class="font-heading font-bold text-xl text-white">Tamper-Proof Audit Trail</h3>
+          <p class="text-slate-300 text-xs leading-relaxed">
+            Every critical action inside the ERP — such as fee waiver grants, marks modifications, challan cancellations, and profile edits — is logged with the user's name, timestamp, and IP address.
+          </p>
+          <ul class="text-[11px] text-amber-300 space-y-1.5 pt-2 border-t border-slate-700">
+            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5"></i> Complete historical edit logs</li>
+            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5"></i> Immediate alert on unauthorized actions</li>
+          </ul>
+        </div>
+
+        <!-- Security Pillar 5: Daily Cloud Backups -->
+        <div class="p-8 rounded-3xl bg-slate-800/60 border border-slate-700/80 hover:border-teal-500/50 transition-all space-y-4 reveal-on-scroll reveal-up delay-100">
+          <div class="w-14 h-14 rounded-2xl bg-teal-500/20 text-teal-400 flex items-center justify-center">
+            <i data-lucide="cloud" class="w-7 h-7"></i>
+          </div>
+          <h3 class="font-heading font-bold text-xl text-white">Automated Daily Cloud Backups</h3>
+          <p class="text-slate-300 text-xs leading-relaxed">
+            Eliminate computer crash nightmares. All school databases are automatically snapshotted daily and replicated across physically separated tier-4 secure data centers.
+          </p>
+          <ul class="text-[11px] text-teal-300 space-y-1.5 pt-2 border-t border-slate-700">
+            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5"></i> 1-Click point-in-time database restoration</li>
+            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5"></i> Manual on-demand database backup download</li>
+          </ul>
+        </div>
+
+        <!-- Security Pillar 6: High Availability SLA -->
+        <div class="p-8 rounded-3xl bg-slate-800/60 border border-slate-700/80 hover:border-purple-500/50 transition-all space-y-4 reveal-on-scroll reveal-right delay-200">
+          <div class="w-14 h-14 rounded-2xl bg-purple-500/20 text-purple-400 flex items-center justify-center">
+            <i data-lucide="server" class="w-7 h-7"></i>
+          </div>
+          <h3 class="font-heading font-bold text-xl text-white">99.9% Cloud Availability SLA</h3>
+          <p class="text-slate-300 text-xs leading-relaxed">
+            High-speed cloud clusters engineered to withstand fee deadline traffic spikes without slowdowns or database lockups. Your campus portal is always accessible 24/7/365.
+          </p>
+          <ul class="text-[11px] text-purple-300 space-y-1.5 pt-2 border-t border-slate-700">
+            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5"></i> Instant multi-server auto-scaling</li>
+            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5"></i> Local Pakistani CDN caching for fast loading</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- ALL 14 CORE MODULES (MATCHING THE READLY ERP DASHBOARD) -->
+  <!-- ========================================================================= -->
+  <section id="modules" class="py-20 lg:py-28 bg-[#fafcfa]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <span class="text-xs font-bold uppercase tracking-wider text-brand-teal">Complete Functional Suite</span>
+        <h2 class="scroll-type-heading font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-slate-900 tracking-tight"
+            data-prefix="Everything Your School Needs to "
+            data-highlight="Run Seamlessly"
+            data-highlight-class="teal-gradient-text"
+            data-suffix="">
+          <span class="type-text">Everything Your School Needs to <span class="teal-gradient-text">Run Seamlessly</span></span><span class="type-cursor inline-block w-1.5 h-7 sm:h-8 bg-brand-teal ml-1.5 animate-pulse align-middle rounded-full hidden"></span>
+        </h2>
+        <p class="text-slate-600 text-base leading-relaxed">
+          Explore all 14 integrated modules available inside The Readly ERP / NADICO School ERP dashboard.
+        </p>
+      </div>
+
+      <!-- Modules 14 Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Module 1: Dashboard -->
+        <div class="bg-white p-7 rounded-3xl border border-slate-200/90 shadow-card hover:shadow-card-hover transition-all space-y-4 reveal-on-scroll reveal-left">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center">
+            <i data-lucide="layout-dashboard" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-heading font-bold text-xl text-slate-900">1. Executive Dashboard & KPIs</h3>
+          <p class="text-slate-600 text-xs leading-relaxed">
+            Bird's-eye view of campus vitals: total enrolled students, present faculty, today's attendance rate, monthly fee recovery in PKR, and instant defaulter summary.
+          </p>
+          <div class="text-[11px] text-slate-500 font-medium space-y-1">
+            <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Real-time student & staff counters</div>
+            <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Instant cash, bank & pending balances</div>
+          </div>
+        </div>
+
+        <!-- Module 2: SIS -->
+        <div class="bg-white p-7 rounded-3xl border border-slate-200/90 shadow-card hover:shadow-card-hover transition-all space-y-4 reveal-on-scroll reveal-up delay-100">
+          <div class="w-12 h-12 rounded-2xl bg-brand-tealSoft text-brand-teal flex items-center justify-center">
+            <i data-lucide="users" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-heading font-bold text-xl text-slate-900">2. Student Information System (SIS)</h3>
+          <p class="text-slate-600 text-xs leading-relaxed">
+            Complete digital lifecycle: General Register (GR) numbers, family/sibling linking, previous academic transcripts, medical emergency files, and B-form records.
+          </p>
+          <div class="text-[11px] text-slate-500 font-medium space-y-1">
+            <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Automatic sibling concession mapping</div>
+            <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Digital inquiry-to-admission pipeline</div>
+          </div>
+        </div>
+
+        <!-- Module 3: Parents Portal -->
+        <div class="bg-white p-7 rounded-3xl border border-slate-200/90 shadow-card hover:shadow-card-hover transition-all space-y-4 reveal-on-scroll reveal-right delay-200">
+          <div class="w-12 h-12 rounded-2xl bg-purple-100 text-purple-700 flex items-center justify-center">
+            <i data-lucide="user-check" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-heading font-bold text-xl text-slate-900">3. Parents Portal & Mobile Access</h3>
+          <p class="text-slate-600 text-xs leading-relaxed">
+            Native mobile app and web portal allowing parents to inspect gate attendance, review daily homework, view fee challan dues, and download term result cards.
+          </p>
+          <div class="text-[11px] text-slate-500 font-medium space-y-1">
+            <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Single login for multiple enrolled siblings</div>
+            <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Paid bank receipt slip photo upload</div>
+          </div>
+        </div>
+
+        <!-- Module 4: Teachers & Faculty -->
+        <div class="bg-white p-7 rounded-3xl border border-slate-200/90 shadow-card hover:shadow-card-hover transition-all space-y-4 reveal-on-scroll reveal-left">
+          <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center">
+            <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-heading font-bold text-xl text-slate-900">4. Teachers & Faculty Management</h3>
+          <p class="text-slate-600 text-xs leading-relaxed">
+            Streamlined educator workflows: subject period allotments, weekly timetable schedules, substitute teacher assignments, and lesson plan submission tracking.
+          </p>
+          <div class="text-[11px] text-slate-500 font-medium space-y-1">
+            <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Fast mobile marks and grades entry</div>
+            <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Digital leave applications with approval flow</div>
+          </div>
+        </div>
+
+        <!-- Module 5: Staff HR & Payroll -->
+        <div class="bg-white p-7 rounded-3xl border border-slate-200/90 shadow-card hover:shadow-card-hover transition-all space-y-4 reveal-on-scroll reveal-up delay-100">
+          <div class="w-12 h-12 rounded-2xl bg-indigo-100 text-indigo-700 flex items-center justify-center">
+            <i data-lucide="briefcase" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-heading font-bold text-xl text-slate-900">5. Staff HR & Biometric Payroll</h3>
+          <p class="text-slate-600 text-xs leading-relaxed">
+            Syncs employee biometric attendance with salary engines. Calculates late arrival deductions, allowances, provident funds, and generates PDF salary slips with 1-click.
+          </p>
+          <div class="text-[11px] text-slate-500 font-medium space-y-1">
+            <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Automated late deduction calculation</div>
+            <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Printable PDF staff pay slips</div>
+          </div>
+        </div>
+
+        <!-- Module 6: Academics & Sessions -->
+        <div class="bg-white p-7 rounded-3xl border border-slate-200/90 shadow-card hover:shadow-card-hover transition-all space-y-4 reveal-on-scroll reveal-right delay-200">
+          <div class="w-12 h-12 rounded-2xl bg-cyan-100 text-cyan-700 flex items-center justify-center">
+            <i data-lucide="book-open" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-heading font-bold text-xl text-slate-900">6. Academics, Curriculum & Sessions</h3>
+          <p class="text-slate-600 text-xs leading-relaxed">
+            Multi-year academic sessions (e.g. 2026-27), class section configurations, subject curriculum mapping, syllabus milestones, and class period schedule generator.
+          </p>
+          <div class="text-[11px] text-slate-500 font-medium space-y-1">
+            <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Automatic student rollover to next grade</div>
+            <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Conflict-free period timetable scheduler</div>
+          </div>
+        </div>
+
+        <!-- Module 7: Biometric Attendance -->
+        <div class="bg-white p-7 rounded-3xl border border-slate-200/90 shadow-card hover:shadow-card-hover transition-all space-y-4 reveal-on-scroll reveal-left">
+          <div class="w-12 h-12 rounded-2xl bg-rose-100 text-rose-700 flex items-center justify-center">
+            <i data-lucide="fingerprint" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-heading font-bold text-xl text-slate-900">7. 1-Tap Biometric Attendance</h3>
+          <p class="text-slate-600 text-xs leading-relaxed">
+            Direct network sync with ZKTeco, Hikvision, and RFID turnstiles. Teachers can also mark 30-second mobile roll calls. Instant automated absent SMS sent to parents.
+          </p>
+          <div class="text-[11px] text-slate-500 font-medium space-y-1">
+            <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Instant WhatsApp / SMS absent alerts</div>
+            <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Gate turnstile & biometric machine sync</div>
+          </div>
+        </div>
+
+        <!-- Module 8: 3-Part Fee Challans -->
+        <div class="bg-white p-7 rounded-3xl border border-slate-200/90 shadow-card hover:shadow-card-hover transition-all space-y-4 reveal-on-scroll reveal-up delay-100">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center">
+            <i data-lucide="receipt" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-heading font-bold text-xl text-slate-900">8. 3-Part Fee Challans & Banking</h3>
+          <p class="text-slate-600 text-xs leading-relaxed">
+            Full compliance with Pakistani banking standards: Bank Copy, School Copy, and Student Copy. Supports Meezan Bank, HBL, Allied Bank, 1Link 1Bill, Easypaisa & JazzCash.
+          </p>
+          <div class="text-[11px] text-slate-500 font-medium space-y-1">
+            <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Automated late fine rules & discount heads</div>
+            <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> 1-Click WhatsApp fee reminders to defaulters</div>
+          </div>
+        </div>
+
+        <!-- Module 9: Accounting & Financials -->
+        <div class="bg-white p-7 rounded-3xl border border-slate-200/90 shadow-card hover:shadow-card-hover transition-all space-y-4 reveal-on-scroll reveal-right delay-200">
+          <div class="w-12 h-12 rounded-2xl bg-teal-100 text-teal-700 flex items-center justify-center">
+            <i data-lucide="banknote" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-heading font-bold text-xl text-slate-900">9. Double-Entry School Accounting</h3>
+          <p class="text-slate-600 text-xs leading-relaxed">
+            Eliminate QuickBooks dependencies. Purpose-built chart of accounts, general ledger, payment/receipt vouchers with bill attachments, and automatic real-time P&L statement.
+          </p>
+          <div class="text-[11px] text-slate-500 font-medium space-y-1">
+            <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Auto fee-challan posting to bank ledgers</div>
+            <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Daily cash flow & trial balance reports</div>
+          </div>
+        </div>
+
+        <!-- Module 10: Examinations & Report Cards -->
+        <div class="bg-white p-7 rounded-3xl border border-slate-200/90 shadow-card hover:shadow-card-hover transition-all space-y-4 reveal-on-scroll reveal-left">
+          <div class="w-12 h-12 rounded-2xl bg-blue-100 text-blue-700 flex items-center justify-center">
+            <i data-lucide="file-spreadsheet" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-heading font-bold text-xl text-slate-900">10. Exams & Digital Report Cards</h3>
+          <p class="text-slate-600 text-xs leading-relaxed">
+            Dynamic grading scales supporting BISE Board (Matric / FSC), Cambridge CAIE (O/A Levels), or custom GPA. Generates beautiful printable result cards with school logo.
+          </p>
+          <div class="text-[11px] text-slate-500 font-medium space-y-1">
+            <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Automated class positions & subject ranks</div>
+            <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Direct result card publishing to Parent App</div>
+          </div>
+        </div>
+
+        <!-- Module 11: Homework & Tasks -->
+        <div class="bg-white p-7 rounded-3xl border border-slate-200/90 shadow-card hover:shadow-card-hover transition-all space-y-4 reveal-on-scroll reveal-up delay-100">
+          <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center">
+            <i data-lucide="check-square" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-heading font-bold text-xl text-slate-900">11. Daily Diary & Homework Broadcast</h3>
+          <p class="text-slate-600 text-xs leading-relaxed">
+            Teachers publish subject-wise homework, test syllabus, and whiteboard snapshots directly to parent smartphones. Eliminates lost paper diaries completely.
+          </p>
+          <div class="text-[11px] text-slate-500 font-medium space-y-1">
+            <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Photo attachments of whiteboard assignments</div>
+            <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Student conduct & behavioral praise notes</div>
+          </div>
+        </div>
+
+        <!-- Module 12: Notice Board -->
+        <div class="bg-white p-7 rounded-3xl border border-slate-200/90 shadow-card hover:shadow-card-hover transition-all space-y-4 reveal-on-scroll reveal-right delay-200">
+          <div class="w-12 h-12 rounded-2xl bg-rose-100 text-rose-700 flex items-center justify-center">
+            <i data-lucide="bell" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-heading font-bold text-xl text-slate-900">12. Notice Board & Circulars</h3>
+          <p class="text-slate-600 text-xs leading-relaxed">
+            Campus-wide emergency alerts, weather holiday announcements, PTM schedule circulars, and sports event notices pushed directly to parents and staff simultaneously.
+          </p>
+          <div class="text-[11px] text-slate-500 font-medium space-y-1">
+            <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Target specific classes or whole campus</div>
+            <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Read receipt acknowledgments by parents</div>
+          </div>
+        </div>
+
+        <!-- Module 13: Executive Analytics -->
+        <div class="bg-white p-7 rounded-3xl border border-slate-200/90 shadow-card hover:shadow-card-hover transition-all space-y-4 reveal-on-scroll reveal-left">
+          <div class="w-12 h-12 rounded-2xl bg-indigo-100 text-indigo-700 flex items-center justify-center">
+            <i data-lucide="bar-chart-3" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-heading font-bold text-xl text-slate-900">13. Chain-Level & Multi-Campus Analytics</h3>
+          <p class="text-slate-600 text-xs leading-relaxed">
+            Essential for school chains and campus networks. Toggle between different school branches, compare enrollment trends, track fee recovery rates, and oversee branch budgets.
+          </p>
+          <div class="text-[11px] text-slate-500 font-medium space-y-1">
+            <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Consolidated multi-branch P&L</div>
+            <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> 1-Click Excel and PDF data export</div>
+          </div>
+        </div>
+
+        <!-- Module 14: Smart Certificates & IDs -->
+        <div class="bg-white p-7 rounded-3xl border border-slate-200/90 shadow-card hover:shadow-card-hover transition-all space-y-4 reveal-on-scroll reveal-right delay-150">
+          <div class="w-12 h-12 rounded-2xl bg-lime-100 text-lime-700 flex items-center justify-center">
+            <i data-lucide="badge-check" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-heading font-bold text-xl text-slate-900">14. Smart ID Cards & Certificates</h3>
+          <p class="text-slate-600 text-xs leading-relaxed">
+            Print PVC student and employee ID cards with QR barcodes in seconds. Generate leaving certificates, character certificates, and merit diplomas directly from student records.
+          </p>
+          <div class="text-[11px] text-slate-500 font-medium space-y-1">
+            <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Pre-designed ID card templates with barcode</div>
+            <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i> Official school leaving certificates with verification</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- LIVE SYSTEM PREVIEW & MOCKUP BANNER -->
+  <!-- ========================================================================= -->
+  <section class="py-16 bg-white border-y border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="bg-gradient-to-br from-brand-charcoal to-[#004c63] rounded-3xl p-8 sm:p-12 text-white relative overflow-hidden shadow-2xl">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <div class="lg:col-span-7 space-y-6 reveal-on-scroll reveal-left">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-lime/20 border border-brand-lime/30 text-brand-limeLight font-bold text-xs uppercase">
+              <i data-lucide="external-link" class="w-3.5 h-3.5"></i> Live Interactive Instance
+            </div>
+            <h2 class="scroll-type-heading font-heading font-extrabold text-3xl sm:text-4xl text-white tracking-tight"
+                data-prefix="Test The Readly ERP in "
+                data-highlight="Your Browser Right Now"
+                data-highlight-class="text-brand-limeLight"
+                data-suffix="">
+              <span class="type-text">Test The Readly ERP in <span class="text-brand-limeLight">Your Browser Right Now</span></span><span class="type-cursor inline-block w-1.5 h-7 sm:h-8 bg-brand-lime ml-1.5 animate-pulse align-middle rounded-full hidden"></span>
+            </h2>
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+              Experience the actual live production dashboard deployed for operational campuses. View real-time attendance graphs, test the fee challan generator, and inspect student records hands-on.
+            </p>
+            <div class="flex flex-wrap items-center gap-4 pt-2">
+              <a href="https://thereadlyerp.vercel.app/rehan" target="_blank" class="px-7 py-3.5 rounded-xl font-bold text-xs sm:text-sm text-brand-charcoal bg-brand-lime hover:bg-brand-limeLight transition-all shadow-button-lime flex items-center gap-2">
+                <span>Launch Live Rehan School Instance</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+              <a href="https://wa.me/923337221552?text=Hello%20NADICO%20Technologies,%20I%20would%20like%20to%20request%20credentials%20for%20The%20Readly%20ERP%20demo." target="_blank" class="px-6 py-3.5 rounded-xl font-bold text-xs sm:text-sm text-white bg-white/10 hover:bg-white/20 border border-white/25 transition-all flex items-center gap-2">
+                <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i>
+                <span>Request Custom Demo on WhatsApp</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 bg-slate-900/90 rounded-2xl p-5 border border-slate-700 text-xs space-y-3 font-mono reveal-on-scroll reveal-right delay-150">
+            <div class="flex items-center justify-between pb-2 border-b border-slate-800 text-slate-400 text-[10px]">
+              <span>portal.thereadlyerp.vercel.app/rehan</span>
+              <span class="text-emerald-400 font-bold flex items-center gap-1">● 100% OPERATIONAL</span>
+            </div>
+            <div class="space-y-2 text-slate-300 text-[11px]">
+              <div class="flex justify-between">
+                <span class="text-slate-400">Security Architecture:</span>
+                <span class="text-emerald-400 font-bold">2FA + TLS 1.3 256-bit</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-400">Active Campus:</span>
+                <span class="text-white font-bold">Rehan Model School</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-400">Daily Attendance Rate:</span>
+                <span class="text-emerald-400 font-bold">98.2% Synced</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-400">Fee Recovery Engine:</span>
+                <span class="text-brand-limeLight font-bold">3-Part Bank Challan OK</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-400">Biometric Sync:</span>
+                <span class="text-emerald-400 font-bold">ZKTeco Cloud Active</span>
+              </div>
+            </div>
+            <div class="pt-2 border-t border-slate-800 text-center">
+              <span class="text-[10px] text-slate-400">Pre-configured with sample student rosters and exam marks</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- WHY PAKISTANI SCHOOLS CHOOSE NADICO ERP (COMPARISON TABLE) -->
+  <!-- ========================================================================= -->
+  <section id="comparison" class="py-20 lg:py-28 bg-[#fafcfa]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <span class="text-xs font-bold uppercase tracking-wider text-brand-teal">Built For Pakistan</span>
+        <h2 class="scroll-type-heading font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 tracking-tight"
+            data-prefix="How NADICO ERP Outperforms "
+            data-highlight="Outdated Legacy Systems"
+            data-highlight-class="teal-gradient-text"
+            data-suffix="">
+          <span class="type-text">How NADICO ERP Outperforms <span class="teal-gradient-text">Outdated Legacy Systems</span></span><span class="type-cursor inline-block w-1.5 h-7 sm:h-8 bg-brand-teal ml-1.5 animate-pulse align-middle rounded-full hidden"></span>
+        </h2>
+        <p class="text-slate-600 text-base">
+          See why 250+ campuses across Pakistan have left old desktop software behind and switched to NADICO ERP.
+        </p>
+      </div>
+
+      <div id="comparisonCard" class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-card reveal-on-scroll reveal-up">
+        <!-- Table Header with Replay Action -->
+        <div class="bg-slate-50/80 px-6 py-3.5 border-b border-slate-200 flex items-center justify-between flex-wrap gap-2">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-700 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span>Live Feature Comparison • Dynamic Line-by-Line Typing</span>
+          </div>
+          <button id="replayComparisonBtn" class="px-3.5 py-1.5 rounded-xl text-xs font-semibold text-brand-teal hover:bg-brand-tealSoft border border-brand-tealBorder transition-all flex items-center gap-1.5 shadow-xs">
+            <i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i>
+            <span>Replay Typing Animation</span>
+          </button>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-xs text-left">
+            <thead class="bg-slate-50 border-b border-slate-200 text-slate-700 font-bold uppercase tracking-wider text-[11px]">
+              <tr>
+                <th class="p-5 w-1/4">Capability / Requirement</th>
+                <th class="p-5 w-3/8 text-rose-700 bg-rose-50/50">Old Desktop / Excel Software</th>
+                <th class="p-5 w-3/8 text-emerald-800 bg-emerald-50">NADICO School ERP (The Readly)</th>
+              </tr>
+            </thead>
+            <tbody id="comparisonTableBody" class="divide-y divide-slate-100 text-slate-600">
+              <tr id="compRow0" class="transition-colors">
+                <td class="p-5 font-bold text-slate-900">Security & 2FA Protection</td>
+                <td class="p-5 text-rose-600 font-medium" id="cellLegacy0">❌ Simple plain-text password; high risk of unauthorized tampering</td>
+                <td class="p-5 text-emerald-700 bg-emerald-50/30 font-bold" id="cellNadico0">✓ Two-Factor Authentication (2FA), 256-bit SSL, and full audit logs</td>
+              </tr>
+              <tr id="compRow1" class="transition-colors">
+                <td class="p-5 font-bold text-slate-900">3-Part Bank Fee Challans</td>
+                <td class="p-5 text-rose-600 font-medium" id="cellLegacy1">❌ Generic receipts; doesn't match Meezan / HBL / 1Link formats</td>
+                <td class="p-5 text-emerald-700 bg-emerald-50/30 font-bold" id="cellNadico1">✓ Authentic 3-part bank slips with barcodes & automatic fine rules</td>
+              </tr>
+              <tr id="compRow2" class="transition-colors">
+                <td class="p-5 font-bold text-slate-900">Parent Communication</td>
+                <td class="p-5 text-rose-600 font-medium" id="cellLegacy2">❌ Paper diaries often lost; costly manual phone calls to parents</td>
+                <td class="p-5 text-emerald-700 bg-emerald-50/30 font-bold" id="cellNadico2">✓ Native Parent Mobile App, whiteboard photo diary, & WhatsApp SMS</td>
+              </tr>
+              <tr id="compRow3" class="transition-colors">
+                <td class="p-5 font-bold text-slate-900">Biometric Attendance</td>
+                <td class="p-5 text-rose-600 font-medium" id="cellLegacy3">❌ Standalone USB download required; no parent notifications</td>
+                <td class="p-5 text-emerald-700 bg-emerald-50/30 font-bold" id="cellNadico3">✓ Real-time ZKTeco cloud sync with automated instant absent SMS</td>
+              </tr>
+              <tr id="compRow4" class="transition-colors">
+                <td class="p-5 font-bold text-slate-900">Campus Accounting & P&L</td>
+                <td class="p-5 text-rose-600 font-medium" id="cellLegacy4">❌ Separate registers; accountant takes days to tally monthly cash</td>
+                <td class="p-5 text-emerald-700 bg-emerald-50/30 font-bold" id="cellNadico4">✓ Integrated double-entry general ledger with automatic real-time P&L</td>
+              </tr>
+              <tr id="compRow5" class="transition-colors">
+                <td class="p-5 font-bold text-slate-900">Disaster Recovery & Backups</td>
+                <td class="p-5 text-rose-600 font-medium" id="cellLegacy5">❌ Stored on a single computer; virus/ransomware destroys all records</td>
+                <td class="p-5 text-emerald-700 bg-emerald-50/30 font-bold" id="cellNadico5">✓ Automated daily multi-region cloud snapshots with zero data loss</td>
+              </tr>
+              <tr id="compRow6" class="transition-colors">
+                <td class="p-5 font-bold text-slate-900">Accessibility</td>
+                <td class="p-5 text-rose-600 font-medium" id="cellLegacy6">❌ Locked to the school office PC; principal cannot monitor from home</td>
+                <td class="p-5 text-emerald-700 bg-emerald-50/30 font-bold" id="cellNadico6">✓ 100% Cloud-accessible from laptop, tablet, or smartphone 24/7</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- FREQUENTLY ASKED QUESTIONS (FAQ) -->
+  <!-- ========================================================================= -->
+  <section id="faq" class="py-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <span class="text-xs font-bold uppercase tracking-wider text-brand-teal">Common Questions</span>
+      <h2 class="scroll-type-heading font-heading font-extrabold text-3xl text-slate-900 tracking-tight mt-1"
+          data-prefix="Frequently Asked "
+          data-highlight="Questions"
+          data-highlight-class="teal-gradient-text"
+          data-suffix="">
+        <span class="type-text">Frequently Asked <span class="teal-gradient-text">Questions</span></span><span class="type-cursor inline-block w-1.5 h-6 bg-brand-teal ml-1.5 animate-pulse align-middle rounded-full hidden"></span>
+      </h2>
+    </div>
+
+    <div class="space-y-4">
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs reveal-on-scroll reveal-left">
+        <h4 class="font-heading font-bold text-slate-900 text-sm">Can we migrate our current students and fee data from Excel?</h4>
+        <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+          Yes! Our deployment engineers handle 100% of your data migration free of charge. Simply share your Excel rosters with student names, family details, and current fee structures, and we will configure your live campus database within 24 to 48 hours.
+        </p>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs reveal-on-scroll reveal-right delay-100">
+        <h4 class="font-heading font-bold text-slate-900 text-sm">How does Two-Factor Authentication (2FA) work in NADICO ERP?</h4>
+        <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+          When 2FA is enabled, administrators and accountants log in using their password plus a 6-digit dynamic passcode generated on their smartphone (Google Authenticator) or sent via SMS. This ensures that even if someone discovers a password, they cannot breach your school's records.
+        </p>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs reveal-on-scroll reveal-left delay-150">
+        <h4 class="font-heading font-bold text-slate-900 text-sm">Which Pakistani banks are supported for 3-part fee challans?</h4>
+        <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+          We support all major Pakistani commercial and Islamic banks including Meezan Bank, HBL, Allied Bank, UBL, Bank Alfalah, Askari Bank, and MCB. We also support 1Link 1Bill digital barcodes, Raast, JazzCash, and Easypaisa reconciliation.
+        </p>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs reveal-on-scroll reveal-right delay-200">
+        <h4 class="font-heading font-bold text-slate-900 text-sm">Do you provide on-site staff training?</h4>
+        <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+          Yes. Our corporate technical teams are available in Karachi and nationwide. We conduct interactive training sessions for your principals, accountants, teachers, and front-desk coordinators, along with 24/7 dedicated telephone and WhatsApp support.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- HIGH CONVERSION CTA BANNER -->
+  <!-- ========================================================================= -->
+  <section class="py-20 bg-gradient-to-r from-brand-charcoal via-brand-tealDark to-brand-charcoal text-white text-center relative overflow-hidden">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 relative z-10 reveal-on-scroll reveal-up">
+      
+      <span class="inline-block bg-white/10 text-brand-limeLight text-xs font-bold px-3.5 py-1.5 rounded-full uppercase tracking-wider border border-white/20">
+        Transform Your Campus Today
+      </span>
+
+      <h2 class="scroll-type-heading font-heading font-extrabold text-3xl sm:text-5xl text-white tracking-tight leading-tight"
+          data-prefix="Ready to Modernize Your School with "
+          data-highlight="NADICO ERP"
+          data-highlight-class="text-brand-limeLight"
+          data-suffix="?">
+        <span class="type-text">Ready to Modernize Your School with <span class="text-brand-limeLight">NADICO ERP</span>?</span><span class="type-cursor inline-block w-1.5 h-8 bg-brand-lime ml-1.5 animate-pulse align-middle rounded-full hidden"></span>
+      </h2>
+
+      <p class="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto">
+        Join leading schools across Pakistan. Schedule a free, personalized 15-minute online walkthrough or on-site consultation.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+        <a href="https://wa.me/923337221552?text=Hello%20NADICO%20Technologies,%20I%20would%20like%20to%20schedule%20a%20demo%20for%20NADICO%20School%20ERP." target="_blank" class="w-full sm:w-auto px-8 py-4 rounded-xl font-bold text-xs sm:text-sm text-brand-charcoal bg-brand-lime hover:bg-brand-limeLight transition-all shadow-button-lime flex items-center justify-center gap-2">
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+          <span>Schedule Walkthrough on WhatsApp (+92 333 722 1552)</span>
+        </a>
+        <a href="index.html#contact" class="w-full sm:w-auto px-7 py-4 rounded-xl font-bold text-xs sm:text-sm text-white bg-white/10 hover:bg-white/20 border border-white/25 transition-all flex items-center justify-center gap-2">
+          <i data-lucide="mail" class="w-4 h-4"></i>
+          <span>Submit Direct Inquiry Form</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- CORPORATE FOOTER -->
+  <!-- ========================================================================= -->
+  <footer class="w-full max-w-full footer-gradient-rich border-t border-[#005a75] pt-12 pb-5 text-white text-xs relative overflow-hidden m-0 mt-auto left-0 right-0 bottom-0">
+    <div class="w-full px-6 sm:px-10 lg:px-14 relative z-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 pb-8 border-b border-white/20">
+        
+        <!-- Brand Info -->
+        <div class="lg:col-span-2 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="silver-sheen-logo-wrap">
+              <img src="LOGO.png" alt="NADICO Technologies" class="h-20 sm:h-24 w-auto object-contain brightness-0 invert drop-shadow-lg">
+              <div class="silver-sheen-overlay" aria-hidden="true"></div>
+            </div>
+          </div>
+          <p class="text-white/90 text-xs leading-relaxed max-w-sm">
+            NADICO Technologies (نادیکو ٹیکنالوجیز) builds reliable Cloud ERP software, school management systems, custom web applications, and high-growth digital marketing campaigns for organizations across Pakistan.
+          </p>
+          <div class="text-xs text-white flex items-center gap-2 font-bold pt-1">
+            <span class="p-1.5 rounded-lg bg-white/15 border border-white/25 flex items-center justify-center">
+              <i data-lucide="phone" class="w-3.5 h-3.5 text-white"></i>
+            </span>
+            <a href="tel:+923337221552" class="hover:underline text-white font-mono tracking-wide text-sm font-bold">+92 333 722 1552</a>
+          </div>
+        </div>
+
+        <!-- ERP Modules -->
+        <div class="space-y-3">
+          <h4 class="text-white font-bold text-sm tracking-wide border-b border-white/25 pb-1 flex items-center gap-1.5 font-heading">
+            <i data-lucide="layers" class="w-3.5 h-3.5 text-brand-limeLight"></i> ERP Systems
+          </h4>
+          <ul class="space-y-2">
+            <li><a href="school-erp.html" class="text-white/90 hover:text-white hover:underline transition-colors flex items-center gap-1.5 font-bold text-brand-limeLight"><span class="w-1.5 h-1.5 rounded-full bg-brand-limeLight"></span> School Management ERP</a></li>
+            <li><a href="index.html#hospital-hms" class="text-white/90 hover:text-white hover:underline transition-colors flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-white/60"></span> Hospital Management (HMS)</a></li>
+            <li><a href="index.html#inventory-pos" class="text-white/90 hover:text-white hover:underline transition-colors flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-white/60"></span> Inventory Management & POS</a></li>
+            <li><a href="https://thereadlyerp.vercel.app/rehan" target="_blank" class="text-white font-bold hover:underline flex items-center gap-1.5 pt-1.5 bg-white/15 hover:bg-white/25 border border-white/20 px-2.5 py-1 rounded-lg w-fit transition-all shadow-xs"><span class="text-brand-limeLight">●</span> The Readly Live Portal <i data-lucide="external-link" class="w-3 h-3 text-white"></i></a></li>
+          </ul>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="space-y-3">
+          <h4 class="text-white font-bold text-sm tracking-wide border-b border-white/25 pb-1 flex items-center gap-1.5 font-heading">
+            <i data-lucide="shield" class="w-3.5 h-3.5 text-brand-limeLight"></i> System Security
+          </h4>
+          <ul class="space-y-2">
+            <li><a href="#security" class="text-white/90 hover:text-white hover:underline transition-colors flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-white/60"></span> Two-Factor Authentication (2FA)</a></li>
+            <li><a href="#security" class="text-white/90 hover:text-white hover:underline transition-colors flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-white/60"></span> Bank-Grade 256-Bit SSL</a></li>
+            <li><a href="#security" class="text-white/90 hover:text-white hover:underline transition-colors flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-white/60"></span> Tamper-Proof Audit Trails</a></li>
+            <li><a href="#security" class="text-white/90 hover:text-white hover:underline transition-colors flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-white/60"></span> Automated Cloud Backups</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="space-y-3">
+          <h4 class="text-white font-bold text-sm tracking-wide border-b border-white/25 pb-1 flex items-center gap-1.5 font-heading">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-brand-limeLight"></i> Direct Contact
+          </h4>
+          <ul class="space-y-2.5 text-xs">
+            <li class="flex items-center gap-2">
+              <i data-lucide="phone" class="w-3.5 h-3.5 text-white"></i>
+              <a href="tel:+923337221552" class="hover:underline text-white font-semibold">+92 333 722 1552</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="mail" class="w-3.5 h-3.5 text-white"></i>
+              <a href="mailto:info@nadico.pk" class="hover:underline text-white font-semibold">info@nadico.pk</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="map-pin" class="w-3.5 h-3.5 text-white"></i>
+              <span class="text-white font-medium">Karachi, Pakistan</span>
+            </li>
+            <li class="pt-1 text-[11px] text-white/80 flex items-center gap-1.5">
+              <i data-lucide="clock" class="w-3 h-3 text-white"></i>
+              <span>Mon - Sat: 9:00 AM - 7:00 PM PKT</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Copyright & Back to Top -->
+      <div class="pt-4 pb-1 flex flex-col sm:flex-row items-center justify-between gap-3 text-white/80 text-[11px]">
+        <div>
+          © 2026 NADICO Technologies (NADICO TECH). All Rights Reserved.
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="index.html" class="text-white/85 hover:text-white hover:underline transition-colors">← Back to Main Homepage</a>
+          <span>•</span>
+          <a href="https://thereadlyerp.vercel.app/rehan" target="_blank" class="text-white/85 hover:text-white hover:underline transition-colors">The Readly ERP Instance</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Action Button -->
+  <a href="https://wa.me/923337221552?text=Hello%20NADICO%20Technologies,%20I%20would%20like%20to%20learn%20more%20about%20NADICO%20School%20ERP." target="_blank" aria-label="WhatsApp Chat" class="fixed bottom-6 right-6 z-50 p-3.5 rounded-full bg-[#25D366] text-white shadow-xl hover:scale-105 transition-transform duration-200 flex items-center gap-2 group">
+    <i data-lucide="message-circle" class="w-6 h-6"></i>
+    <span class="hidden sm:inline font-bold text-xs font-sans">
+      Chat on WhatsApp
+    </span>
+  </a>
+
+  <script>
+    lucide.createIcons();
+
+    // Mobile Drawer Logic
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const closeDrawerBtn = document.getElementById('closeDrawerBtn');
+    const mobileDrawer = document.getElementById('mobileDrawer');
+    const mobileDrawerOverlay = document.getElementById('mobileDrawerOverlay');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+    function openDrawer() {
+      if (!mobileDrawer || !mobileDrawerOverlay) return;
+      mobileDrawerOverlay.classList.remove('hidden');
+      setTimeout(() => {
+        mobileDrawerOverlay.classList.remove('opacity-0');
+        mobileDrawerOverlay.classList.add('opacity-100');
+        mobileDrawer.classList.remove('translate-x-full');
+        mobileDrawer.classList.add('translate-x-0');
+      }, 10);
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeDrawer() {
+      if (!mobileDrawer || !mobileDrawerOverlay) return;
+      mobileDrawerOverlay.classList.remove('opacity-100');
+      mobileDrawerOverlay.classList.add('opacity-0');
+      mobileDrawer.classList.remove('translate-x-0');
+      mobileDrawer.classList.add('translate-x-full');
+      setTimeout(() => {
+        mobileDrawerOverlay.classList.add('hidden');
+      }, 300);
+      document.body.style.overflow = '';
+    }
+
+    if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', openDrawer);
+    if (closeDrawerBtn) closeDrawerBtn.addEventListener('click', closeDrawer);
+    if (mobileDrawerOverlay) mobileDrawerOverlay.addEventListener('click', closeDrawer);
+    mobileNavLinks.forEach(link => link.addEventListener('click', closeDrawer));
+
+    // =========================================================================
+    // COMPARISON TABLE DYNAMIC LINE-BY-LINE TYPING ANIMATION (RED & GREEN LINES)
+    // =========================================================================
+    const comparisonData = [
+      {
+        legacy: "❌ Simple plain-text password; high risk of unauthorized tampering",
+        nadico: "✓ Two-Factor Authentication (2FA), 256-bit SSL, and full audit logs"
+      },
+      {
+        legacy: "❌ Generic receipts; doesn't match Meezan / HBL / 1Link formats",
+        nadico: "✓ Authentic 3-part bank slips with barcodes & automatic fine rules"
+      },
+      {
+        legacy: "❌ Paper diaries often lost; costly manual phone calls to parents",
+        nadico: "✓ Native Parent Mobile App, whiteboard photo diary, & WhatsApp SMS"
+      },
+      {
+        legacy: "❌ Standalone USB download required; no parent notifications",
+        nadico: "✓ Real-time ZKTeco cloud sync with automated instant absent SMS"
+      },
+      {
+        legacy: "❌ Separate registers; accountant takes days to tally monthly cash",
+        nadico: "✓ Integrated double-entry general ledger with automatic real-time P&L"
+      },
+      {
+        legacy: "❌ Stored on a single computer; virus/ransomware destroys all records",
+        nadico: "✓ Automated daily multi-region cloud snapshots with zero data loss"
+      },
+      {
+        legacy: "❌ Locked to the school office PC; principal cannot monitor from home",
+        nadico: "✓ 100% Cloud-accessible from laptop, tablet, or smartphone 24/7"
+      }
+    ];
+
+    let typingStarted = false;
+
+    function runComparisonTyping() {
+      typingStarted = true;
+      comparisonData.forEach((_, i) => {
+        const legEl = document.getElementById(`cellLegacy${i}`);
+        const nadEl = document.getElementById(`cellNadico${i}`);
+        const rowEl = document.getElementById(`compRow${i}`);
+        if (legEl) legEl.innerHTML = '<span class="text-slate-300 italic text-[11px]">...</span>';
+        if (nadEl) nadEl.innerHTML = '<span class="text-slate-300 italic text-[11px]">...</span>';
+        if (rowEl) rowEl.className = 'transition-colors opacity-60';
+      });
+
+      let rowIndex = 0;
+
+      function typeRow(idx) {
+        if (idx >= comparisonData.length) return;
+        const row = comparisonData[idx];
+        const legEl = document.getElementById(`cellLegacy${idx}`);
+        const nadEl = document.getElementById(`cellNadico${idx}`);
+        const rowEl = document.getElementById(`compRow${idx}`);
+        if (rowEl) rowEl.className = 'transition-colors bg-brand-tealSoft/30';
+
+        let legChar = 0;
+        if (legEl) legEl.innerHTML = '';
+
+        const legTimer = setInterval(() => {
+          legChar++;
+          if (legEl) legEl.innerHTML = row.legacy.slice(0, legChar) + '<span class="inline-block w-1.5 h-3.5 bg-rose-500 ml-1 animate-pulse align-middle"></span>';
+          if (legChar >= row.legacy.length) {
+            clearInterval(legTimer);
+            if (legEl) legEl.innerHTML = row.legacy;
+
+            // Start typing Nadico green line
+            let nadChar = 0;
+            if (nadEl) nadEl.innerHTML = '';
+            const nadTimer = setInterval(() => {
+              nadChar++;
+              if (nadEl) nadEl.innerHTML = row.nadico.slice(0, nadChar) + '<span class="inline-block w-1.5 h-3.5 bg-emerald-600 ml-1 animate-pulse align-middle"></span>';
+              if (nadChar >= row.nadico.length) {
+                clearInterval(nadTimer);
+                if (nadEl) nadEl.innerHTML = row.nadico;
+                if (rowEl) rowEl.className = 'transition-colors hover:bg-slate-50/60';
+                setTimeout(() => typeRow(idx + 1), 100);
+              }
+            }, 14);
+          }
+        }, 14);
+      }
+
+      typeRow(0);
+    }
+
+    const compCard = document.getElementById('comparisonCard');
+    if (compCard && 'IntersectionObserver' in window) {
+      const compObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !typingStarted) {
+            runComparisonTyping();
+          }
+        });
+      }, { threshold: 0.15 });
+      compObserver.observe(compCard);
+    }
+
+    const replayBtn = document.getElementById('replayComparisonBtn');
+    if (replayBtn) replayBtn.addEventListener('click', runComparisonTyping);
+
+    // =========================================================================
+    // SCROLL-TRIGGERED HEADINGS TYPING ENGINE
+    // =========================================================================
+    const erpScrollHeadings = document.querySelectorAll('.scroll-type-heading');
+    if (erpScrollHeadings.length && 'IntersectionObserver' in window) {
+      const headingObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          const el = entry.target;
+          const textSpan = el.querySelector('.type-text');
+          const cursorSpan = el.querySelector('.type-cursor');
+          if (!textSpan) return;
+
+          const prefix = el.dataset.prefix || '';
+          const highlight = el.dataset.highlight || '';
+          const highlightClass = el.dataset.highlightClass || 'teal-gradient-text';
+          const suffix = el.dataset.suffix || '';
+          const fullText = prefix + highlight + suffix;
+          const pLen = prefix.length;
+          const hlLen = highlight.length;
+
+          if (entry.isIntersecting) {
+            if (el._typingInterval) clearInterval(el._typingInterval);
+            if (cursorSpan) cursorSpan.classList.remove('hidden');
+            textSpan.innerHTML = '';
+
+            let count = 0;
+            el._typingInterval = setInterval(() => {
+              count += 2;
+              if (count >= fullText.length) {
+                count = fullText.length;
+                clearInterval(el._typingInterval);
+                el._typingInterval = null;
+                textSpan.innerHTML = prefix + (highlight ? `<span class="${highlightClass}">${highlight}</span>` : '') + suffix;
+                setTimeout(() => {
+                  if (cursorSpan && !el._typingInterval) cursorSpan.classList.add('hidden');
+                }, 1000);
+              } else {
+                const rPrefix = fullText.slice(0, Math.min(count, pLen));
+                const rHl = count > pLen && highlight
+                  ? `<span class="${highlightClass}">${fullText.slice(pLen, Math.min(count, pLen + hlLen))}</span>`
+                  : '';
+                const rSuffix = count > pLen + hlLen
+                  ? fullText.slice(pLen + hlLen, count)
+                  : '';
+                textSpan.innerHTML = rPrefix + rHl + rSuffix;
+              }
+            }, 24);
+          } else {
+            if (el._typingInterval) {
+              clearInterval(el._typingInterval);
+              el._typingInterval = null;
+            }
+            if (cursorSpan) cursorSpan.classList.add('hidden');
+            textSpan.innerHTML = prefix + (highlight ? `<span class="${highlightClass}">${highlight}</span>` : '') + suffix;
+          }
+        });
+      }, {
+        threshold: 0.05,
+        rootMargin: '120px 0px -10% 0px'
+      });
+
+      erpScrollHeadings.forEach(h => headingObserver.observe(h));
+    }
+
+    // =========================================================================
+    // LIGHTWEIGHT ZERO-JANK SCROLL REVEAL (74% LOWER HALF TRIGGER LINE)
+    // Runs off-thread on GPU compositor via native browser IntersectionObserver
+    // =========================================================================
+    const revealElements = document.querySelectorAll('.reveal-on-scroll');
+    if (revealElements.length && 'IntersectionObserver' in window) {
+      const scrollObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+          } else {
+            entry.target.classList.remove('revealed');
+          }
+        });
+      }, {
+        threshold: 0.04,
+        rootMargin: '150px 0px -10% 0px'
+      });
+
+      revealElements.forEach(el => scrollObserver.observe(el));
+    }
+  </script>
+</body>
+</html>
