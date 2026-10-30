@@ -42,9 +42,9 @@ export default function Footer() {
             <Layers className="w-3.5 h-3.5 text-brand-limeLight" /> ERP Systems
           </h4>
           <ul className="space-y-2">
-            <li><a href="/school-erp" className="text-white/90 hover:text-white hover:underline transition-colors flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-brand-limeLight"></span> School Management ERP</a></li>
-            <li><a href="#hospital-hms" className="text-white/90 hover:text-white hover:underline transition-colors flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-brand-limeLight"></span> Hospital Management (HMS)</a></li>
-            <li><a href="#inventory-pos" className="text-white/90 hover:text-white hover:underline transition-colors flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-brand-limeLight"></span> Inventory Management & POS</a></li>
+            <li><Link to="/school-erp" className="text-white/90 hover:text-white hover:underline transition-colors flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-brand-limeLight"></span> School Management ERP</Link></li>
+            <li><Link to="/hospital-hms" className="text-white/90 hover:text-white hover:underline transition-colors flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-brand-limeLight"></span> Hospital Management (HMS)</Link></li>
+            <li><Link to="/inventory-pos" className="text-white/90 hover:text-white hover:underline transition-colors flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-brand-limeLight"></span> Inventory Management & POS</Link></li>
             <li><a href="https://thereadlyerp.vercel.app/rehan" target="_blank" className="text-white font-bold hover:underline flex items-center gap-1.5 pt-1.5 bg-white/15 hover:bg-white/25 border border-white/20 px-2.5 py-1 rounded-lg w-fit transition-all shadow-xs"><span className="text-brand-limeLight">●</span> The Readly Live Portal <ExternalLink className="w-3 h-3 text-white" /></a></li>
           </ul>
         </div>
@@ -55,10 +55,10 @@ export default function Footer() {
             <Code className="w-3.5 h-3.5 text-brand-limeLight" /> Tech Services
           </h4>
           <ul className="space-y-2">
-            <li><a href="#web-development" className="text-white/90 hover:text-white hover:underline transition-colors flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-brand-limeLight"></span> Website Design & UI/UX</a></li>
-            <li><a href="#web-development" className="text-white/90 hover:text-white hover:underline transition-colors flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-brand-limeLight"></span> Custom Web Applications</a></li>
-            <li><a href="#digital-marketing" className="text-white/90 hover:text-white hover:underline transition-colors flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-brand-limeLight"></span> Digital Marketing & SEO</a></li>
-            <li><a href="#about" className="text-white/90 hover:text-white hover:underline transition-colors flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-brand-limeLight"></span> Cloud Hosting & Security</a></li>
+            <li><Link to="/web-development" className="text-white/90 hover:text-white hover:underline transition-colors flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-brand-limeLight"></span> Website Design & UI/UX</Link></li>
+            <li><Link to="/web-development" className="text-white/90 hover:text-white hover:underline transition-colors flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-brand-limeLight"></span> Custom Web Applications</Link></li>
+            <li><Link to="/digital-marketing" className="text-white/90 hover:text-white hover:underline transition-colors flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-brand-limeLight"></span> Digital Marketing & SEO</Link></li>
+            <li><Link to="/about" className="text-white/90 hover:text-white hover:underline transition-colors flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-brand-limeLight"></span> About NADICO TECH</Link></li>
           </ul>
         </div>
 

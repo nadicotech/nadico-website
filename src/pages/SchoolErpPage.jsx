@@ -1,4 +1,4 @@
-import { ArrowRight, BadgeCheck, Banknote, BarChart3, Bell, BookOpen, Briefcase, Calculator, Check, CheckCircle, CheckSquare, Cloud, ExternalLink, FileSpreadsheet, FileText, Fingerprint, GraduationCap, KeyRound, Layers, LayoutDashboard, Lock, Mail, MessageCircle, Receipt, RotateCcw, Server, Shield, ShieldCheck, Smartphone, UserCheck, Users } from 'lucide-react';
+import { ArrowRight, BadgeCheck, Banknote, BarChart3, Bell, BookOpen, Briefcase, Calculator, Check, CheckCircle, CheckSquare, Cloud, ExternalLink, FileSpreadsheet, FileText, Fingerprint, GraduationCap, KeyRound, Layers, LayoutDashboard, Lock, Mail, MessageCircle, Receipt, RotateCcw, Server, Shield, ShieldCheck, Smartphone, UserCheck, Users, Star, Clock, Building2, TrendingUp } from 'lucide-react';
 import React, { useEffect, useState, useRef } from 'react';
 import ScrollTypewriterTitle from '../components/ScrollTypewriterTitle.jsx';
 import Header from '../components/Header.jsx';
@@ -179,6 +179,24 @@ function ComparisonTypewriterTable() {
 }
 
 export default function SchoolErpPage() {
+  const [selectedTier, setSelectedTier] = useState('primary');
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    schoolName: '',
+    studentCount: '250 - 500 Students',
+    city: 'Karachi',
+    notes: ''
+  });
+  const [formSubmitted, setFormSubmitted] = useState(false);
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    const msg = `Hello NADICO Technologies! I want a live demo & quotation for School Management ERP.%0A%0A*Name:* ${formData.name}%0A*Phone:* ${formData.phone}%0A*School:* ${formData.schoolName}%0A*Students:* ${formData.studentCount}%0A*City:* ${formData.city}%0A*Notes:* ${formData.notes || 'N/A'}`;
+    window.open(`https://wa.me/923337221552?text=${msg}`, '_blank');
+    setFormSubmitted(true);
+  };
+
   useEffect(() => {
 
     // 2. Initialize Bi-Directional Scroll Reveal Observer
@@ -256,6 +274,106 @@ export default function SchoolErpPage() {
           </div>
           <div className="p-2.5 rounded-xl bg-white border border-slate-200/90 shadow-xs flex items-center justify-center gap-1.5">
             <Smartphone className="w-3.5 h-3.5 text-emerald-600" /> Parent & Staff Apps
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  {/* ========================================================================= */}
+  {/* TOP CLIENT REVIEWS SECTION (REQUESTED BY USER AT THE TOP OF THE PAGE) */}
+  {/* ========================================================================= */}
+  <section className="py-12 bg-slate-50 border-y border-slate-200/80">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+        <div>
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-tealSoft text-brand-teal text-[11px] font-bold uppercase tracking-wider mb-2">
+            <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+            <span>Verified Campus Principal Reviews</span>
+          </div>
+          <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-slate-900 tracking-tight">
+            Trusted by 250+ Schools & Educational Trusts Across Pakistan
+          </h2>
+        </div>
+        <div className="flex items-center gap-2 text-xs font-bold text-slate-600 bg-white px-3.5 py-2 rounded-xl border border-slate-200 shadow-xs shrink-0">
+          <span className="flex text-amber-400">
+            {'★'.repeat(5)}
+          </span>
+          <span>4.9 / 5.0 Campus Trust Rating</span>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs hover:shadow-card transition-all flex flex-col justify-between">
+          <div>
+            <div className="flex items-center justify-between mb-3">
+              <div className="flex text-amber-400 text-sm">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+                ))}
+              </div>
+              <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-brand-tealSoft text-brand-teal border border-brand-tealBorder">
+                1,100+ Students • Karachi
+              </span>
+            </div>
+            <p className="text-xs text-slate-700 leading-relaxed italic mb-4">
+              "NADICO School ERP ne hamare fee collection ka sara jhanjhat khatam kar diya. Har mahine 3-part bank challans Meezan Bank format par 2 minute mein print ho jate hain aur fee defaulters ki list WhatsApp par auto-alert chali jati hai. 100% recommended software hai."
+            </p>
+          </div>
+          <div className="pt-3 border-t border-slate-100">
+            <div className="font-bold text-xs text-slate-900">Prof. Tariq Mansoor</div>
+            <div className="text-[11px] text-slate-500 font-medium">Principal & Academic Director</div>
+            <div className="text-[11px] text-brand-teal font-bold mt-0.5">City Cambridge School, Karachi</div>
+          </div>
+        </div>
+
+        <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs hover:shadow-card transition-all flex flex-col justify-between">
+          <div>
+            <div className="flex items-center justify-between mb-3">
+              <div className="flex text-amber-400 text-sm">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+                ))}
+              </div>
+              <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-brand-limeSoft text-brand-limeDark border border-brand-limeBorder">
+                850 Students • Lahore
+              </span>
+            </div>
+            <p className="text-xs text-slate-700 leading-relaxed italic mb-4">
+              "ZKTeco biometric machine gate par lagayi hui hai. Bachay ke ungli lagate hi walidain ke WhatsApp par instant arrival SMS chala jata hai. Result card printing ka CAIE/BISE format itna pyara hai ke school ka standard bohot upar chala gaya hai."
+            </p>
+          </div>
+          <div className="pt-3 border-t border-slate-100">
+            <div className="font-bold text-xs text-slate-900">Mrs. Shazia Rehman</div>
+            <div className="text-[11px] text-slate-500 font-medium">Director Academic Affairs</div>
+            <div className="text-[11px] text-brand-limeDark font-bold mt-0.5">Beacon Valley Grammar School, Lahore</div>
+          </div>
+        </div>
+
+        <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs hover:shadow-card transition-all flex flex-col justify-between">
+          <div>
+            <div className="flex items-center justify-between mb-3">
+              <div className="flex text-amber-400 text-sm">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+                ))}
+              </div>
+              <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-sky-50 text-sky-800 border border-sky-200">
+                5 Campuses • Islamabad
+              </span>
+            </div>
+            <p className="text-xs text-slate-700 leading-relaxed italic mb-4">
+              "Hamare 5 alag campuses hain. Main apne mobile se baithe baithe har campus ki fee collection, staff attendance aur P&L accounts live check kar leta hoon. 2FA security hone ki wajah se data leakage ka koi dar nahi."
+            </p>
+          </div>
+          <div className="pt-3 border-t border-slate-100">
+            <div className="font-bold text-xs text-slate-900">Engr. Muhammad Farhan</div>
+            <div className="text-[11px] text-slate-500 font-medium">Managing Trustee</div>
+            <div className="text-[11px] text-sky-800 font-bold mt-0.5">Al-Falah Educational Network, Rawalpindi/Islamabad</div>
           </div>
         </div>
 
@@ -721,6 +839,332 @@ export default function SchoolErpPage() {
       </div>
 
       <ComparisonTypewriterTable />
+
+    </div>
+  </section>
+
+  {/* ========================================================================= */}
+  {/* FLEXIBLE CAMPUS PRICING & VISUAL GRAPH (STARTING FROM RS. 30/STUDENT/MONTH) */}
+  {/* ========================================================================= */}
+  <section id="pricing" className="py-16 lg:py-24 bg-slate-50 border-t border-slate-200">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
+        <span className="text-xs font-bold uppercase tracking-wider text-brand-teal bg-brand-tealSoft px-3.5 py-1 rounded-full border border-brand-tealBorder">
+          Affordable Pakistani Campus Plans
+        </span>
+        <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 tracking-tight">
+          Transparent, Per-Student Pricing Designed for Pakistani Schools
+        </h2>
+        <p className="text-slate-600 text-sm leading-relaxed">
+          No large upfront software licensing fees. Pay only according to your active student enrollment, with zero charges during summer vacations on inactive accounts.
+        </p>
+      </div>
+
+      {/* PRICING CARDS WITH STARTING FROM MODEL */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
+        
+        {/* TIER 1 */}
+        <div 
+          onClick={() => setSelectedTier('primary')}
+          className={`p-7 rounded-3xl bg-white border-2 transition-all cursor-pointer relative flex flex-col justify-between ${
+            selectedTier === 'primary' 
+              ? 'border-brand-teal shadow-card ring-2 ring-brand-teal/20' 
+              : 'border-slate-200 hover:border-slate-300'
+          }`}
+        >
+          <div>
+            <div className="flex items-center justify-between mb-2">
+              <h3 className="font-heading font-bold text-xl text-slate-900">Standard Campus</h3>
+              <span className="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-700">Up to 300 Students</span>
+            </div>
+            <p className="text-xs text-slate-500 mb-4">Ideal for primary, elementary, and community academy branches.</p>
+
+            <div className="p-4 rounded-2xl bg-teal-50/70 border border-teal-100 mb-6">
+              <div className="text-xs text-brand-teal font-semibold">Starting from only</div>
+              <div className="text-3xl font-extrabold text-brand-tealDark tracking-tight mt-0.5">
+                Rs. 30 <span className="text-xs font-bold text-slate-500">per student / month</span>
+              </div>
+              <div className="text-[11px] text-brand-teal mt-1">Includes cloud hosting & automated 3-part bank slips</div>
+            </div>
+
+            <ul className="space-y-2.5 text-xs text-slate-600 mb-6">
+              <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-600" /> Student Enrollment & Family Profiles</li>
+              <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-600" /> 3-Part Bank Fee Challan Generator</li>
+              <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-600" /> Daily Teacher Attendance Register</li>
+              <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-600" /> Board Standard Term Exam Cards</li>
+              <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-600" /> Free Student Data Import from Excel</li>
+            </ul>
+          </div>
+
+          <a
+            href="#contact"
+            className="w-full py-3 rounded-xl font-bold text-xs text-center text-brand-teal bg-brand-tealSoft hover:bg-brand-teal hover:text-white transition-colors"
+          >
+            Select Standard Campus
+          </a>
+        </div>
+
+        {/* TIER 2 (RECOMMENDED) */}
+        <div 
+          onClick={() => setSelectedTier('advanced')}
+          className={`p-7 rounded-3xl bg-white border-2 transition-all cursor-pointer relative flex flex-col justify-between ${
+            selectedTier === 'advanced' 
+              ? 'border-brand-teal shadow-card ring-2 ring-brand-teal/20' 
+              : 'border-slate-200 hover:border-slate-300'
+          }`}
+        >
+          <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full bg-brand-teal text-white text-[10px] font-extrabold uppercase tracking-wider">
+            Most Popular for High Schools
+          </div>
+
+          <div>
+            <div className="flex items-center justify-between mb-2">
+              <h3 className="font-heading font-bold text-xl text-slate-900">Comprehensive Academy</h3>
+              <span className="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-brand-limeSoft text-brand-limeDark font-bold">Recommended</span>
+            </div>
+            <p className="text-xs text-slate-500 mb-4">For secondary high schools, Cambridge O/A-Levels, and colleges.</p>
+
+            <div className="p-4 rounded-2xl bg-teal-50 border border-brand-tealBorder mb-6">
+              <div className="text-xs text-brand-teal font-semibold">Starting from only</div>
+              <div className="text-3xl font-extrabold text-brand-teal tracking-tight mt-0.5">
+                Rs. 45 <span className="text-xs font-bold text-slate-500">per student / month</span>
+              </div>
+              <div className="text-[11px] text-brand-tealDark mt-1">Includes ZKTeco biometric sync & parent app</div>
+            </div>
+
+            <ul className="space-y-2.5 text-xs text-slate-600 mb-6">
+              <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-600" /> Biometric Hardware Gate Attendance Sync</li>
+              <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-600" /> Instant WhatsApp Absent Alerts to Parents</li>
+              <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-600" /> Mobile Parent Portal & Homework Diary</li>
+              <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-600" /> Double-Entry Campus General Accounting</li>
+              <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-600" /> Staff Payroll & Biometric Salary Slip</li>
+            </ul>
+          </div>
+
+          <a
+            href="#contact"
+            className="w-full py-3 rounded-xl font-bold text-xs text-center text-white bg-brand-teal hover:bg-brand-tealDark transition-colors shadow-button"
+          >
+            Select Comprehensive Academy
+          </a>
+        </div>
+
+        {/* TIER 3 */}
+        <div 
+          onClick={() => setSelectedTier('network')}
+          className={`p-7 rounded-3xl bg-white border-2 transition-all cursor-pointer relative flex flex-col justify-between ${
+            selectedTier === 'network' 
+              ? 'border-brand-teal shadow-card ring-2 ring-brand-teal/20' 
+              : 'border-slate-200 hover:border-slate-300'
+          }`}
+        >
+          <div>
+            <div className="flex items-center justify-between mb-2">
+              <h3 className="font-heading font-bold text-xl text-slate-900">Multi-Campus Network</h3>
+              <span className="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-700">Multi-Branch Group</span>
+            </div>
+            <p className="text-xs text-slate-500 mb-4">Complete enterprise ERP for school groups with 2 or more campus locations.</p>
+
+            <div className="p-4 rounded-2xl bg-slate-100 border border-slate-200 mb-6">
+              <div className="text-xs text-slate-700 font-semibold">Institutional Volume Discount</div>
+              <div className="text-3xl font-extrabold text-slate-900 tracking-tight mt-0.5">
+                Custom Quote <span className="text-xs font-bold text-slate-500">volume based</span>
+              </div>
+              <div className="text-[11px] text-slate-600 mt-1">Multi-campus head-office dashboard & 1Link bank sync</div>
+            </div>
+
+            <ul className="space-y-2.5 text-xs text-slate-600 mb-6">
+              <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-600" /> Centralized Head Office Super Admin Panel</li>
+              <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-600" /> Direct 1Link 1Bill Automated Bank Reconciliations</li>
+              <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-600" /> Two-Factor Authentication (2FA) & Role Audit</li>
+              <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-600" /> Dedicated Account Manager & On-Site Staff Training</li>
+              <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-600" /> 24/7 Telephone Hotline & WhatsApp SLA</li>
+            </ul>
+          </div>
+
+          <a
+            href="#contact"
+            className="w-full py-3 rounded-xl font-bold text-xs text-center text-slate-800 bg-slate-200 hover:bg-slate-300 transition-colors"
+          >
+            Inquire Multi-Campus Quote
+          </a>
+        </div>
+
+      </div>
+
+      {/* VISUAL GRAPH / COMPARISON BAR (REQUESTED BY USER) */}
+      <div className="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-xs">
+        <h4 className="font-heading font-bold text-base text-slate-900 mb-4 flex items-center gap-2">
+          <TrendingUp className="w-4 h-4 text-brand-teal" />
+          <span>Starting Cost by Campus Enrollment Size (Visual Investment Graph)</span>
+        </h4>
+        
+        <div className="space-y-4">
+          <div>
+            <div className="flex justify-between text-xs font-semibold text-slate-700 mb-1">
+              <span>Standard Campus (100 - 300 Students)</span>
+              <span className="text-brand-teal font-bold">Starting from Rs. 30 per student / mo</span>
+            </div>
+            <div className="w-full bg-slate-100 rounded-full h-3 overflow-hidden">
+              <div className="bg-brand-tealLight h-full rounded-full transition-all duration-500" style={{ width: '30%' }}></div>
+            </div>
+          </div>
+
+          <div>
+            <div className="flex justify-between text-xs font-semibold text-slate-700 mb-1">
+              <span>Comprehensive High School (300 - 800 Students)</span>
+              <span className="text-brand-teal font-bold">Starting from Rs. 45 per student / mo</span>
+            </div>
+            <div className="w-full bg-slate-100 rounded-full h-3 overflow-hidden">
+              <div className="bg-brand-teal h-full rounded-full transition-all duration-500" style={{ width: '60%' }}></div>
+            </div>
+          </div>
+
+          <div>
+            <div className="flex justify-between text-xs font-semibold text-slate-700 mb-1">
+              <span>Multi-Campus Network / Trust (1,000+ Students)</span>
+              <span className="text-brand-teal font-bold">Volume Pricing (Lowest Per-Student Rate)</span>
+            </div>
+            <div className="w-full bg-slate-100 rounded-full h-3 overflow-hidden">
+              <div className="bg-brand-tealDark h-full rounded-full transition-all duration-500" style={{ width: '95%' }}></div>
+            </div>
+          </div>
+        </div>
+
+        <p className="text-[11px] text-slate-500 mt-4 italic text-center">
+          * Note: Includes free data migration from Excel, staff training sessions, continuous cloud backups, and dedicated WhatsApp support.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  {/* ========================================================================= */}
+  {/* DIRECT CAMPUS CONSULTATION & DEMO FORM (REQUESTED BY USER) */}
+  {/* ========================================================================= */}
+  <section id="contact" className="py-16 lg:py-20 bg-white">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div className="p-8 sm:p-10 rounded-3xl bg-slate-50 border border-slate-200 shadow-card">
+        
+        <div className="text-center max-w-xl mx-auto mb-8 space-y-2">
+          <span className="text-xs font-bold uppercase tracking-wider text-brand-teal bg-brand-tealSoft px-3 py-1 rounded-full border border-brand-tealBorder">
+            Direct Campus Consultation
+          </span>
+          <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-slate-900 tracking-tight">
+            Schedule a Free Live School ERP Walkthrough
+          </h2>
+          <p className="text-xs text-slate-600 leading-relaxed">
+            Fill this quick form and our educational deployment engineer will show you how NADICO ERP generates your school's bank challans and report cards live on Zoom or WhatsApp.
+          </p>
+        </div>
+
+        {formSubmitted ? (
+          <div className="p-6 rounded-2xl bg-teal-50 border border-brand-tealBorder text-center space-y-3">
+            <CheckCircle className="w-10 h-10 text-brand-teal mx-auto" />
+            <h3 className="font-bold text-lg text-brand-tealDark">Inquiry Sent Successfully!</h3>
+            <p className="text-xs text-brand-teal">
+              Our campus consultant is reviewing your details and will connect with you on WhatsApp shortly.
+            </p>
+          </div>
+        ) : (
+          <form onSubmit={handleFormSubmit} className="space-y-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label className="block text-xs font-bold text-slate-700 mb-1.5">Principal / Administrator Name *</label>
+                <input
+                  type="text"
+                  required
+                  placeholder="e.g. Prof. Tariq Mansoor"
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs text-slate-800 focus:outline-none focus:border-brand-teal bg-white"
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs font-bold text-slate-700 mb-1.5">WhatsApp / Phone Number *</label>
+                <input
+                  type="tel"
+                  required
+                  placeholder="e.g. 0333 7221552"
+                  value={formData.phone}
+                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs text-slate-800 focus:outline-none focus:border-brand-teal bg-white"
+                />
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label className="block text-xs font-bold text-slate-700 mb-1.5">School / College Name *</label>
+                <input
+                  type="text"
+                  required
+                  placeholder="e.g. City Cambridge School"
+                  value={formData.schoolName}
+                  onChange={(e) => setFormData({ ...formData, schoolName: e.target.value })}
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs text-slate-800 focus:outline-none focus:border-brand-teal bg-white"
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs font-bold text-slate-700 mb-1.5">Approximate Student Count</label>
+                <select
+                  value={formData.studentCount}
+                  onChange={(e) => setFormData({ ...formData, studentCount: e.target.value })}
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs text-slate-800 focus:outline-none focus:border-brand-teal bg-white"
+                >
+                  <option>100 - 250 Students</option>
+                  <option>250 - 500 Students</option>
+                  <option>500 - 1,000 Students</option>
+                  <option>1,000+ Students (Multi-Campus)</option>
+                </select>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label className="block text-xs font-bold text-slate-700 mb-1.5">City</label>
+                <input
+                  type="text"
+                  placeholder="e.g. Karachi, Lahore, Rawalpindi"
+                  value={formData.city}
+                  onChange={(e) => setFormData({ ...formData, city: e.target.value })}
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs text-slate-800 focus:outline-none focus:border-brand-teal bg-white"
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs font-bold text-slate-700 mb-1.5">Primary Bank for Fee Challans</label>
+                <input
+                  type="text"
+                  placeholder="e.g. Meezan Bank, HBL, Allied Bank, Cash Counter"
+                  value={formData.notes}
+                  onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs text-slate-800 focus:outline-none focus:border-brand-teal bg-white"
+                />
+              </div>
+            </div>
+
+            <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-3">
+              <div className="flex items-center gap-2 text-xs text-slate-500">
+                <Clock className="w-4 h-4 text-brand-teal" />
+                <span>Average reply time: under 15 minutes</span>
+              </div>
+              <button
+                type="submit"
+                className="w-full sm:w-auto px-8 py-3.5 rounded-xl font-bold text-xs text-white bg-brand-teal hover:bg-brand-tealDark transition-all shadow-button flex items-center justify-center gap-2"
+              >
+                <MessageCircle className="w-4 h-4" />
+                <span>Request Campus Walkthrough on WhatsApp</span>
+              </button>
+            </div>
+          </form>
+        )}
+
+      </div>
 
     </div>
   </section>

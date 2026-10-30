@@ -150,10 +150,10 @@ export default function ErpSolutions() {
           </div>
 
           <div className="pt-8 space-y-3">
-            <a href="#contact" className="w-full py-3.5 rounded-xl bg-sky-700 hover:bg-sky-800 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all shadow-sm">
-              <span>Schedule Healthcare ERP Demo</span>
-              <Calendar className="w-4 h-4" />
-            </a>
+            <Link to="/hospital-hms" className="w-full py-3.5 rounded-xl bg-sky-700 hover:bg-sky-800 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all shadow-sm">
+              <span>Explore Hospital HMS Page & Pricing</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
             <a href="https://wa.me/923337221552?text=Hello%20NADICO%20Technologies,%20I%20am%20interested%20in%20your%20Hospital%20Management%20System." target="_blank" className="w-full py-3 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-800 font-bold text-xs flex items-center justify-center gap-1.5 transition-colors border border-slate-200">
               <span>Inquire via WhatsApp</span>
               <MessageCircle className="w-3.5 h-3.5 text-emerald-600" />
@@ -213,10 +213,10 @@ export default function ErpSolutions() {
           </div>
 
           <div className="pt-8 space-y-3">
-            <a href="#contact" className="w-full py-3.5 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all shadow-sm">
-              <span>Book POS System Demo</span>
-              <Play className="w-4 h-4" />
-            </a>
+            <Link to="/inventory-pos" className="w-full py-3.5 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all shadow-sm">
+              <span>Explore Inventory & POS Page & Pricing</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
             <a href="https://wa.me/923337221552?text=Hello%20NADICO%20Technologies,%20I%20want%20a%20quote%20for%20Inventory%20and%20POS%20software." target="_blank" className="w-full py-3 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-800 font-bold text-xs flex items-center justify-center gap-1.5 transition-colors border border-slate-200">
               <span>Inquire via WhatsApp</span>
               <MessageCircle className="w-3.5 h-3.5 text-emerald-600" />

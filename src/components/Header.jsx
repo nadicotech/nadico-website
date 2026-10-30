@@ -111,7 +111,7 @@ export default function Header() {
                   </Link>
 
                   {/* Hospital HMS Item */}
-                  <a href="/#hospital-hms" className="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors group/item">
+                  <Link to="/hospital-hms" className="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors group/item">
                     <div className="w-10 h-10 rounded-xl bg-sky-50 border border-sky-200 flex items-center justify-center text-sky-700 shrink-0 group-hover/item:bg-sky-700 group-hover/item:text-white transition-colors">
                       <Activity className="w-5 h-5" />
                     </div>
@@ -119,10 +119,10 @@ export default function Header() {
                       <div className="font-bold text-slate-900 text-xs">Hospital Management (HMS)</div>
                       <div className="text-slate-500 text-[11px] leading-tight mt-0.5">OPD/IPD tokens, EMR, pharmacy POS & lab tests</div>
                     </div>
-                  </a>
+                  </Link>
 
                   {/* Inventory & POS Item */}
-                  <a href="/#inventory-pos" className="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors group/item">
+                  <Link to="/inventory-pos" className="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors group/item">
                     <div className="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-700 shrink-0 group-hover/item:bg-emerald-700 group-hover/item:text-white transition-colors">
                       <ShoppingCart className="w-5 h-5" />
                     </div>
@@ -130,7 +130,7 @@ export default function Header() {
                       <div className="font-bold text-slate-900 text-xs">Inventory & POS System</div>
                       <div className="text-slate-500 text-[11px] leading-tight mt-0.5">Barcode retail checkout, stock ledger & purchase orders</div>
                     </div>
-                  </a>
+                  </Link>
 
                   {/* Live Link Footer */}
                   <div className="pt-2 mt-1 border-t border-slate-100 flex items-center justify-between px-2 text-[11px]">
@@ -144,10 +144,10 @@ export default function Header() {
               </div>
 
               {/* SERVICES LINKS */}
-              <a href="/#web-development" className="hover:text-brand-teal transition-colors">Web Development</a>
-              <a href="/#digital-marketing" className="hover:text-brand-teal transition-colors">Digital Marketing</a>
-              <a href="/#about" className="hover:text-brand-teal transition-colors">About Us</a>
-              <a href="/#contact" className="hover:text-brand-teal transition-colors">Contact</a>
+              <Link to="/web-development" className="hover:text-brand-teal transition-colors">Web Development</Link>
+              <Link to="/digital-marketing" className="hover:text-brand-limeDark transition-colors">Digital Marketing</Link>
+              <Link to="/about" className="hover:text-brand-teal transition-colors">About Us</Link>
+              <Link to="/contact" className="hover:text-brand-teal transition-colors">Contact</Link>
             </>
           )}
         </nav>
@@ -365,8 +365,8 @@ export default function Header() {
                 </span>
               </Link>
 
-              <a
-                href="/#hospital-hms"
+              <Link
+                to="/hospital-hms"
                 onClick={() => setDrawerOpen(false)}
                 className="flex items-center justify-between p-3 rounded-2xl bg-slate-50 hover:bg-sky-50 border border-slate-200/80 transition-colors group"
               >
@@ -382,10 +382,10 @@ export default function Header() {
                 <span className="px-2 py-0.5 rounded-full text-[9px] font-extrabold bg-sky-100 text-sky-800">
                   HEALTH
                 </span>
-              </a>
+              </Link>
 
-              <a
-                href="/#inventory-pos"
+              <Link
+                to="/inventory-pos"
                 onClick={() => setDrawerOpen(false)}
                 className="flex items-center justify-between p-3 rounded-2xl bg-slate-50 hover:bg-emerald-50 border border-slate-200/80 transition-colors group"
               >
@@ -401,7 +401,7 @@ export default function Header() {
                 <span className="px-2 py-0.5 rounded-full text-[9px] font-extrabold bg-emerald-100 text-emerald-800">
                   RETAIL
                 </span>
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -411,8 +411,8 @@ export default function Header() {
               Web & Growth Services
             </div>
             
-            <a
-              href="/#web-development"
+            <Link
+              to="/web-development"
               onClick={() => setDrawerOpen(false)}
               className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-slate-50 text-slate-700 font-semibold text-xs transition-colors"
             >
@@ -420,10 +420,10 @@ export default function Header() {
                 <Layout className="w-4 h-4" />
               </div>
               <span>Custom Website Design & Dev</span>
-            </a>
+            </Link>
 
-            <a
-              href="/#digital-marketing"
+            <Link
+              to="/digital-marketing"
               onClick={() => setDrawerOpen(false)}
               className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-slate-50 text-slate-700 font-semibold text-xs transition-colors"
             >
@@ -431,24 +431,24 @@ export default function Header() {
                 <TrendingUp className="w-4 h-4" />
               </div>
               <span>Digital Marketing & SEO</span>
-            </a>
+            </Link>
           </div>
 
           <div className="space-y-1 pt-2 border-t border-slate-100">
-            <a
-              href="/#about"
+            <Link
+              to="/about"
               onClick={() => setDrawerOpen(false)}
               className="block px-3 py-2 text-xs font-semibold text-slate-600 hover:text-brand-teal transition-colors"
             >
               About NADICO TECH
-            </a>
-            <a
-              href="/#contact"
+            </Link>
+            <Link
+              to="/contact"
               onClick={() => setDrawerOpen(false)}
               className="block px-3 py-2 text-xs font-semibold text-slate-600 hover:text-brand-teal transition-colors"
             >
               Contact & Support
-            </a>
+            </Link>
           </div>
         </div>
       )}

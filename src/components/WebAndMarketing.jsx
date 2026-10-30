@@ -1,5 +1,6 @@
 import { ArrowRight, CheckCircle, Code, Layout, TrendingUp } from 'lucide-react';
 import React from 'react';
+import { Link } from 'react-router-dom';
 import ScrollTypewriterTitle from './ScrollTypewriterTitle.jsx';
 
 export default function WebAndMarketing() {
@@ -62,10 +63,10 @@ export default function WebAndMarketing() {
             </div>
           </div>
 
-          <a href="#contact" className="inline-flex items-center gap-2 text-xs font-bold text-brand-teal hover:text-brand-tealDark transition-colors">
-            <span>Discuss Your Web Project</span>
+          <Link to="/web-development" className="inline-flex items-center gap-2 text-xs font-bold text-brand-teal hover:text-brand-tealDark transition-colors">
+            <span>Explore Web Packages & Pricing</span>
             <ArrowRight className="w-4 h-4" />
-          </a>
+          </Link>
         </div>
 
         {/* SERVICE 2: DIGITAL MARKETING & BRAND ACCELERATION */}
@@ -100,10 +101,10 @@ export default function WebAndMarketing() {
             </div>
           </div>
 
-          <a href="#contact" className="inline-flex items-center gap-2 text-xs font-bold text-brand-limeDark hover:text-brand-charcoal transition-colors">
-            <span>Boost Your Digital Presence</span>
+          <Link to="/digital-marketing" className="inline-flex items-center gap-2 text-xs font-bold text-brand-limeDark hover:text-brand-charcoal transition-colors">
+            <span>Explore Marketing Retainers & Pricing</span>
             <ArrowRight className="w-4 h-4" />
-          </a>
+          </Link>
         </div>
 
       </div>

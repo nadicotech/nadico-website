@@ -2,9 +2,19 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const distIndex = path.resolve('dist/index.html');
-const distSchool = path.resolve('dist/school-erp.html');
+const routes = [
+  'school-erp.html',
+  'hospital-hms.html',
+  'inventory-pos.html',
+  'web-development.html',
+  'digital-marketing.html',
+  'about.html',
+  'contact.html'
+];
 
 if (fs.existsSync(distIndex)) {
-  fs.copyFileSync(distIndex, distSchool);
-  console.log('Postbuild: Successfully copied dist/index.html to dist/school-erp.html');
+  for (const route of routes) {
+    fs.copyFileSync(distIndex, path.resolve('dist', route));
+  }
+  console.log('Postbuild: Successfully copied dist/index.html to all route static HTML files.');
 }
