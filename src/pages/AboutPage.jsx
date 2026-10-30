@@ -33,7 +33,7 @@ export default function AboutPage() {
       role: "Director of Education",
       org: "Cambridge Grammar Network (8 Campuses), Karachi",
       rating: 5,
-      text: "NADICO Technologies ke sath kaam karte hue humein 3 saal ho chuke hain. Inki support team raat 11 baje bhi WhatsApp par active hoti hai. Pakistan ke local schools ke challenges (load shedding, bank challan formats) ko jitna ye samajhte hain, koi international software company nahi samajh sakti.",
+      text: "We have partnered with NADICO Technologies for over 3 years. Their support engineers are readily accessible on WhatsApp even late in the evening. No foreign software provider understands Pakistani educational workflows—from bank challan formats to load-shedding resilience—better than NADICO.",
       metric: "3+ Years Client • 8 Campuses Sync"
     },
     {
@@ -41,7 +41,7 @@ export default function AboutPage() {
       role: "Chief Executive",
       org: "Al-Shifa Healthcare Center, Hyderabad",
       rating: 5,
-      text: "Software companies aam taur par advance paise le kar ghaib ho jati hain. Lekin NADICO ki engineering team ne hamare hospital mein 3 din ruk kar receptionists aur doctors ko step-by-step train kiya. Aisi dedicted Pakistani tech team dekh kar khushi hoti hai.",
+      text: "Too many software vendors collect payments and vanish. NADICO's engineering team spent 3 full days on-site at our healthcare center training our receptionists, nurses, and consulting doctors step by step. It is refreshing to work with such a dedicated Pakistani technology partner.",
       metric: "On-Site Staff Training • Zero Friction"
     },
     {
@@ -49,7 +49,7 @@ export default function AboutPage() {
       role: "Chief Financial Officer",
       org: "Pak Steel & Hardware Corp, Lahore",
       rating: 5,
-      text: "NADICO ke double-entry cloud accounts aur inventory system ne hamari monthly reconciliations ko 100% automated kar diya hai. Inki data security aur 2FA protection bank-standard ki hai.",
+      text: "NADICO's integrated cloud accounting and multi-warehouse inventory engine automated our monthly financial reconciliations completely. Their data encryption and two-factor authentication meet true bank standards.",
       metric: "Full Financial Audit • 100% Accurate"
     }
   ];

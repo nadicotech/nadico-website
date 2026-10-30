@@ -38,7 +38,7 @@ export default function WebDevelopmentPage() {
       role: "Managing Director",
       company: "Indus Valley Textiles (Exporter), Karachi",
       rating: 5,
-      text: "Hamare international buyers Europe aur Gulf mein hain. NADICO team ne hamari company ke liye custom product catalog aur B2B inquiry portal banaya. Website 1 second se kam waqt mein khulti hai aur mobile par itni smooth hai ke hum ne pehle mahine mein 4 naye export orders close kiye.",
+      text: "Our international wholesale buyers are based across Europe and the GCC. NADICO engineered our custom product catalog and B2B export inquiry portal. The site loads in under a second and is so fluid on mobile devices that we closed 4 major new export contracts within our first month.",
       tag: "B2B Export Portal • Sub-Second Speed"
     },
     {
@@ -46,7 +46,7 @@ export default function WebDevelopmentPage() {
       role: "Chief Executive Officer",
       company: "PakCargo Logistics & Supply Chain, Lahore",
       rating: 5,
-      text: "Hum ne pehle 2 different freelancers se website banwai jo adhi chhor kar bhag gaye. NADICO ne proper contract aur timeline par React & Node.js par hamara tracking portal develop kiya. Professionalism aur direct communication ka koi muqabla nahi.",
+      text: "We previously hired two separate freelance developers who abandoned our logistics project midway. NADICO stepped in, signed a clear milestone agreement, and engineered our customer shipment tracking portal using React and Node.js on schedule. Their technical discipline is outstanding.",
       tag: "Custom Web Application • Real-time Tracking"
     },
     {
@@ -54,7 +54,7 @@ export default function WebDevelopmentPage() {
       role: "Founder & Director",
       company: "HealthPoint Diagnostic Center, Islamabad",
       rating: 5,
-      text: "Online test booking aur patient report download ka portal itna asan banaya gaya hai ke 60 saal ke buzurg bhi baghair kisi mushkil ke apni PDF report download kar lete hain. Technical SEO ki wajah se Google par Islamabad lab searches mein hum top 3 mein aa rahe hain.",
+      text: "The online diagnostic test booking and patient lab report portal is so intuitive that even elderly patients download their PDF results without confusion. Thanks to their technical on-page SEO, our diagnostic center consistently ranks in the top 3 on Google for Islamabad medical searches.",
       tag: "Medical Web Portal • SEO Ranked #1"
     }
   ];
@@ -94,20 +94,20 @@ export default function WebDevelopmentPage() {
 
   const faqs = [
     {
-      q: "Website banne mein kitna waqt lagta hai?",
-      a: "Standard Corporate Business Website 7 se 10 din ke andar live ho jati hai. Agar custom web application ya database portal ho to requirements ke mutabiq 2 se 4 hafte lagte hain. Hum har step par aap ko live preview link share karte hain."
+      q: "How long does it take to design and launch a custom website?",
+      a: "A standard corporate business website typically launches within 7 to 10 working days. For custom web applications, multi-tier databases, or client portals, delivery schedules range between 2 to 4 weeks based on feature scope. We share interactive staging links at each development milestone."
     },
     {
-      q: "Domain name aur hosting ka kya hisab hota hai?",
-      a: "Hum .com, .pk ya .com.pk domain registration aur high-speed cloud hosting ka sara setup khud manage karte hain. Aap ko kisi technical pareshani ka samna nahi karna parta."
+      q: "How are domain registration and cloud hosting managed?",
+      a: "We handle 100% of the domain setup (.com, .pk, or .com.pk), high-speed global CDN edge hosting, and SSL certificates for you, ensuring zero technical friction."
     },
     {
-      q: "Website live hone ke baad agar koi cheez change karni ho to kya hoga?",
-      a: "NADICO ke tamam web packages mein 6 mahine ki free maintenance aur technical support shamil hoti hai. Is ke ilawa hum aap ko ek aasan admin panel dete hain jahan se aap khud phone number, tasweerein aur text tabdeel kar sakte hain."
+      q: "How do we make updates or modifications after the website goes live?",
+      a: "Every NADICO web project includes a lightweight, secure content management dashboard where you can edit text, phone numbers, and images without writing a single line of code. Additionally, all packages include 6 months of complimentary technical support."
     },
     {
-      q: "Kya hamari website Google par top ranking mein aayegi?",
-      a: "Jee haan! Hum technical on-page SEO ke tamam usool (meta tags, fast loading, mobile compatibility, Google Search Console indexing) shuru din se code mein shamil karte hain taake aap ki website search engine par jaldi rank kare."
+      q: "Will our website be optimized for high Google search engine rankings?",
+      a: "Yes. From day one, we bake technical on-page SEO into your codebase—including structured JSON-LD schemas, sub-second core web vitals, mobile responsive design, and Google Search Console indexing."
     }
   ];
 

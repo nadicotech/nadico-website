@@ -38,7 +38,7 @@ export default function DigitalMarketingPage() {
       role: "Managing Director",
       company: "Al-Miraj Builders & Developers, Karachi",
       rating: 5,
-      text: "Hum pehle aam agencies ko lakhon rupaye de chuke thay jo sirf likes aur fake reach dikhate thay. NADICO team ne hamare Bahria Town aur Scheme 33 projects ke liye direct WhatsApp campaign chalayi. Har hafte 40 se zyada genuine buyers ke messages aate hain aur hum ne 3 mahine mein 6 luxury apartments close kiye.",
+      text: "We spent hundreds of thousands of rupees with generic digital agencies that only delivered vanity page likes and bot traffic. NADICO's media buyers launched a laser-targeted direct WhatsApp lead campaign for our residential projects in Bahria Town and Scheme 33. We receive over 40 qualified buyer inquiries weekly and closed 6 luxury apartments within 3 months.",
       metric: "6 High-Ticket Property Sales • 4.8x ROAS"
     },
     {
@@ -46,7 +46,7 @@ export default function DigitalMarketingPage() {
       role: "Founder & Creative Head",
       company: "Zehra Pret & Stitched Lawn, Lahore",
       rating: 5,
-      text: "Hamara online clothing brand Eid season mein sales ke liye struggle kar raha tha. NADICO ne hamari Meta Catalog Ads aur Instagram Reels funnels optimize kiye. Hamara Cost-per-Purchase 1400 rupaye se gir kar 420 rupaye par aa gaya. 100% transparent reporting milti hai.",
+      text: "Our direct-to-consumer apparel brand was struggling with rising acquisition costs ahead of the peak festive season. NADICO restructured our Meta Catalog campaigns and high-retention video reels funnels. Our cost per purchase decreased from Rs. 1,400 to Rs. 420, while monthly sales scaled past 550 verified orders.",
       metric: "68% Drop in Ad CPA • 550+ Monthly Orders"
     },
     {
@@ -54,7 +54,7 @@ export default function DigitalMarketingPage() {
       role: "CEO & Partner",
       company: "SunTech Solar Solutions, Islamabad & Rawalpindi",
       rating: 5,
-      text: "Solar panel installation mein har banda quote maang kar gayab ho jata tha. NADICO ne high-intent Google Search Ads aur customized landing page banaya. Ab sirf wahi log call karte hain jinke paas budget tayar hai. Fuzool time waste bilkul khatam ho gaya.",
+      text: "In commercial solar engineering, casual quote-seekers used to drain our sales team's energy. NADICO engineered high-intent Google Search campaigns paired with a dedicated qualification landing page. Now, only pre-budgeted commercial property and factory owners reach our engineers.",
       metric: "High-Intent Commercial Leads • 3.9x ROI"
     }
   ];
@@ -94,20 +94,20 @@ export default function DigitalMarketingPage() {
 
   const faqs = [
     {
-      q: "Campaign shuru hone ke kitne din baad leads aana shuru hoti hain?",
-      a: "Campaign live hone ke 24 se 48 ghante ke andar real customer leads aur WhatsApp messages aana shuru ho jate hain. Hum pehle 3 din testing karte hain taake aap ka cost-per-lead sab se kam ho."
+      q: "How quickly do qualified buyer leads begin arriving once campaigns go live?",
+      a: "Qualified customer inquiries and direct WhatsApp chats typically begin generating within 24 to 48 hours of campaign launch. We conduct intensive A/B testing during the first 72 hours to rapidly lower your cost per lead (CPL)."
     },
     {
-      q: "Ad spend (advertising budget) kis ko pay karna hota hai?",
-      a: "Meta (Facebook) aur Google ka official ad spend aap ke apne credit/debit card se direct kat'ta hai. Is se aap ko 100% shafafiyat rehti hai ke aap ka ek ek rupiya kahan kharch ho raha hai. Hum sirf monthly management fee lete hain."
+      q: "How is ad spend paid to advertising platforms like Meta and Google?",
+      a: "Official ad spend is charged directly to your own company credit or debit card by Meta and Google. This gives you 100% financial transparency over every rupee spent. We charge a flat, transparent monthly management retainer."
     },
     {
-      q: "Kya aap ad ke liye graphics aur Urdu/English text khud banate hain?",
-      a: "Jee bilkul! Hamari in-house creative team Pakistani market ke hisab se attractive ad images, carousel banners, aur psychological Urdu copywriting khud prepare karti hai."
+      q: "Do you design creative graphics, video ads, and persuasive copywriting in-house?",
+      a: "Yes. Our creative team produces high-converting ad visuals, carousel graphics, video reels, and localized bilingual copy engineered specifically for Pakistani buyer psychology."
     },
     {
-      q: "Fake clicks ya fake leads se bachne ka kya tareeqa hai?",
-      a: "Hum broad audience ke bajaye specific Pakistani geographic radius, demographic targeting aur WhatsApp two-step verification lead forms lagate hain taake sirf genuine khareedar hi rabta karein."
+      q: "How do you protect campaigns from fake bot clicks and low-intent inquiries?",
+      a: "Instead of broad untargeted audiences, we implement precise geographic and demographic exclusions, device filtering, and two-step verification forms to ensure only genuine, decision-making buyers contact your sales desk."
     }
   ];
 

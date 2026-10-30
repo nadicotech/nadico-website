@@ -321,7 +321,7 @@ export default function SchoolErpPage() {
               </span>
             </div>
             <p className="text-xs text-slate-700 leading-relaxed italic mb-4">
-              "NADICO School ERP ne hamare fee collection ka sara jhanjhat khatam kar diya. Har mahine 3-part bank challans Meezan Bank format par 2 minute mein print ho jate hain aur fee defaulters ki list WhatsApp par auto-alert chali jati hai. 100% recommended software hai."
+              "NADICO School ERP eliminated all our fee collection headaches. Every month, 3-part bank deposit slips in official Meezan Bank and HBL formats are generated in minutes, and automated overdue fee alerts are dispatched via WhatsApp. It is a truly dependable campus management system."
             </p>
           </div>
           <div className="pt-3 border-t border-slate-100">
@@ -344,7 +344,7 @@ export default function SchoolErpPage() {
               </span>
             </div>
             <p className="text-xs text-slate-700 leading-relaxed italic mb-4">
-              "ZKTeco biometric machine gate par lagayi hui hai. Bachay ke ungli lagate hi walidain ke WhatsApp par instant arrival SMS chala jata hai. Result card printing ka CAIE/BISE format itna pyara hai ke school ka standard bohot upar chala gaya hai."
+              "We connected our ZKTeco biometric gate machines directly to the cloud. As soon as students tap their finger, parents receive instant arrival notifications on WhatsApp. The CAIE and BISE standard report cards look exceptionally elegant and elevated our school's professional reputation."
             </p>
           </div>
           <div className="pt-3 border-t border-slate-100">
@@ -367,7 +367,7 @@ export default function SchoolErpPage() {
               </span>
             </div>
             <p className="text-xs text-slate-700 leading-relaxed italic mb-4">
-              "Hamare 5 alag campuses hain. Main apne mobile se baithe baithe har campus ki fee collection, staff attendance aur P&L accounts live check kar leta hoon. 2FA security hone ki wajah se data leakage ka koi dar nahi."
+              "Managing 5 separate branch campuses used to take days of travel. Now I monitor campus fee collections, teacher attendance, and consolidated P&L statements directly from my smartphone. With Two-Factor Authentication, our institutional data is entirely secure."
             </p>
           </div>
           <div className="pt-3 border-t border-slate-100">

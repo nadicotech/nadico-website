@@ -34,7 +34,7 @@ export default function ContactPage() {
       role: "Campus Administrator",
       org: "Al-Huda Higher Secondary School, Karachi",
       rating: 5,
-      text: "Hum ne Saturday raat ko challan print karte waqt error report kiya. 10 minute ke andar NADICO ke support engineer ne WhatsApp video call par issue solve kar diya. Aisi customer service Pakistan mein pehle kabhi nahi dekhi.",
+      text: "When we reported a printing issue on a Saturday evening, a NADICO senior support engineer resolved it over a WhatsApp video session within 10 minutes. That level of responsive client service is unmatched in Pakistan.",
       tag: "Instant 10-Min Response"
     },
     {
@@ -42,7 +42,7 @@ export default function ContactPage() {
       role: "Managing Director",
       org: "Lakhani Mart & Cosmetics, Hyderabad",
       rating: 5,
-      text: "NADICO ki team ne hamare store par aa kar barcode scanners set kiye aur cashiers ko samjhaya. Software lene ke baad bhi inki phone support hamesha available hoti hai.",
+      text: "The NADICO deployment team visited our retail mart in person, calibrated our barcode hardware, and thoroughly trained our cashier staff. Even years after deployment, their helpline is consistently reliable.",
       tag: "Dedicated On-Site Support"
     },
     {
@@ -50,23 +50,23 @@ export default function ContactPage() {
       role: "Clinic Operations Head",
       org: "Hashmi Health Center, Rawalpindi",
       rating: 5,
-      text: "Inka official WhatsApp hotline (+92 333 722 1552) har waqt responsive hai. Har mahine ki audit reports aur naye updates waqt par milte hain.",
+      text: "Their official WhatsApp helpline (+92 333 722 1552) is remarkably responsive. Software updates, audit reports, and technical assistance are always delivered on schedule.",
       tag: "24/7 WhatsApp Hotline"
     }
   ];
 
   const faqs = [
     {
-      q: "Aap ka office kahan waqia hai aur kya hum physical meeting kar sakte hain?",
-      a: "Hamara head office Karachi mein waqia hai. Aap hamare WhatsApp (+92 333 722 1552) par time confirm kar ke hamare office visit kar sakte hain ya hamari technical team aap ke school ya office aakar live demo dikha sakti hai."
+      q: "Where is your primary office located, and can we schedule an in-person meeting?",
+      a: "Our corporate headquarters is located in Karachi, Pakistan. You are welcome to visit our office by confirming an appointment via WhatsApp (+92 333 722 1552), or our technical deployment team can visit your campus or facility for an on-site demonstration."
     },
     {
-      q: "Kya Lahore, Islamabad ya doosre shehron mein support milti hai?",
-      a: "Jee haan! Pure Pakistan ke tamam shehron (Lahore, Islamabad, Rawalpindi, Faisalabad, Multan, Peshawar, Quetta, Hyderabad wagerah) mein hamari cloud deployments hain aur WhatsApp, phone, AnyDesk/TeamViewer aur Zoom ke zariye 24/7 instant live technical assistance faraham ki jati hai."
+      q: "Do you provide technical assistance to clients in Lahore, Islamabad, and other cities across Pakistan?",
+      a: "Yes, nationwide. We actively support institutional clients across Karachi, Lahore, Islamabad, Rawalpindi, Faisalabad, Multan, Peshawar, and Hyderabad with instant 24/7 technical assistance via WhatsApp, telephone, and secure remote desktop sessions."
     },
     {
-      q: "Customer inquiry ka jawab kitni der mein milta hai?",
-      a: "Business hours (Peer ta Hafta, Subha 9:00 AM se Shaam 7:00 PM) ke doran tamam WhatsApp aur phone messages ka jawab 15 minute ke andar diya jata hai."
+      q: "How quickly does your technical team respond to new inquiries?",
+      a: "During corporate business hours (Monday to Saturday, 9:00 AM to 7:00 PM PKT), all inquiries submitted via WhatsApp or our web forms receive a dedicated response within 15 minutes."
     }
   ];
 

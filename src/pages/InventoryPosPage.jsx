@@ -37,7 +37,7 @@ export default function InventoryPosPage() {
       role: "Owner & Managing Director",
       business: "Al-Madina Cash & Carry (3 Branches), Karachi",
       rating: 5,
-      text: "Hum pehle manual register aur pirated software use kar rahe thay jis se har mahine stock short nikalta tha. Jab se NADICO POS lagaya hai, har ek item ka barcode scan hota hai aur raat ko dukan band hone par owner ke WhatsApp par daily sale report khud pohnch jati hai. Aik rupaye ki bhi chori pakri jati hai.",
+      text: "We used to rely on manual ledgers and unverified local software, which resulted in stock shortages every month. Since deploying NADICO POS, every single item is barcode-scanned at the checkout counter, and an automated daily sales closing report is delivered straight to my WhatsApp every night. Our inventory shrinkage has dropped to zero.",
       scale: "3 Superstore Branches • 8 POS Counters"
     },
     {
@@ -45,7 +45,7 @@ export default function InventoryPosPage() {
       role: "Operations Head",
       business: "Metro Hardware & Sanitary Wholesale, Lahore",
       rating: 5,
-      text: "Wholesale business mein customer udhaar aur supplier payment track karna sab se mushkil kaam hota hai. NADICO ke vendor ledger aur customer credit limit system ne hamara 25 lakh rupaye ka phansa hua udhaar recover karwaya hai. FBR POS tax slips bhi aik click par nikal aati hain.",
+      text: "In the wholesale distribution trade, tracking customer credit accounts and vendor payables is critical. NADICO's vendor ledger and customer credit limit engine helped us recover over Rs. 2.5 million in overdue receivables. FBR digital tax receipts print in less than a second.",
       scale: "Wholesale & Godown Network"
     },
     {
@@ -53,7 +53,7 @@ export default function InventoryPosPage() {
       role: "Managing Partner",
       business: "City Care Pharmacy & Cosmetics, Rawalpindi",
       rating: 5,
-      text: "Dawaon ki expiry date track karna sab se bara challenge tha. NADICO POS mein 60 din pehle expiry alert aa jata hai aur hum company ko return slip bana kar bhej dete hain. Barcode scanning speed itni tez hai ke peak rush hours mein customer line mein nahi khara rehta.",
+      text: "Tracking pharmaceutical batch numbers and expiry dates was our biggest logistical headache. NADICO POS alerts our pharmacists 60 days before any medicine expires, allowing us to generate supplier return slips immediately. Counter checkout speed is exceptionally fast even during evening rush hours.",
       scale: "Pharmacy Chain • Batch & Expiry Sync"
     }
   ];
@@ -86,27 +86,27 @@ export default function InventoryPosPage() {
     },
     {
       icon: FileSpreadsheet,
-      title: "Customer Udhaar & Vendor Ledger",
+      title: "Customer Credit Accounts & Vendor Ledger",
       desc: "Complete double-entry accounting: track customer credit limits, automated overdue reminders via SMS, and purchase order tracking."
     }
   ];
 
   const faqs = [
     {
-      q: "Agar bijli ya load-shedding ki wajah se internet chala jaye to kya counter ruk jaye ga?",
-      a: "Bilkul nahi! NADICO POS mein hybrid offline engine laga hua hai. Internet band hone par bhi barcode scanning, billing, cash drawer open aur thermal slip printing normal tareeqe se chalti rehti hai. Jaise hi internet connect hota hai, sara data cloud server se auto-sync ho jata hai."
+      q: "Will the billing counter stop functioning if load-shedding causes an internet interruption?",
+      a: "Not at all. NADICO POS incorporates an offline hybrid checkout engine. Barcode scanning, invoice creation, automatic cash drawer opening, and thermal receipt printing continue running smoothly without internet. All transactions automatically sync to the cloud as soon as connection is restored."
     },
     {
-      q: "Kya hamara purana barcode scanner aur thermal printer is software ke sath chalay ga?",
-      a: "Jee haan, 100%! Tamam standard USB, Bluetooth, aur Wireless 1D/2D barcode scanners (Honeywell, Zebra, Datalogic, Chinese models) aur tamam 58mm/80mm thermal receipt printers plug-and-play kaam karte hain. Kisi naye hardware ki zaroorat nahi."
+      q: "Are our existing barcode scanners and thermal receipt printers compatible with NADICO POS?",
+      a: "Yes, 100%. All standard USB, Bluetooth, and wireless 1D/2D barcode scanners (Honeywell, Zebra, Datalogic, and local models) along with 58mm and 80mm thermal receipt printers work plug-and-play without requiring any proprietary hardware."
     },
     {
-      q: "Kya hum hazaron items ki Excel list aik sath upload kar sakte hain?",
-      a: "Jee bilkul! Hamari technical team aap ke Excel sheet se product names, barcodes, purchase price, sale price, aur current stock quantity 2 ghante ke andar database mein safely import kar deti hai."
+      q: "Can we upload our existing product inventory and price lists in bulk from Excel?",
+      a: "Yes, absolutely. Our deployment engineers format and import your product catalogs, barcodes, purchase costs, retail prices, and opening stock balances into your live system within 2 hours, free of charge."
     },
     {
-      q: "Cashier chori ya invoice delete to nahi kar sakta?",
-      a: "Hargiz nahi! Role-Based Access control ke tehat cashier ko invoice cancel karne, discount barhane, ya stock adjust karne ki ijazat nahi hoti jab tak branch manager ya owner apna master PIN ya password na lagaye. Har activity ka audit log banta hai."
+      q: "Can cashiers cancel invoices or tamper with sales data without management authorization?",
+      a: "Never. With granular role-based security, cashiers cannot void bills, alter discounts, or modify inventory quantities without a supervisor's master PIN. Every transaction and modification is recorded in a tamper-proof audit trail."
     }
   ];
 
@@ -377,7 +377,7 @@ export default function InventoryPosPage() {
                   <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-600" /> Unlimited Products & Barcodes</li>
                   <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-600" /> FBR Digital Tax Invoicing Integration</li>
                   <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-600" /> Batch & Expiry Management</li>
-                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-600" /> Customer Udhaar Ledger & Reminders</li>
+                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-600" /> Customer Credit Ledger & Payment Reminders</li>
                 </ul>
               </div>
 

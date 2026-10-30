@@ -3,7 +3,7 @@ import {
   Activity, Shield, Stethoscope, Pill, Bed, FileText, Users, Clock, 
   CheckCircle, ArrowRight, Star, Phone, MessageCircle, Calendar, 
   HelpCircle, ChevronDown, Check, Building2, Microchip, Database, Award, 
-  Sparkles, HeartPulse, ClipboardCheck, ArrowLeft, ExternalLink, MapPin
+  Sparkles, HeartPulse, ClipboardCheck, ArrowLeft, ExternalLink, MapPin, TrendingUp
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header.jsx';
@@ -26,7 +26,7 @@ export default function HospitalHmsPage() {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    const msg = `Hello NADICO Technologies! I want a live demo for Hospital HMS.%0A%0A*Name:* ${formData.name}%0A*Phone:* ${formData.phone}%0A*Hospital/Clinic:* ${formData.hospitalName}%0A*Type:* ${formData.facilityType}%0A*Beds:* ${formData.bedsCount}%0A*City:* ${formData.city}%0A*Details:* ${formData.notes || 'N/A'}`;
+    const msg = `Hello NADICO Technologies! I would like to schedule a live demo for Hospital Management System (HMS).%0A%0A*Name:* ${formData.name}%0A*Phone:* ${formData.phone}%0A*Hospital/Clinic:* ${formData.hospitalName}%0A*Facility Type:* ${formData.facilityType}%0A*Beds:* ${formData.bedsCount}%0A*City:* ${formData.city}%0A*Requirements:* ${formData.notes || 'N/A'}`;
     window.open(`https://wa.me/923337221552?text=${msg}`, '_blank');
     setFormSubmitted(true);
   };
@@ -37,7 +37,7 @@ export default function HospitalHmsPage() {
       role: "Medical Director",
       facility: "Shifa Care General Hospital, Karachi",
       rating: 5,
-      text: "NADICO Hospital HMS ne hamare OPD token aur pharmacy billing ka rush khatam kar diya hai. Doctor ke prescription print hote hi pharmacy counter par slip auto-load ho jati hai. 100% reliable system hai.",
+      text: "NADICO Hospital HMS completely resolved our counter queues and billing delays. As soon as doctors finalize digital prescriptions, pharmacy slips sync in real time. It is a rock-solid, dependable hospital operating system.",
       beds: "65 Beds Facility"
     },
     {
@@ -45,7 +45,7 @@ export default function HospitalHmsPage() {
       role: "Chief of Medicine",
       facility: "Al-Razi Poly Clinic & Diagnostic, Lahore",
       rating: 5,
-      text: "Hamare 14 specialist doctors ki roaster scheduling aur patient EMR records ek click par open hote hain. Sab se achi baat 2FA security hai, patient ka data bilkul safe aur confidential rehta hai.",
+      text: "Scheduling our 14 specialist consultants and pulling patient EMR histories is effortless. What impressed our medical board most is the two-factor authentication security—patient records remain confidential and tamper-proof.",
       beds: "Multi-Specialty OPD"
     },
     {
@@ -53,7 +53,7 @@ export default function HospitalHmsPage() {
       role: "Hospital Administrator",
       facility: "Iqra Medical Complex, Rawalpindi",
       rating: 5,
-      text: "IPD admission se discharge tak, bed charges, nursing notes aur OT billing automatic calculate hoti hai. Month-end accounts audit mein pehle hafte lagte thay, ab 10 minute mein P&L report ban jati hai.",
+      text: "From patient admission to bed charges, nurse logs, and OT billing, calculations are 100% automated. Month-end financial auditing used to take our accounting team over a week; now we generate accurate P&L reports in minutes.",
       beds: "110 Beds Hospital"
     }
   ];
@@ -62,51 +62,51 @@ export default function HospitalHmsPage() {
     {
       icon: Users,
       title: "OPD Token & Queue Dispenser",
-      desc: "Fast counter registration with CNIC/mobile lookup, automated thermal slip printing, and real-time waiting screen display."
+      desc: "Rapid counter registration with CNIC or mobile lookup, automated thermal slip printing, and real-time waiting lounge screen display."
     },
     {
       icon: Stethoscope,
       title: "Doctor Clinic & EMR Desk",
-      desc: "Paperless patient medical history, vital signs graph, ICD-10 diagnosis selector, and customized Urdu/English prescription pad."
+      desc: "Paperless patient medical history, vital signs graphs, ICD-10 diagnosis selector, and customized English and Urdu prescription pads."
     },
     {
       icon: Bed,
-      title: "IPD & Ward Bed Manager",
-      desc: "Visual graphical bed occupancy layout (ICU, Private, General Ward), daily round notes, oxygen tracking, and multi-day billing ledger."
+      title: "IPD & Ward Bed Management",
+      desc: "Visual graphical bed occupancy layout (ICU, Private, General Ward), daily clinical rounds, nursing logs, and multi-day ledger billing."
     },
     {
       icon: Pill,
       title: "Pharmacy POS & Expiry Tracker",
-      desc: "Barcode medicine checkout, batch-wise expiry alerts, automated supplier returns, and FBR digital invoice integration."
+      desc: "Barcode medicine checkout, batch-wise expiry warnings, automated supplier returns, and FBR digital fiscal invoice integration."
     },
     {
       icon: Activity,
-      title: "Pathology & Radiology Lab",
-      desc: "CBC, Ultrasound, X-Ray test booking, normal range auto-validation, and instant WhatsApp SMS report delivery to patient mobile."
+      title: "Pathology & Radiology Laboratory",
+      desc: "CBC, Ultrasound, and X-Ray test booking, normal range auto-validation, and instant WhatsApp PDF report delivery to patient smartphones."
     },
     {
       icon: Shield,
-      title: "2FA Security & Staff Audit",
-      desc: "Bank-grade Two-Factor Authentication, role-based access for nurses, cashiers, and doctors with zero unauthorized record deletion."
+      title: "2FA Security & Clinical Staff Audit",
+      desc: "Bank-grade Two-Factor Authentication, granular role-based permissions for nurses, cashiers, and consultants with zero unauthorized record deletion."
     }
   ];
 
   const faqs = [
     {
-      q: "Kya internet band hone par hospital ka OPD counter ruk jaye ga?",
-      a: "Hargiz nahi! NADICO HMS mein offline hybrid mode available hai. Internet na hone par bhi counter token slips print hoti hain aur internet aate hi cloud database se auto-sync ho jati hain."
+      q: "Will front-desk OPD token counters stop working if the internet goes down?",
+      a: "Not at all. NADICO HMS features an intelligent offline-first architecture. Receptionists can continue registering patients, printing queue tokens, and issuing thermal slips during power or internet outages. Data automatically synchronizes with the cloud database the moment connectivity is restored."
     },
     {
-      q: "Kya pharmacy inventory FBR POS aur barcode scanners ko support karti hai?",
-      a: "Jee haan, sabhi standard USB/Bluetooth barcode scanners, thermal receipt printers (58mm/80mm), aur FBR digital tax integration fully supported hain."
+      q: "Does the pharmacy module support barcode scanners, thermal printers, and FBR POS digital invoicing?",
+      a: "Yes, 100%. All industry-standard 1D/2D barcode scanners, 58mm and 80mm thermal receipt printers, and official FBR digital fiscalized QR-code stamps are fully supported out of the box."
     },
     {
-      q: "Doctors apni appointment schedule aur commissions kaise check karein ge?",
-      a: "Har doctor ke paas apna personal doctor portal hota hai jahan wo daily appointments, completed OPDs, aur apni procedure-wise commission report live dekh sakte hain."
+      q: "How do consulting doctors monitor their daily patient rosters and procedure commissions?",
+      a: "Every physician receives secure access to their dedicated doctor portal, allowing them to view daily appointment queues, examine patient histories, and track procedure-wise clinical commissions in real time."
     },
     {
-      q: "Hospital ka purana patient data is software mein transfer ho sakta hai?",
-      a: "Bilkul! Hamari technical team aap ke Excel ya legacy software se patient records, inventory, aur staff profiles ko 24-48 ghante ke andar safely migrate kar deti hai."
+      q: "Can we migrate our existing patient records and pharmacy inventory from Excel or legacy software?",
+      a: "Absolutely. Our dedicated deployment engineers securely import your legacy patient records, past clinical histories, and pharmacy stock spreadsheets within 24 to 48 hours without operational downtime."
     }
   ];
 
@@ -121,18 +121,18 @@ export default function HospitalHmsPage() {
           
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-100/90 border border-sky-200 text-sky-800 text-xs font-bold mb-6">
             <HeartPulse className="w-4 h-4 text-sky-600 animate-pulse" />
-            <span>Pakistan's Dedicated Cloud Hospital Management System</span>
+            <span>Enterprise Cloud Healthcare Management System • Built for Pakistan</span>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             
             <div className="lg:col-span-7 space-y-6">
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-[1.18] font-heading">
-                Hospital & Clinic Software Jo <span className="teal-gradient-text">OPD, Beds, EMR & Pharmacy</span> Ko 100% Control Mein Laye
+                Cloud-Powered Hospital ERP for <span className="text-sky-700">OPD, Beds, EMR & Pharmacy</span> Control
               </h1>
               
               <p className="text-slate-600 text-base sm:text-lg leading-relaxed max-w-2xl">
-                Manual register aur ghalat bills se chutkara payein. NADICO Hospital HMS aap ke hospital ko fast OPD tokens, instant lab report WhatsApp delivery, aur automated pharmacy inventory faraham karta hai.
+                Eliminate manual paper registers, billing discrepancies, and delayed reports. NADICO HMS delivers rapid patient token queues, real-time EMR documentation, WhatsApp lab report delivery, and automated pharmacy stock management.
               </p>
 
               <div className="flex flex-wrap items-center gap-4 pt-2">
@@ -140,7 +140,7 @@ export default function HospitalHmsPage() {
                   href="#pricing"
                   className="px-6 py-3.5 rounded-xl font-bold text-sm text-white bg-sky-700 hover:bg-sky-800 transition-all shadow-md flex items-center gap-2"
                 >
-                  <span>Starting Packages Check Karein</span>
+                  <span>Explore Pricing Packages</span>
                   <ArrowRight className="w-4 h-4" />
                 </a>
 
@@ -149,7 +149,7 @@ export default function HospitalHmsPage() {
                   className="px-6 py-3.5 rounded-xl font-bold text-sm text-slate-800 bg-white border border-slate-300 hover:bg-slate-50 transition-all flex items-center gap-2 shadow-xs"
                 >
                   <Calendar className="w-4 h-4 text-sky-700" />
-                  <span>Book Free Hospital Demo</span>
+                  <span>Book Free Clinical Walkthrough</span>
                 </a>
               </div>
 
@@ -195,7 +195,7 @@ export default function HospitalHmsPage() {
                   </div>
                   <div className="flex items-center justify-between p-3 rounded-2xl bg-slate-50 border border-slate-100 text-xs">
                     <span className="font-bold text-slate-700">Lab Reports Auto-Delivered</span>
-                    <span className="font-mono font-extrabold text-emerald-700">Instant SMS/PDF</span>
+                    <span className="font-mono font-extrabold text-emerald-700">Instant SMS & PDF</span>
                   </div>
                   <div className="flex items-center justify-between p-3 rounded-2xl bg-slate-50 border border-slate-100 text-xs">
                     <span className="font-bold text-slate-700">Pharmacy Expiry Wastage</span>
@@ -206,6 +206,7 @@ export default function HospitalHmsPage() {
                 <a 
                   href="https://wa.me/923337221552?text=Hello%20NADICO%20Technologies,%20I%20want%20to%20see%20a%20live%20walkthrough%20of%20Hospital%20HMS."
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="w-full py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs flex items-center justify-center gap-2 transition-colors shadow-sm"
                 >
                   <MessageCircle className="w-4 h-4" />
@@ -231,10 +232,10 @@ export default function HospitalHmsPage() {
               <span>Verified Hospital Director Reviews</span>
             </div>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 font-heading">
-              Doctors Aur Hospital Administrators Ka Aitaymad
+              Endorsed by Leading Physicians & Hospital Administrators
             </h2>
             <p className="text-slate-600 text-xs sm:text-sm mt-2">
-              Dekhein Pakistani clinics aur hospitals NADICO HMS ke sath apne daily operations kaise asaan bana chukay hain.
+              Discover how healthcare centers and private hospitals across Pakistan optimize their daily clinical operations with NADICO HMS.
             </p>
           </div>
 
@@ -286,10 +287,10 @@ export default function HospitalHmsPage() {
           <div className="max-w-2xl mx-auto text-center mb-12">
             <span className="text-sky-700 font-extrabold text-xs tracking-wider uppercase">Complete Hospital Automation</span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2 font-heading">
-              Har Department Ke Liye Mukammal Digital Control
+              Complete Digital Oversight for Every Clinical Department
             </h2>
             <p className="text-slate-600 text-xs sm:text-sm mt-2">
-              Reception se le kar Doctor chamber, Pharmacy, Lab aur Finance tak, har cheez aapas mein jurri hui hai.
+              From reception desks to doctor chambers, inpatient wards, pharmacy counters, and diagnostic labs—everything operates on a unified ledger.
             </p>
           </div>
 
@@ -312,47 +313,47 @@ export default function HospitalHmsPage() {
       </section>
 
       {/* ========================================================================= */}
-      {/* PRICING SECTION & VISUAL GRAPH (STARTING FROM MODEL AS REQUESTED) */}
+      {/* PRICING SECTION & VISUAL GRAPH (STARTING FROM RS. 50,000 AS REQUESTED) */}
       {/* ========================================================================= */}
       <section id="pricing" className="py-16 bg-slate-50 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="text-sky-700 font-extrabold text-xs uppercase tracking-wider">Transparent & Flexible Model</span>
+            <span className="text-sky-700 font-extrabold text-xs uppercase tracking-wider">Transparent & Flexible Investment</span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2 font-heading">
               Hospital HMS Starting Packages
             </h2>
             <p className="text-slate-600 text-xs sm:text-sm mt-2">
-              Hamara model fixed aur bohot mehanga nahi hai; aap ki facility ke size ke mutabiq asaan monthly subscription plan hai.
+              Fair, scalable pricing tailored to your facility size—from private specialist polyclinics to comprehensive tertiary care hospitals.
             </p>
           </div>
 
           {/* Pricing Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
             
-            {/* Tier 1: Poly Clinic / Single OPD */}
+            {/* Tier 1: Poly Clinic / Single OPD (Starting from Rs. 50,000) */}
             <div className="bg-white rounded-3xl p-7 border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
               <div>
                 <span className="px-3 py-1 rounded-full text-[10px] font-extrabold bg-slate-100 text-slate-700 uppercase">
                   Polyclinics & OPD Centers
                 </span>
                 <h3 className="text-xl font-bold text-slate-900 mt-4 font-heading">Clinic Care Edition</h3>
-                <p className="text-slate-500 text-xs mt-1">1 se 4 Doctors wale private clinic centers ke liye.</p>
+                <p className="text-slate-500 text-xs mt-1">Designed for private clinics and centers with 1 to 4 consulting doctors.</p>
 
                 <div className="my-6 p-4 rounded-2xl bg-slate-50 border border-slate-100">
                   <div className="text-[11px] text-slate-500 font-semibold uppercase tracking-wider">Starting Package</div>
-                  <div className="text-2xl font-extrabold text-slate-900 mt-1">
-                    Rs. 7,499 <span className="text-xs font-semibold text-slate-500">/ month</span>
+                  <div className="text-3xl font-extrabold text-slate-900 mt-1">
+                    Rs. 50,000 <span className="text-xs font-semibold text-slate-500">deployment package</span>
                   </div>
-                  <div className="text-[10px] text-emerald-600 font-bold mt-1">Includes unlimited patient token history</div>
+                  <div className="text-[10px] text-emerald-600 font-bold mt-1">Includes unlimited patient records & cloud setup</div>
                 </div>
 
                 <ul className="space-y-2.5 text-xs text-slate-700">
-                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-600 shrink-0" /> OPD Token Counter Slip</li>
+                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-600 shrink-0" /> OPD Token Queue & Slip Printing</li>
                   <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-600 shrink-0" /> Digital Prescription Pad</li>
-                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-600 shrink-0" /> Patient Medical History Records</li>
-                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-600 shrink-0" /> Daily Cash Summary Ledger</li>
-                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-600 shrink-0" /> 2FA Administrator Login</li>
+                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-600 shrink-0" /> Comprehensive Patient Medical History</li>
+                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-600 shrink-0" /> Daily Cash Collection Summary</li>
+                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-600 shrink-0" /> Two-Factor Authentication (2FA)</li>
                 </ul>
               </div>
 
@@ -360,7 +361,7 @@ export default function HospitalHmsPage() {
                 href="#contact-form"
                 className="mt-8 w-full py-3 rounded-xl font-bold text-xs text-sky-800 bg-sky-50 hover:bg-sky-100 border border-sky-200 text-center transition-colors"
               >
-                Inquire For Clinic Edition
+                Select Clinic Care Edition
               </a>
             </div>
 
@@ -375,22 +376,22 @@ export default function HospitalHmsPage() {
                   15 to 60 Beds Hospitals
                 </span>
                 <h3 className="text-xl font-bold text-slate-900 mt-4 font-heading">General Hospital ERP</h3>
-                <p className="text-slate-500 text-xs mt-1">Complete OPD, IPD, Pharmacy aur Pathology coverage.</p>
+                <p className="text-slate-500 text-xs mt-1">Complete OPD, IPD, Pharmacy, and Pathology laboratory suite.</p>
 
                 <div className="my-6 p-4 rounded-2xl bg-sky-50/80 border border-sky-100">
                   <div className="text-[11px] text-sky-800 font-semibold uppercase tracking-wider">Starting Package</div>
-                  <div className="text-2xl font-extrabold text-sky-900 mt-1">
-                    Rs. 14,999 <span className="text-xs font-semibold text-slate-500">/ month</span>
+                  <div className="text-3xl font-extrabold text-sky-900 mt-1">
+                    Rs. 95,000 <span className="text-xs font-semibold text-slate-500">deployment package</span>
                   </div>
-                  <div className="text-[10px] text-emerald-700 font-bold mt-1">All 14 modules with free data migration</div>
+                  <div className="text-[10px] text-emerald-700 font-bold mt-1">All clinical modules with free data migration</div>
                 </div>
 
                 <ul className="space-y-2.5 text-xs text-slate-700">
-                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-600 shrink-0" /> Full OPD Token + Doctor Queue</li>
+                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-600 shrink-0" /> Full OPD Token + Doctor Queue Engine</li>
                   <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-600 shrink-0" /> IPD Ward & Bed Occupancy Matrix</li>
-                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-600 shrink-0" /> Pharmacy POS with Batch Expiry Alert</li>
+                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-600 shrink-0" /> Pharmacy POS with Batch Expiry Warnings</li>
                   <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-600 shrink-0" /> Lab Test Booking with WhatsApp Delivery</li>
-                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-600 shrink-0" /> Doctor Commission Settlement Engine</li>
+                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-600 shrink-0" /> Doctor Commission Settlement System</li>
                   <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-600 shrink-0" /> 24/7 Priority Emergency Support</li>
                 </ul>
               </div>
@@ -399,7 +400,7 @@ export default function HospitalHmsPage() {
                 href="#contact-form"
                 className="mt-8 w-full py-3 rounded-xl font-bold text-xs text-white bg-sky-700 hover:bg-sky-800 shadow-md text-center transition-colors"
               >
-                Book Hospital Live Walkthrough
+                Book General Hospital Walkthrough
               </a>
             </div>
 
@@ -410,20 +411,20 @@ export default function HospitalHmsPage() {
                   Large Hospital / Multi-Branch
                 </span>
                 <h3 className="text-xl font-bold text-slate-900 mt-4 font-heading">Enterprise Healthcare</h3>
-                <p className="text-slate-500 text-xs mt-1">100+ Beds facilities aur multi-city hospital groups.</p>
+                <p className="text-slate-500 text-xs mt-1">Designed for 100+ Bed facilities and multi-city hospital networks.</p>
 
                 <div className="my-6 p-4 rounded-2xl bg-slate-50 border border-slate-100">
                   <div className="text-[11px] text-slate-500 font-semibold uppercase tracking-wider">Custom Tailored</div>
-                  <div className="text-2xl font-extrabold text-slate-900 mt-1">
+                  <div className="text-3xl font-extrabold text-slate-900 mt-1">
                     Custom Quote
                   </div>
-                  <div className="text-[10px] text-sky-700 font-bold mt-1">Dedicated cloud instance & SLA agreement</div>
+                  <div className="text-[10px] text-sky-700 font-bold mt-1">Dedicated cloud instance & technical SLA</div>
                 </div>
 
                 <ul className="space-y-2.5 text-xs text-slate-700">
                   <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-600 shrink-0" /> Multi-Branch Centralized Patient Database</li>
                   <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-600 shrink-0" /> Operation Theater (OT) & Anesthesia Logs</li>
-                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-600 shrink-0" /> Full Accounting GL & Payroll Sync</li>
+                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-600 shrink-0" /> Double-Entry General Ledger & Payroll</li>
                   <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-600 shrink-0" /> Automated Offsite Cloud Data Snapshots</li>
                   <li className="flex items-center gap-2"><Check className="w-4 h-4 text-emerald-600 shrink-0" /> On-Premise Local Server Option</li>
                 </ul>
@@ -439,11 +440,55 @@ export default function HospitalHmsPage() {
 
           </div>
 
+          {/* VISUAL INVESTMENT PROGRESSION GRAPH */}
+          <div className="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-xs max-w-5xl mx-auto">
+            <h4 className="font-heading font-bold text-base text-slate-900 mb-4 flex items-center gap-2">
+              <TrendingUp className="w-4 h-4 text-sky-700" />
+              <span>Investment Comparison by Healthcare Scale (Visual Cost Graph)</span>
+            </h4>
+            
+            <div className="space-y-4">
+              <div>
+                <div className="flex justify-between text-xs font-semibold text-slate-700 mb-1">
+                  <span>Polyclinic & OPD Center (1-4 Doctors)</span>
+                  <span className="text-sky-700 font-bold">Starting from Rs. 50,000</span>
+                </div>
+                <div className="w-full bg-slate-100 rounded-full h-3 overflow-hidden">
+                  <div className="bg-sky-400 h-full rounded-full transition-all duration-500" style={{ width: '35%' }}></div>
+                </div>
+              </div>
+
+              <div>
+                <div className="flex justify-between text-xs font-semibold text-slate-700 mb-1">
+                  <span>General Hospital (15-60 Beds, Full OPD + IPD + Pharmacy + Lab)</span>
+                  <span className="text-sky-700 font-bold">Starting from Rs. 95,000</span>
+                </div>
+                <div className="w-full bg-slate-100 rounded-full h-3 overflow-hidden">
+                  <div className="bg-sky-600 h-full rounded-full transition-all duration-500" style={{ width: '65%' }}></div>
+                </div>
+              </div>
+
+              <div>
+                <div className="flex justify-between text-xs font-semibold text-slate-700 mb-1">
+                  <span>Tertiary Care & Multi-Branch Network (100+ Beds)</span>
+                  <span className="text-sky-700 font-bold">Enterprise Custom Scope</span>
+                </div>
+                <div className="w-full bg-slate-100 rounded-full h-3 overflow-hidden">
+                  <div className="bg-sky-900 h-full rounded-full transition-all duration-500" style={{ width: '95%' }}></div>
+                </div>
+              </div>
+            </div>
+
+            <p className="text-[11px] text-slate-500 mt-4 italic text-center">
+              * Note: All deployment packages include end-to-end data migration, on-site and remote clinical staff training, automated cloud backups, and dedicated WhatsApp support.
+            </p>
+          </div>
+
         </div>
       </section>
 
       {/* ========================================================================= */}
-      {/* DIRECT HOSPITAL INQUIRY FORM (REQUESTED BY USER) */}
+      {/* DIRECT HOSPITAL INQUIRY FORM */}
       {/* ========================================================================= */}
       <section id="contact-form" className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -452,111 +497,121 @@ export default function HospitalHmsPage() {
             <div className="max-w-2xl mb-8">
               <span className="text-sky-400 font-bold text-xs uppercase tracking-wider">Get In Touch</span>
               <h2 className="text-2xl sm:text-3xl font-extrabold mt-2 font-heading">
-                Apne Hospital Ya Clinic Ka Free Demo Schedule Karein
+                Schedule a Free Walkthrough for Your Hospital or Clinic
               </h2>
               <p className="text-slate-300 text-xs sm:text-sm mt-2">
-                Neechay details darj karein ya hamari helpline par call karein. Hamari technical team aap ke software requirements ka audit kare gi.
+                Provide your details below or call our clinical technical hotline. Our software consultants will analyze your facility requirements.
               </p>
             </div>
 
-            <form onSubmit={handleFormSubmit} className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label className="block text-xs font-semibold text-slate-300 mb-1">Aap Ka Naam *</label>
-                <input 
-                  type="text" 
-                  required
-                  placeholder="Dr. / Mr. Name"
-                  value={formData.name}
-                  onChange={(e) => setFormData({...formData, name: e.target.value})}
-                  className="w-full px-4 py-2.5 rounded-xl bg-white/10 border border-white/20 text-white placeholder-slate-400 text-xs focus:outline-none focus:border-sky-400"
-                />
+            {formSubmitted ? (
+              <div className="p-6 rounded-2xl bg-sky-900/60 border border-sky-400 text-center space-y-3">
+                <CheckCircle className="w-10 h-10 text-emerald-400 mx-auto" />
+                <h3 className="font-bold text-lg text-white">Inquiry Received Successfully!</h3>
+                <p className="text-xs text-sky-200">
+                  Our healthcare software consultant will reach out via WhatsApp shortly to schedule your demo.
+                </p>
               </div>
+            ) : (
+              <form onSubmit={handleFormSubmit} className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-xs font-semibold text-slate-300 mb-1">Your Full Name *</label>
+                  <input 
+                    type="text" 
+                    required
+                    placeholder="e.g. Dr. Farhan Qureshi"
+                    value={formData.name}
+                    onChange={(e) => setFormData({...formData, name: e.target.value})}
+                    className="w-full px-4 py-2.5 rounded-xl bg-white/10 border border-white/20 text-white placeholder-slate-400 text-xs focus:outline-none focus:border-sky-400"
+                  />
+                </div>
 
-              <div>
-                <label className="block text-xs font-semibold text-slate-300 mb-1">WhatsApp / Mobile Number *</label>
-                <input 
-                  type="tel" 
-                  required
-                  placeholder="0333 1234567"
-                  value={formData.phone}
-                  onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                  className="w-full px-4 py-2.5 rounded-xl bg-white/10 border border-white/20 text-white placeholder-slate-400 text-xs focus:outline-none focus:border-sky-400"
-                />
-              </div>
+                <div>
+                  <label className="block text-xs font-semibold text-slate-300 mb-1">WhatsApp / Phone Number *</label>
+                  <input 
+                    type="tel" 
+                    required
+                    placeholder="e.g. 0333 722 1552"
+                    value={formData.phone}
+                    onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                    className="w-full px-4 py-2.5 rounded-xl bg-white/10 border border-white/20 text-white placeholder-slate-400 text-xs focus:outline-none focus:border-sky-400"
+                  />
+                </div>
 
-              <div>
-                <label className="block text-xs font-semibold text-slate-300 mb-1">Hospital / Clinic Ka Naam *</label>
-                <input 
-                  type="text" 
-                  required
-                  placeholder="e.g. Al-Shifa Care Hospital"
-                  value={formData.hospitalName}
-                  onChange={(e) => setFormData({...formData, hospitalName: e.target.value})}
-                  className="w-full px-4 py-2.5 rounded-xl bg-white/10 border border-white/20 text-white placeholder-slate-400 text-xs focus:outline-none focus:border-sky-400"
-                />
-              </div>
+                <div>
+                  <label className="block text-xs font-semibold text-slate-300 mb-1">Hospital / Clinic Name *</label>
+                  <input 
+                    type="text" 
+                    required
+                    placeholder="e.g. Shifa Care General Hospital"
+                    value={formData.hospitalName}
+                    onChange={(e) => setFormData({...formData, hospitalName: e.target.value})}
+                    className="w-full px-4 py-2.5 rounded-xl bg-white/10 border border-white/20 text-white placeholder-slate-400 text-xs focus:outline-none focus:border-sky-400"
+                  />
+                </div>
 
-              <div>
-                <label className="block text-xs font-semibold text-slate-300 mb-1">Facility Type</label>
-                <select 
-                  value={formData.facilityType}
-                  onChange={(e) => setFormData({...formData, facilityType: e.target.value})}
-                  className="w-full px-4 py-2.5 rounded-xl bg-white/10 border border-white/20 text-white text-xs focus:outline-none focus:border-sky-400 [&>option]:bg-slate-900"
-                >
-                  <option value="Private Hospital">Private Hospital</option>
-                  <option value="Poly Clinic & OPD Center">Poly Clinic & OPD Center</option>
-                  <option value="Maternity & Care Center">Maternity & Care Center</option>
-                  <option value="Diagnostic & Lab Facility">Diagnostic & Lab Facility</option>
-                </select>
-              </div>
+                <div>
+                  <label className="block text-xs font-semibold text-slate-300 mb-1">Facility Type</label>
+                  <select 
+                    value={formData.facilityType}
+                    onChange={(e) => setFormData({...formData, facilityType: e.target.value})}
+                    className="w-full px-4 py-2.5 rounded-xl bg-white/10 border border-white/20 text-white text-xs focus:outline-none focus:border-sky-400 [&>option]:bg-slate-900"
+                  >
+                    <option value="Private Hospital">Private Hospital</option>
+                    <option value="Poly Clinic & OPD Center">Poly Clinic & OPD Center</option>
+                    <option value="Maternity & Care Center">Maternity & Care Center</option>
+                    <option value="Diagnostic & Lab Facility">Diagnostic & Lab Facility</option>
+                  </select>
+                </div>
 
-              <div>
-                <label className="block text-xs font-semibold text-slate-300 mb-1">Beds Capacity</label>
-                <select 
-                  value={formData.bedsCount}
-                  onChange={(e) => setFormData({...formData, bedsCount: e.target.value})}
-                  className="w-full px-4 py-2.5 rounded-xl bg-white/10 border border-white/20 text-white text-xs focus:outline-none focus:border-sky-400 [&>option]:bg-slate-900"
-                >
-                  <option value="OPD Only (No Beds)">OPD Only (No Beds)</option>
-                  <option value="Under 25 Beds">Under 25 Beds</option>
-                  <option value="25-50 Beds">25-50 Beds</option>
-                  <option value="50-100 Beds">50-100 Beds</option>
-                  <option value="100+ Beds">100+ Beds</option>
-                </select>
-              </div>
+                <div>
+                  <label className="block text-xs font-semibold text-slate-300 mb-1">Beds Capacity</label>
+                  <select 
+                    value={formData.bedsCount}
+                    onChange={(e) => setFormData({...formData, bedsCount: e.target.value})}
+                    className="w-full px-4 py-2.5 rounded-xl bg-white/10 border border-white/20 text-white text-xs focus:outline-none focus:border-sky-400 [&>option]:bg-slate-900"
+                  >
+                    <option value="OPD Only (No Beds)">OPD Only (No Beds)</option>
+                    <option value="Under 25 Beds">Under 25 Beds</option>
+                    <option value="25-50 Beds">25-50 Beds</option>
+                    <option value="50-100 Beds">50-100 Beds</option>
+                    <option value="100+ Beds">100+ Beds</option>
+                  </select>
+                </div>
 
-              <div>
-                <label className="block text-xs font-semibold text-slate-300 mb-1">City / Location</label>
-                <input 
-                  type="text" 
-                  placeholder="Karachi, Lahore, etc."
-                  value={formData.city}
-                  onChange={(e) => setFormData({...formData, city: e.target.value})}
-                  className="w-full px-4 py-2.5 rounded-xl bg-white/10 border border-white/20 text-white placeholder-slate-400 text-xs focus:outline-none focus:border-sky-400"
-                />
-              </div>
+                <div>
+                  <label className="block text-xs font-semibold text-slate-300 mb-1">City / Location</label>
+                  <input 
+                    type="text" 
+                    placeholder="e.g. Karachi, Lahore, Islamabad"
+                    value={formData.city}
+                    onChange={(e) => setFormData({...formData, city: e.target.value})}
+                    className="w-full px-4 py-2.5 rounded-xl bg-white/10 border border-white/20 text-white placeholder-slate-400 text-xs focus:outline-none focus:border-sky-400"
+                  />
+                </div>
 
-              <div className="sm:col-span-2">
-                <label className="block text-xs font-semibold text-slate-300 mb-1">Koi Khaas Requirement Ya Sawal?</label>
-                <textarea 
-                  rows="2"
-                  placeholder="e.g. Pharmacy barcode scanners, doctor commission setup, etc."
-                  value={formData.notes}
-                  onChange={(e) => setFormData({...formData, notes: e.target.value})}
-                  className="w-full px-4 py-2.5 rounded-xl bg-white/10 border border-white/20 text-white placeholder-slate-400 text-xs focus:outline-none focus:border-sky-400"
-                ></textarea>
-              </div>
+                <div className="sm:col-span-2">
+                  <label className="block text-xs font-semibold text-slate-300 mb-1">Specific Requirements or Clinical Notes</label>
+                  <textarea 
+                    rows="2"
+                    placeholder="e.g. Pharmacy barcode scanners, doctor commission setup, or lab machine interfacing..."
+                    value={formData.notes}
+                    onChange={(e) => setFormData({...formData, notes: e.target.value})}
+                    className="w-full px-4 py-2.5 rounded-xl bg-white/10 border border-white/20 text-white placeholder-slate-400 text-xs focus:outline-none focus:border-sky-400"
+                  ></textarea>
+                </div>
 
-              <div className="sm:col-span-2 pt-2">
-                <button 
-                  type="submit"
-                  className="w-full py-3.5 rounded-xl bg-sky-500 hover:bg-sky-600 text-white font-bold text-sm transition-colors shadow-lg flex items-center justify-center gap-2"
-                >
-                  <MessageCircle className="w-4 h-4" />
-                  <span>Submit & Connect with HMS Consultant on WhatsApp</span>
-                </button>
-              </div>
-            </form>
+                <div className="sm:col-span-2 pt-2">
+                  <button 
+                    type="submit"
+                    className="w-full py-3.5 rounded-xl bg-sky-500 hover:bg-sky-600 text-white font-bold text-sm transition-colors shadow-lg flex items-center justify-center gap-2"
+                  >
+                    <MessageCircle className="w-4 h-4" />
+                    <span>Submit & Connect with HMS Consultant on WhatsApp</span>
+                  </button>
+                </div>
+              </form>
+            )}
 
             <div className="mt-8 pt-6 border-t border-white/10 flex flex-wrap items-center justify-between gap-4 text-xs text-slate-300">
               <div className="flex items-center gap-2">
@@ -580,8 +635,8 @@ export default function HospitalHmsPage() {
       <section className="py-14 bg-slate-50 border-t border-slate-200">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <h2 className="text-2xl font-bold text-slate-900 font-heading">Hospital HMS ke Mutaliq Ahem Sawalat</h2>
-            <p className="text-slate-500 text-xs mt-1">Aam tor par administrators hum se yeh sawalat poochte hain.</p>
+            <h2 className="text-2xl font-bold text-slate-900 font-heading">Frequently Asked Questions About Hospital HMS</h2>
+            <p className="text-slate-500 text-xs mt-1">Practical answers to operational questions healthcare administrators ask us.</p>
           </div>
 
           <div className="space-y-3">
