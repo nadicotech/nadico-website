@@ -6,7 +6,7 @@ export default function WhyNadico() {
   return (
     <>
 {/* ========================================================================= */}
-  {/* 7. WHY CHOOSE NADICO TECHNOLOGIES (ABOUT US & ADVANTAGES) */}
+  {/* 7. WHY CHOOSE NadiCo TechNOLOGIES (ABOUT US & ADVANTAGES) */}
   {/* ========================================================================= */}
   <section id="about" className="py-20 lg:py-24 bg-slate-50/60 tech-icons-bg-partnership border-t border-slate-200 relative">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -16,7 +16,7 @@ export default function WhyNadico() {
           as="h2"
           className="font-heading text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight"
           prefix="Why Organizations Partner With "
-          highlight="NADICO TECH"
+          highlight="NadiCo Tech"
           highlightClass="teal-gradient-text"
         />
         <p className="text-slate-600 text-sm sm:text-base leading-relaxed">

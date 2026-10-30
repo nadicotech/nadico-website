@@ -45,7 +45,7 @@ export default function Header() {
             <div className="silver-sheen-logo-wrap transition-transform group-hover:scale-105">
               <img
                 src="/LOGO.png"
-                alt="NADICO Global Technologies"
+                alt="NadiCo Global Technologies"
                 className="h-11 sm:h-13 lg:h-15 w-auto object-contain drop-shadow-sm"
               />
               <div className="silver-sheen-overlay" aria-hidden="true"></div>
@@ -70,7 +70,7 @@ export default function Header() {
                 <span>14 Modules</span>
               </a>
               <a href="#comparison" className="hover:text-brand-teal transition-colors">
-                Why NADICO
+                Why NadiCo
               </a>
               <a href="#faq" className="hover:text-brand-teal transition-colors">
                 FAQ
@@ -163,7 +163,7 @@ export default function Header() {
                 <ExternalLink className="w-3.5 h-3.5" />
               </a>
 
-              <a href="https://wa.me/923337221552?text=Hello%20NADICO%20Technologies,%20I%20would%20like%20to%20schedule%20a%20demo%20for%20NADICO%20School%20ERP." target="_blank" className="px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-brand-lime hover:bg-brand-limeDark text-brand-charcoal transition-all shadow-button-lime flex items-center gap-1.5">
+              <a href="https://wa.me/923337221552?text=Hello%20NadiCo%20Technologies,%20I%20would%20like%20to%20schedule%20a%20demo%20for%20NadiCo%20School%20ERP." target="_blank" className="px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-brand-lime hover:bg-brand-limeDark text-brand-charcoal transition-all shadow-button-lime flex items-center gap-1.5">
                 <Calendar className="w-4 h-4 text-brand-charcoal" />
                 <span className="text-brand-charcoal">Schedule Campus Demo</span>
               </a>
@@ -228,7 +228,7 @@ export default function Header() {
         <div className="silver-sheen-logo-wrap">
           <img
             src="/LOGO.png"
-            alt="NADICO Technologies"
+            alt="NadiCo Technologies"
             className="h-11 w-auto object-contain"
           />
           <div className="silver-sheen-overlay" aria-hidden="true"></div>
@@ -249,7 +249,7 @@ export default function Header() {
       <div className="flex items-center justify-between p-2.5 rounded-xl bg-brand-tealSoft border border-brand-tealBorder text-brand-teal text-[11px] font-semibold">
         <span className="flex items-center gap-1.5 font-bold">
           <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-          NADICO Cloud Architecture
+          NadiCo Cloud Architecture
         </span>
         <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-700 bg-emerald-100 px-1.5 py-0.5 rounded">
           Online
@@ -298,7 +298,7 @@ export default function Header() {
             className="flex items-center gap-3 p-3 rounded-xl hover:bg-slate-50 text-slate-700 font-medium text-xs transition-colors"
           >
             <CheckCircle className="w-4 h-4 text-brand-limeDark shrink-0" />
-            <span>Why NADICO ERP</span>
+            <span>Why NadiCo ERP</span>
           </a>
 
           <a
@@ -431,7 +431,7 @@ export default function Header() {
               onClick={() => setDrawerOpen(false)}
               className="block px-3 py-2 text-xs font-semibold text-slate-600 hover:text-brand-teal transition-colors"
             >
-              About NADICO TECH
+              About NadiCo Tech
             </Link>
             <Link
               to="/contact"
@@ -469,7 +469,7 @@ export default function Header() {
         </a>
 
         <a
-          href="https://wa.me/923337221552?text=Hello%20NADICO%20Technologies,%20I%20want%20to%20consult%20regarding%20ERP%20software."
+          href="https://wa.me/923337221552?text=Hello%20NadiCo%20Technologies,%20I%20want%20to%20consult%20regarding%20ERP%20software."
           target="_blank"
           rel="noopener noreferrer"
           className="py-2.5 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:opacity-95 text-center flex items-center justify-center gap-1.5 shadow-[0_4px_14px_rgba(37,211,102,0.35)] transition-all"

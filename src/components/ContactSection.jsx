@@ -18,7 +18,7 @@ export default function ContactSection() {
     setSubmitted(true);
     setTimeout(() => {
       const text = encodeURIComponent(
-        `Hi NADICO Technologies!\n\nI want to request a live demo:\n- Name: ${formData.name || 'Prospective Client'}\n- Organization: ${formData.org || 'Institution'}\n- Phone: ${formData.phone || 'Pending'}\n- Solution: ${formData.service}\n- Notes: ${formData.message || 'None'}`
+        `Hi NadiCo Technologies!\n\nI want to request a live demo:\n- Name: ${formData.name || 'Prospective Client'}\n- Organization: ${formData.org || 'Institution'}\n- Phone: ${formData.phone || 'Pending'}\n- Solution: ${formData.service}\n- Notes: ${formData.message || 'None'}`
       );
       window.open(`https://wa.me/923337221552?text=${text}`, '_blank');
     }, 700);
@@ -47,7 +47,7 @@ export default function ContactSection() {
               as="h2"
               className="font-heading text-2xl sm:text-3xl font-bold text-slate-900 leading-tight"
               prefix="Ready to Upgrade to "
-              highlight="NADICO ERP"
+              highlight="NadiCo ERP"
               highlightClass="teal-gradient-text"
               suffix="?"
             />
@@ -71,7 +71,7 @@ export default function ContactSection() {
               </a>
 
               {/* WhatsApp */}
-              <a href="https://wa.me/923337221552?text=Hello%20NADICO%20Technologies,%20I%20would%20like%20to%20request%20a%20live%20demo%20and%20consultation." target="_blank" className="p-4 rounded-2xl bg-emerald-50/70 border border-emerald-200 hover:border-emerald-500 hover:shadow-md flex items-center gap-4 transition-all group">
+              <a href="https://wa.me/923337221552?text=Hello%20NadiCo%20Technologies,%20I%20would%20like%20to%20request%20a%20live%20demo%20and%20consultation." target="_blank" className="p-4 rounded-2xl bg-emerald-50/70 border border-emerald-200 hover:border-emerald-500 hover:shadow-md flex items-center gap-4 transition-all group">
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-tr from-[#128C7E] to-[#25D366] text-white flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform shadow-[0_4px_12px_rgba(37,211,102,0.35)]">
                   <WhatsAppIcon className="w-6 h-6 text-white" />
                 </div>

@@ -5,10 +5,10 @@ export default function FloatingWhatsApp() {
   return (
     <aside aria-label="WhatsApp quick contact">
       <a 
-        href="https://wa.me/923337221552?text=Hello%20NADICO%20Technologies,%20I%20would%20like%20to%20inquire%20about%20your%20ERP%20software%20and%20tech%20solutions." 
+        href="https://wa.me/923337221552?text=Hello%20NadiCo%20Technologies,%20I%20would%20like%20to%20inquire%20about%20your%20ERP%20software%20and%20tech%20solutions." 
         target="_blank" 
         rel="noopener noreferrer"
-        aria-label="Chat with NADICO Technologies on WhatsApp" 
+        aria-label="Chat with NadiCo Technologies on WhatsApp" 
         className="fixed bottom-5 sm:bottom-6 right-4 sm:right-6 z-50 group flex items-center focus:outline-none"
       >
         {/* Soft Background Ping Animation */}

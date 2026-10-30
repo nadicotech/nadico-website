@@ -1,4 +1,4 @@
-# NADICO Technologies - React Application
+# NadiCo Technologies - React Application
 
 A modern, high-performance corporate web platform built with **React**, **Vite**, **Tailwind CSS**, and **React Router DOM**.
 

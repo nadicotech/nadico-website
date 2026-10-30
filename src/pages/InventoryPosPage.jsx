@@ -27,7 +27,7 @@ export default function InventoryPosPage() {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    const msg = `Hello NADICO Technologies! I want a live demo for Inventory & POS System.%0A%0A*Name:* ${formData.name}%0A*Phone:* ${formData.phone}%0A*Business Name:* ${formData.businessName}%0A*Type:* ${formData.businessType}%0A*Counters/Branches:* ${formData.countersCount}%0A*City:* ${formData.city}%0A*Details:* ${formData.notes || 'N/A'}`;
+    const msg = `Hello NadiCo Technologies! I want a live demo for Inventory & POS System.%0A%0A*Name:* ${formData.name}%0A*Phone:* ${formData.phone}%0A*Business Name:* ${formData.businessName}%0A*Type:* ${formData.businessType}%0A*Counters/Branches:* ${formData.countersCount}%0A*City:* ${formData.city}%0A*Details:* ${formData.notes || 'N/A'}`;
     window.open(`https://wa.me/923337221552?text=${msg}`, '_blank');
     setFormSubmitted(true);
   };
@@ -38,7 +38,7 @@ export default function InventoryPosPage() {
       role: "Owner & Managing Director",
       business: "Al-Madina Cash & Carry (3 Branches), Karachi",
       rating: 5,
-      text: "We used to rely on manual ledgers and unverified local software, which resulted in stock shortages every month. Since deploying NADICO POS, every single item is barcode-scanned at the checkout counter, and an automated daily sales closing report is delivered straight to my WhatsApp every night. Our inventory shrinkage has dropped to zero.",
+      text: "We used to rely on manual ledgers and unverified local software, which resulted in stock shortages every month. Since deploying NadiCo POS, every single item is barcode-scanned at the checkout counter, and an automated daily sales closing report is delivered straight to my WhatsApp every night. Our inventory shrinkage has dropped to zero.",
       scale: "3 Superstore Branches • 8 POS Counters"
     },
     {
@@ -46,7 +46,7 @@ export default function InventoryPosPage() {
       role: "Operations Head",
       business: "Metro Hardware & Sanitary Wholesale, Lahore",
       rating: 5,
-      text: "In the wholesale distribution trade, tracking customer credit accounts and vendor payables is critical. NADICO's vendor ledger and customer credit limit engine helped us recover over Rs. 2.5 million in overdue receivables. FBR digital tax receipts print in less than a second.",
+      text: "In the wholesale distribution trade, tracking customer credit accounts and vendor payables is critical. NadiCo's vendor ledger and customer credit limit engine helped us recover over Rs. 2.5 million in overdue receivables. FBR digital tax receipts print in less than a second.",
       scale: "Wholesale & Godown Network"
     },
     {
@@ -54,7 +54,7 @@ export default function InventoryPosPage() {
       role: "Managing Partner",
       business: "City Care Pharmacy & Cosmetics, Rawalpindi",
       rating: 5,
-      text: "Tracking pharmaceutical batch numbers and expiry dates was our biggest logistical headache. NADICO POS alerts our pharmacists 60 days before any medicine expires, allowing us to generate supplier return slips immediately. Counter checkout speed is exceptionally fast even during evening rush hours.",
+      text: "Tracking pharmaceutical batch numbers and expiry dates was our biggest logistical headache. NadiCo POS alerts our pharmacists 60 days before any medicine expires, allowing us to generate supplier return slips immediately. Counter checkout speed is exceptionally fast even during evening rush hours.",
       scale: "Pharmacy Chain • Batch & Expiry Sync"
     }
   ];
@@ -95,10 +95,10 @@ export default function InventoryPosPage() {
   const faqs = [
     {
       q: "Will the billing counter stop functioning if load-shedding causes an internet interruption?",
-      a: "Not at all. NADICO POS incorporates an offline hybrid checkout engine. Barcode scanning, invoice creation, automatic cash drawer opening, and thermal receipt printing continue running smoothly without internet. All transactions automatically sync to the cloud as soon as connection is restored."
+      a: "Not at all. NadiCo POS incorporates an offline hybrid checkout engine. Barcode scanning, invoice creation, automatic cash drawer opening, and thermal receipt printing continue running smoothly without internet. All transactions automatically sync to the cloud as soon as connection is restored."
     },
     {
-      q: "Are our existing barcode scanners and thermal receipt printers compatible with NADICO POS?",
+      q: "Are our existing barcode scanners and thermal receipt printers compatible with NadiCo POS?",
       a: "Yes, 100%. All standard USB, Bluetooth, and wireless 1D/2D barcode scanners (Honeywell, Zebra, Datalogic, and local models) along with 58mm and 80mm thermal receipt printers work plug-and-play without requiring any proprietary hardware."
     },
     {
@@ -143,7 +143,7 @@ export default function InventoryPosPage() {
                 <ArrowRight className="w-4 h-4" />
               </a>
               <a
-                href="https://wa.me/923337221552?text=Hello%20NADICO%20Technologies,%20I%20want%20a%20live%20demo%20of%20Inventory%20and%20POS%20System."
+                href="https://wa.me/923337221552?text=Hello%20NadiCo%20Technologies,%20I%20want%20a%20live%20demo%20of%20Inventory%20and%20POS%20System."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto px-6 py-3.5 rounded-xl font-bold text-xs sm:text-sm text-slate-800 bg-white hover:bg-emerald-50/60 border border-slate-300 hover:border-emerald-500 transition-all shadow-xs flex items-center justify-center gap-2 group"

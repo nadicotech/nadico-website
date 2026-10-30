@@ -28,7 +28,7 @@ export default function DigitalMarketingPage() {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    const msg = `Hello NADICO Technologies! I want a Digital Marketing audit & proposal.%0A%0A*Name:* ${formData.name}%0A*Phone:* ${formData.phone}%0A*Business:* ${formData.businessName}%0A*Industry:* ${formData.industry}%0A*Budget:* ${formData.monthlyAdBudget}%0A*Platform:* ${formData.currentChannel}%0A*City:* ${formData.city}%0A*Goals:* ${formData.goals || 'N/A'}`;
+    const msg = `Hello NadiCo Technologies! I want a Digital Marketing audit & proposal.%0A%0A*Name:* ${formData.name}%0A*Phone:* ${formData.phone}%0A*Business:* ${formData.businessName}%0A*Industry:* ${formData.industry}%0A*Budget:* ${formData.monthlyAdBudget}%0A*Platform:* ${formData.currentChannel}%0A*City:* ${formData.city}%0A*Goals:* ${formData.goals || 'N/A'}`;
     window.open(`https://wa.me/923337221552?text=${msg}`, '_blank');
     setFormSubmitted(true);
   };
@@ -39,7 +39,7 @@ export default function DigitalMarketingPage() {
       role: "Managing Director",
       company: "Al-Miraj Builders & Developers, Karachi",
       rating: 5,
-      text: "We spent hundreds of thousands of rupees with generic digital agencies that only delivered vanity page likes and bot traffic. NADICO's media buyers launched a laser-targeted direct WhatsApp lead campaign for our residential projects in Bahria Town and Scheme 33. We receive over 40 qualified buyer inquiries weekly and closed 6 luxury apartments within 3 months.",
+      text: "We spent hundreds of thousands of rupees with generic digital agencies that only delivered vanity page likes and bot traffic. NadiCo's media buyers launched a laser-targeted direct WhatsApp lead campaign for our residential projects in Bahria Town and Scheme 33. We receive over 40 qualified buyer inquiries weekly and closed 6 luxury apartments within 3 months.",
       metric: "6 High-Ticket Property Sales • 4.8x ROAS"
     },
     {
@@ -47,7 +47,7 @@ export default function DigitalMarketingPage() {
       role: "Founder & Creative Head",
       company: "Zehra Pret & Stitched Lawn, Lahore",
       rating: 5,
-      text: "Our direct-to-consumer apparel brand was struggling with rising acquisition costs ahead of the peak festive season. NADICO restructured our Meta Catalog campaigns and high-retention video reels funnels. Our cost per purchase decreased from Rs. 1,400 to Rs. 420, while monthly sales scaled past 550 verified orders.",
+      text: "Our direct-to-consumer apparel brand was struggling with rising acquisition costs ahead of the peak festive season. NadiCo restructured our Meta Catalog campaigns and high-retention video reels funnels. Our cost per purchase decreased from Rs. 1,400 to Rs. 420, while monthly sales scaled past 550 verified orders.",
       metric: "68% Drop in Ad CPA • 550+ Monthly Orders"
     },
     {
@@ -55,7 +55,7 @@ export default function DigitalMarketingPage() {
       role: "CEO & Partner",
       company: "SunTech Solar Solutions, Islamabad & Rawalpindi",
       rating: 5,
-      text: "In commercial solar engineering, casual quote-seekers used to drain our sales team's energy. NADICO engineered high-intent Google Search campaigns paired with a dedicated qualification landing page. Now, only pre-budgeted commercial property and factory owners reach our engineers.",
+      text: "In commercial solar engineering, casual quote-seekers used to drain our sales team's energy. NadiCo engineered high-intent Google Search campaigns paired with a dedicated qualification landing page. Now, only pre-budgeted commercial property and factory owners reach our engineers.",
       metric: "High-Intent Commercial Leads • 3.9x ROI"
     }
   ];
@@ -144,7 +144,7 @@ export default function DigitalMarketingPage() {
                 <ArrowRight className="w-4 h-4 text-brand-charcoal" />
               </a>
               <a
-                href="https://wa.me/923337221552?text=Hello%20NADICO%20Technologies,%20I%20want%20a%20free%20audit%20of%20my%20digital%20marketing%20campaigns."
+                href="https://wa.me/923337221552?text=Hello%20NadiCo%20Technologies,%20I%20want%20a%20free%20audit%20of%20my%20digital%20marketing%20campaigns."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto px-6 py-3.5 rounded-xl font-bold text-xs sm:text-sm text-slate-800 bg-white hover:bg-emerald-50/60 border border-slate-300 hover:border-emerald-500 transition-all shadow-xs flex items-center justify-center gap-2 group"

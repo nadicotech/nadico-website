@@ -21,12 +21,12 @@ export default function Footer() {
         <div className="lg:col-span-2 space-y-4">
           <div className="flex items-center gap-3">
             <div className="silver-sheen-logo-wrap">
-              <img src="/LOGO.png" alt="NADICO Technologies" className="h-20 sm:h-24 w-auto object-contain brightness-0 invert drop-shadow-lg" />
+              <img src="/LOGO.png" alt="NadiCo Technologies" className="h-20 sm:h-24 w-auto object-contain brightness-0 invert drop-shadow-lg" />
               <div className="silver-sheen-overlay" aria-hidden="true"></div>
             </div>
           </div>
           <p className="text-white/90 text-xs leading-relaxed max-w-sm">
-            NADICO Technologies (نادیکو ٹیکنالوجیز) builds reliable Cloud ERP software, school management systems, custom web applications, and high-growth digital marketing campaigns for organizations across Pakistan.
+            NadiCo Technologies (نادیکو ٹیکنالوجیز) builds reliable Cloud ERP software, school management systems, custom web applications, and high-growth digital marketing campaigns for organizations across Pakistan.
           </p>
           <div className="text-xs text-white flex items-center gap-2 font-bold pt-1">
             <span className="p-1.5 rounded-lg bg-white/15 border border-white/25 flex items-center justify-center">
@@ -58,7 +58,7 @@ export default function Footer() {
             <li><Link to="/web-development" className="text-white/90 hover:text-white hover:underline transition-colors flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-brand-limeLight"></span> Website Design & UI/UX</Link></li>
             <li><Link to="/web-development" className="text-white/90 hover:text-white hover:underline transition-colors flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-brand-limeLight"></span> Custom Web Applications</Link></li>
             <li><Link to="/digital-marketing" className="text-white/90 hover:text-white hover:underline transition-colors flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-brand-limeLight"></span> Digital Marketing & SEO</Link></li>
-            <li><Link to="/about" className="text-white/90 hover:text-white hover:underline transition-colors flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-brand-limeLight"></span> About NADICO TECH</Link></li>
+            <li><Link to="/about" className="text-white/90 hover:text-white hover:underline transition-colors flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-brand-limeLight"></span> About NadiCo Tech</Link></li>
           </ul>
         </div>
 
@@ -92,7 +92,7 @@ export default function Footer() {
       {/* Copyright & Quick Links */}
       <div className="pt-4 pb-1 flex flex-col sm:flex-row items-center justify-between gap-3 text-white/80 text-[11px]">
         <div>
-          © 2026 NADICO Technologies (NADICO TECH). All Rights Reserved.
+          © 2026 NadiCo Technologies (NadiCo Tech). All Rights Reserved.
         </div>
         <div className="flex items-center gap-4">
           <a href="#hero" className="text-white/85 hover:text-white hover:underline transition-colors">Back to top ↑</a>

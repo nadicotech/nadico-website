@@ -27,7 +27,7 @@ export default function HospitalHmsPage() {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    const msg = `Hello NADICO Technologies! I would like to schedule a live demo for Hospital Management System (HMS).%0A%0A*Name:* ${formData.name}%0A*Phone:* ${formData.phone}%0A*Hospital/Clinic:* ${formData.hospitalName}%0A*Facility Type:* ${formData.facilityType}%0A*Beds:* ${formData.bedsCount}%0A*City:* ${formData.city}%0A*Requirements:* ${formData.notes || 'N/A'}`;
+    const msg = `Hello NadiCo Technologies! I would like to schedule a live demo for Hospital Management System (HMS).%0A%0A*Name:* ${formData.name}%0A*Phone:* ${formData.phone}%0A*Hospital/Clinic:* ${formData.hospitalName}%0A*Facility Type:* ${formData.facilityType}%0A*Beds:* ${formData.bedsCount}%0A*City:* ${formData.city}%0A*Requirements:* ${formData.notes || 'N/A'}`;
     window.open(`https://wa.me/923337221552?text=${msg}`, '_blank');
     setFormSubmitted(true);
   };
@@ -38,7 +38,7 @@ export default function HospitalHmsPage() {
       role: "Medical Director",
       facility: "Shifa Care General Hospital, Karachi",
       rating: 5,
-      text: "NADICO Hospital HMS completely resolved our counter queues and billing delays. As soon as doctors finalize digital prescriptions, pharmacy slips sync in real time. It is a rock-solid, dependable hospital operating system.",
+      text: "NadiCo Hospital HMS completely resolved our counter queues and billing delays. As soon as doctors finalize digital prescriptions, pharmacy slips sync in real time. It is a rock-solid, dependable hospital operating system.",
       beds: "65 Beds Facility"
     },
     {
@@ -95,7 +95,7 @@ export default function HospitalHmsPage() {
   const faqs = [
     {
       q: "Will front-desk OPD token counters stop working if the internet goes down?",
-      a: "Not at all. NADICO HMS features an intelligent offline-first architecture. Receptionists can continue registering patients, printing queue tokens, and issuing thermal slips during power or internet outages. Data automatically synchronizes with the cloud database the moment connectivity is restored."
+      a: "Not at all. NadiCo HMS features an intelligent offline-first architecture. Receptionists can continue registering patients, printing queue tokens, and issuing thermal slips during power or internet outages. Data automatically synchronizes with the cloud database the moment connectivity is restored."
     },
     {
       q: "Does the pharmacy module support barcode scanners, thermal printers, and FBR POS digital invoicing?",
@@ -133,7 +133,7 @@ export default function HospitalHmsPage() {
               </h1>
               
               <p className="text-slate-600 text-base sm:text-lg leading-relaxed max-w-2xl">
-                Eliminate manual paper registers, billing discrepancies, and delayed reports. NADICO HMS delivers rapid patient token queues, real-time EMR documentation, WhatsApp lab report delivery, and automated pharmacy stock management.
+                Eliminate manual paper registers, billing discrepancies, and delayed reports. NadiCo HMS delivers rapid patient token queues, real-time EMR documentation, WhatsApp lab report delivery, and automated pharmacy stock management.
               </p>
 
               <div className="flex flex-wrap items-center gap-4 pt-2">
@@ -180,7 +180,7 @@ export default function HospitalHmsPage() {
                       <Activity className="w-6 h-6" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-slate-900 text-sm">NADICO HMS Cloud Engine</h4>
+                      <h4 className="font-bold text-slate-900 text-sm">NadiCo HMS Cloud Engine</h4>
                       <div className="text-[11px] text-emerald-600 font-bold flex items-center gap-1">
                         <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> 99.98% Live Server Uptime
                       </div>
@@ -205,7 +205,7 @@ export default function HospitalHmsPage() {
                 </div>
 
                 <a 
-                  href="https://wa.me/923337221552?text=Hello%20NADICO%20Technologies,%20I%20want%20to%20see%20a%20live%20walkthrough%20of%20Hospital%20HMS."
+                  href="https://wa.me/923337221552?text=Hello%20NadiCo%20Technologies,%20I%20want%20to%20see%20a%20live%20walkthrough%20of%20Hospital%20HMS."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full py-3.5 rounded-xl bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:opacity-95 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-[0_4px_14px_rgba(37,211,102,0.35)] hover:scale-[1.02] active:scale-[0.98] transition-all"
@@ -236,7 +236,7 @@ export default function HospitalHmsPage() {
               Endorsed by Leading Physicians & Hospital Administrators
             </h2>
             <p className="text-slate-600 text-xs sm:text-sm mt-2">
-              Discover how healthcare centers and private hospitals across Pakistan optimize their daily clinical operations with NADICO HMS.
+              Discover how healthcare centers and private hospitals across Pakistan optimize their daily clinical operations with NadiCo HMS.
             </p>
           </div>
 

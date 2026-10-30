@@ -6,10 +6,10 @@ import WhatsAppIcon from './WhatsAppIcon.jsx';
 const suites = ['school', 'hospital', 'inventory', 'web'];
 
 const laptopUrls = {
-  school: 'thereadlyerp.vercel.app/rehan • NADICO ERP',
-  hospital: 'nadico-hms.cloud/clinical-ops • NADICO HMS',
-  inventory: 'nadico-pos.store/terminal-checkout • NADICO POS',
-  web: 'nadicotech.com/web-engineering • NADICO Web Platform'
+  school: 'thereadlyerp.vercel.app/rehan • NadiCo ERP',
+  hospital: 'nadico-hms.cloud/clinical-ops • NadiCo HMS',
+  inventory: 'nadico-pos.store/terminal-checkout • NadiCo POS',
+  web: 'nadicotech.com/web-engineering • NadiCo Web Platform'
 };
 
 const schoolBreadcrumbs = {
@@ -221,7 +221,7 @@ export default function HeroSection() {
           <div id="heroSlide0" className={`hero-slide space-y-4 sm:space-y-5 transition-all duration-500 ${currentSlide === 0 ? 'opacity-100 block' : 'opacity-0 hidden'}`}>
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-tealSoft border border-brand-tealBorder text-brand-teal text-xs font-bold shadow-xs">
               <span className="w-2 h-2 rounded-full bg-brand-lime animate-pulse"></span>
-              <span>NADICO ERP • FLAGSHIP SCHOOL PLATFORM (THE READLY)</span>
+              <span>NadiCo ERP • FLAGSHIP SCHOOL PLATFORM (THE READLY)</span>
               <ShieldCheck className="w-3.5 h-3.5 text-brand-limeDark" />
             </div>
 
@@ -245,7 +245,7 @@ export default function HeroSection() {
                 <span>View Live School Portal</span>
                 <ExternalLink className="w-4 h-4 text-slate-400 group-hover:text-brand-teal transition-transform" />
               </a>
-              <a href="https://wa.me/923337221552?text=Hello%20NADICO%20Technologies,%20I%20would%20like%20to%20schedule%20a%20demo%20for%20NADICO%20School%20ERP." target="_blank" className="px-5 sm:px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:opacity-95 transition-all duration-200 shadow-[0_4px_14px_rgba(37,211,102,0.35)] hover:scale-[1.03] active:scale-[0.98] flex items-center gap-2">
+              <a href="https://wa.me/923337221552?text=Hello%20NadiCo%20Technologies,%20I%20would%20like%20to%20schedule%20a%20demo%20for%20NadiCo%20School%20ERP." target="_blank" className="px-5 sm:px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:opacity-95 transition-all duration-200 shadow-[0_4px_14px_rgba(37,211,102,0.35)] hover:scale-[1.03] active:scale-[0.98] flex items-center gap-2">
                 <WhatsAppIcon className="w-4 h-4 text-white" />
                 <span>Consult on WhatsApp</span>
               </a>
@@ -285,7 +285,7 @@ export default function HeroSection() {
                 <span className="w-2.5 h-2.5 rounded-full bg-sky-600"></span>
                 <span>Request Clinical HMS Walkthrough</span>
               </a>
-              <a href="https://wa.me/923337221552?text=Hello%20NADICO%20Technologies,%20I%20would%20like%20to%20inquire%20about%20Hospital%20Management%20System." target="_blank" className="px-5 sm:px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:opacity-95 transition-all duration-200 shadow-[0_4px_14px_rgba(37,211,102,0.35)] hover:scale-[1.03] active:scale-[0.98] flex items-center gap-2">
+              <a href="https://wa.me/923337221552?text=Hello%20NadiCo%20Technologies,%20I%20would%20like%20to%20inquire%20about%20Hospital%20Management%20System." target="_blank" className="px-5 sm:px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:opacity-95 transition-all duration-200 shadow-[0_4px_14px_rgba(37,211,102,0.35)] hover:scale-[1.03] active:scale-[0.98] flex items-center gap-2">
                 <WhatsAppIcon className="w-4 h-4 text-white" />
                 <span>Consult on WhatsApp</span>
               </a>
@@ -325,7 +325,7 @@ export default function HeroSection() {
                 <span className="w-2.5 h-2.5 rounded-full bg-emerald-600"></span>
                 <span>Request Retail POS Demo</span>
               </a>
-              <a href="https://wa.me/923337221552?text=Hello%20NADICO%20Technologies,%20I%20would%20like%20to%20inquire%20about%20POS%20and%20Inventory%20System." target="_blank" className="px-5 sm:px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:opacity-95 transition-all duration-200 shadow-[0_4px_14px_rgba(37,211,102,0.35)] hover:scale-[1.03] active:scale-[0.98] flex items-center gap-2">
+              <a href="https://wa.me/923337221552?text=Hello%20NadiCo%20Technologies,%20I%20would%20like%20to%20inquire%20about%20POS%20and%20Inventory%20System." target="_blank" className="px-5 sm:px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:opacity-95 transition-all duration-200 shadow-[0_4px_14px_rgba(37,211,102,0.35)] hover:scale-[1.03] active:scale-[0.98] flex items-center gap-2">
                 <WhatsAppIcon className="w-4 h-4 text-white" />
                 <span>Consult on WhatsApp</span>
               </a>
@@ -365,7 +365,7 @@ export default function HeroSection() {
                 <span className="w-2.5 h-2.5 rounded-full bg-brand-lime"></span>
                 <span>Digital Marketing & SEO</span>
               </a>
-              <a href="https://wa.me/923337221552?text=Hello%20NADICO%20Technologies,%20I%20would%20like%20to%20discuss%20a%20new%20website%20project." target="_blank" className="px-5 sm:px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:opacity-95 transition-all duration-200 shadow-[0_4px_14px_rgba(37,211,102,0.35)] hover:scale-[1.03] active:scale-[0.98] flex items-center gap-2">
+              <a href="https://wa.me/923337221552?text=Hello%20NadiCo%20Technologies,%20I%20would%20like%20to%20discuss%20a%20new%20website%20project." target="_blank" className="px-5 sm:px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:opacity-95 transition-all duration-200 shadow-[0_4px_14px_rgba(37,211,102,0.35)] hover:scale-[1.03] active:scale-[0.98] flex items-center gap-2">
                 <WhatsAppIcon className="w-4 h-4 text-white" />
                 <span>Start Web Consultation</span>
               </a>
@@ -874,7 +874,7 @@ export default function HeroSection() {
 
 
                 {/* ========================================================= */}
-                {/* SUITE 2: HOSPITAL MANAGEMENT SYSTEM (NADICO HMS) */}
+                {/* SUITE 2: HOSPITAL MANAGEMENT SYSTEM (NadiCo HMS) */}
                 {/* ========================================================= */}
                 <div id="viewHospitalHMS" className={`h-full flex flex-col justify-between overflow-hidden ${activeSuite === 'hospital' ? '' : 'hidden'}`}>
                   
@@ -886,7 +886,7 @@ export default function HeroSection() {
                           +
                         </div>
                         <div className="hidden sm:block">
-                          <div className="font-bold text-white text-[9px] sm:text-[11px] leading-tight">NADICO HMS</div>
+                          <div className="font-bold text-white text-[9px] sm:text-[11px] leading-tight">NadiCo HMS</div>
                           <div className="text-[7px] text-sky-300 font-mono tracking-wider">CLINICAL SUITE</div>
                         </div>
                       </div>
@@ -1178,7 +1178,7 @@ export default function HeroSection() {
 
                   {/* Bottom Bar */}
                   <div className="bg-sky-950 text-white px-2 sm:px-3 py-0.5 flex items-center justify-between text-[6.5px] sm:text-[8px] shrink-0 font-mono border-t border-sky-900">
-                    <span className="text-sky-200">Product: NADICO HMS Enterprise Suite • HIPAA Standards</span>
+                    <span className="text-sky-200">Product: NadiCo HMS Enterprise Suite • HIPAA Standards</span>
                     <span className="text-emerald-400 font-bold flex items-center gap-1"><span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> CLINICAL SERVER SYNCED 100%</span>
                   </div>
 
@@ -1186,7 +1186,7 @@ export default function HeroSection() {
 
 
                 {/* ========================================================= */}
-                {/* SUITE 3: RETAIL INVENTORY & POS (NADICO POS) */}
+                {/* SUITE 3: RETAIL INVENTORY & POS (NadiCo POS) */}
                 {/* ========================================================= */}
                 <div id="viewInventoryPOS" className={`h-full flex flex-col justify-between overflow-hidden ${activeSuite === 'inventory' ? '' : 'hidden'}`}>
                   
@@ -1198,7 +1198,7 @@ export default function HeroSection() {
                           POS
                         </div>
                         <div className="hidden sm:block">
-                          <div className="font-bold text-white text-[9px] sm:text-[11px] leading-tight">NADICO POS</div>
+                          <div className="font-bold text-white text-[9px] sm:text-[11px] leading-tight">NadiCo POS</div>
                           <div className="text-[7px] text-emerald-400 font-mono tracking-wider">RETAIL ENTERPRISE</div>
                         </div>
                       </div>
@@ -1478,7 +1478,7 @@ export default function HeroSection() {
 
                   {/* Bottom Bar */}
                   <div className="bg-emerald-950 text-white px-2 sm:px-3 py-0.5 flex items-center justify-between text-[6.5px] sm:text-[8px] shrink-0 font-mono border-t border-emerald-900">
-                    <span className="text-emerald-300">Product: NADICO POS Retail Edition • Cash Drawer Interfaced</span>
+                    <span className="text-emerald-300">Product: NadiCo POS Retail Edition • Cash Drawer Interfaced</span>
                     <span className="text-emerald-400 font-bold flex items-center gap-1"><span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> TERMINAL RECONCILED 100%</span>
                   </div>
 
@@ -1497,7 +1497,7 @@ export default function HeroSection() {
                           DEV
                         </div>
                         <div className="hidden sm:block">
-                          <div className="font-bold text-white text-[9px] sm:text-[11px] leading-tight">NADICO WEB LABS</div>
+                          <div className="font-bold text-white text-[9px] sm:text-[11px] leading-tight">NadiCo Web Labs</div>
                           <div className="text-[7px] text-teal-400 font-mono tracking-wider">FULL-STACK & GROWTH</div>
                         </div>
                       </div>
@@ -1520,7 +1520,7 @@ export default function HeroSection() {
                         </div>
                         <div className="hidden sm:block text-left">
                           <div className="font-bold text-white text-[8.5px] leading-tight">Lead Architect</div>
-                          <div className="text-[6.5px] text-teal-400 font-mono">NADICO CLOUD</div>
+                          <div className="text-[6.5px] text-teal-400 font-mono">NadiCo Cloud</div>
                         </div>
                       </div>
                     </div>
@@ -1576,7 +1576,7 @@ export default function HeroSection() {
                       {/* Workspace Header */}
                       <div className="flex items-center justify-between pb-1 sm:pb-1.5 border-b border-slate-200 shrink-0">
                         <div className="flex items-center gap-1 text-[7.5px] sm:text-[9.5px]">
-                          <span className="font-bold text-slate-800">NADICO Web Engine</span>
+                          <span className="font-bold text-slate-800">NadiCo Web Engine</span>
                           <span className="text-slate-400">/</span>
                           <span id="webBreadcrumbTitle" className="text-brand-teal font-semibold">{webBreadcrumbs[webSubTab]}</span>
                         </div>
@@ -1716,7 +1716,7 @@ export default function HeroSection() {
 
                   {/* Bottom Bar */}
                   <div className="bg-slate-900 text-white px-2 sm:px-3 py-0.5 flex items-center justify-between text-[6.5px] sm:text-[8px] shrink-0 font-mono border-t border-slate-800">
-                    <span className="text-teal-300">NADICO Web Platform • Continuous Integration & Deployment</span>
+                    <span className="text-teal-300">NadiCo Web Platform • Continuous Integration & Deployment</span>
                     <span className="text-emerald-400 font-bold flex items-center gap-1"><span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> LIGHTHOUSE 99+ VERIFIED</span>
                   </div>
 
@@ -1982,7 +1982,7 @@ export default function HeroSection() {
                         <div className="w-4 h-4 rounded bg-emerald-700 text-white flex items-center justify-center font-bold text-[8px]">
                           POS
                         </div>
-                        <span className="text-[10px] font-bold text-slate-900">NADICO Store</span>
+                        <span className="text-[10px] font-bold text-slate-900">NadiCo Store</span>
                       </div>
                       <span className="text-[8px] px-1 py-0.2 rounded-full bg-emerald-100 text-emerald-800 font-bold">Counter 1</span>
                     </div>
@@ -2060,7 +2060,7 @@ export default function HeroSection() {
                           NW
                         </div>
                         <div>
-                          <div className="font-bold text-slate-900 text-[10px] leading-tight">NADICO Web Studio</div>
+                          <div className="font-bold text-slate-900 text-[10px] leading-tight">NadiCo Web Studio</div>
                           <div className="text-[7.5px] text-teal-600 font-medium">Digital Engineering</div>
                         </div>
                       </div>

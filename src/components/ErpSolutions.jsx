@@ -22,12 +22,12 @@ export default function ErpSolutions() {
           as="h2"
           className="font-heading text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight"
           prefix="Purpose-Built "
-          highlight="NADICO ERP"
+          highlight="NadiCo ERP"
           highlightClass="teal-gradient-text"
           suffix=" Solutions"
         />
         <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-          Whether you run an educational network, a multi-specialty hospital, or a busy retail warehouse, NADICO Technologies builds software that actually fits how businesses operate in Pakistan—free from complicated jargon and ready to use on day one.
+          Whether you run an educational network, a multi-specialty hospital, or a busy retail warehouse, NadiCo Technologies builds software that actually fits how businesses operate in Pakistan—free from complicated jargon and ready to use on day one.
         </p>
       </div>
 
@@ -155,7 +155,7 @@ export default function ErpSolutions() {
               <span>Explore Hospital HMS Page & Pricing</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
-            <a href="https://wa.me/923337221552?text=Hello%20NADICO%20Technologies,%20I%20am%20interested%20in%20your%20Hospital%20Management%20System." target="_blank" className="w-full py-3 rounded-xl bg-emerald-50/80 hover:bg-emerald-100/90 text-emerald-900 font-bold text-xs flex items-center justify-center gap-2 transition-all border border-emerald-200 shadow-xs">
+            <a href="https://wa.me/923337221552?text=Hello%20NadiCo%20Technologies,%20I%20am%20interested%20in%20your%20Hospital%20Management%20System." target="_blank" className="w-full py-3 rounded-xl bg-emerald-50/80 hover:bg-emerald-100/90 text-emerald-900 font-bold text-xs flex items-center justify-center gap-2 transition-all border border-emerald-200 shadow-xs">
               <WhatsAppIcon className="w-4 h-4 text-[#25D366]" fill="#25D366" />
               <span>Inquire via WhatsApp</span>
             </a>
@@ -218,7 +218,7 @@ export default function ErpSolutions() {
               <span>Explore Inventory & POS Page & Pricing</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
-            <a href="https://wa.me/923337221552?text=Hello%20NADICO%20Technologies,%20I%20want%20a%20quote%20for%20Inventory%20and%20POS%20software." target="_blank" className="w-full py-3 rounded-xl bg-emerald-50/80 hover:bg-emerald-100/90 text-emerald-900 font-bold text-xs flex items-center justify-center gap-2 transition-all border border-emerald-200 shadow-xs">
+            <a href="https://wa.me/923337221552?text=Hello%20NadiCo%20Technologies,%20I%20want%20a%20quote%20for%20Inventory%20and%20POS%20software." target="_blank" className="w-full py-3 rounded-xl bg-emerald-50/80 hover:bg-emerald-100/90 text-emerald-900 font-bold text-xs flex items-center justify-center gap-2 transition-all border border-emerald-200 shadow-xs">
               <WhatsAppIcon className="w-4 h-4 text-[#25D366]" fill="#25D366" />
               <span>Inquire via WhatsApp</span>
             </a>

@@ -24,7 +24,7 @@ export default function ContactPage() {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    const msg = `Hello NADICO Technologies! I am contacting you from the website contact page.%0A%0A*Name:* ${formData.name}%0A*Phone:* ${formData.phone}%0A*Email:* ${formData.email || 'N/A'}%0A*Department:* ${formData.department}%0A*City:* ${formData.city}%0A*Message:* ${formData.message || 'N/A'}`;
+    const msg = `Hello NadiCo Technologies! I am contacting you from the website contact page.%0A%0A*Name:* ${formData.name}%0A*Phone:* ${formData.phone}%0A*Email:* ${formData.email || 'N/A'}%0A*Department:* ${formData.department}%0A*City:* ${formData.city}%0A*Message:* ${formData.message || 'N/A'}`;
     window.open(`https://wa.me/923337221552?text=${msg}`, '_blank');
     setFormSubmitted(true);
   };
@@ -35,7 +35,7 @@ export default function ContactPage() {
       role: "Campus Administrator",
       org: "Al-Huda Higher Secondary School, Karachi",
       rating: 5,
-      text: "When we reported a printing issue on a Saturday evening, a NADICO senior support engineer resolved it over a WhatsApp video session within 10 minutes. That level of responsive client service is unmatched in Pakistan.",
+      text: "When we reported a printing issue on a Saturday evening, a NadiCo senior support engineer resolved it over a WhatsApp video session within 10 minutes. That level of responsive client service is unmatched in Pakistan.",
       tag: "Instant 10-Min Response"
     },
     {
@@ -43,7 +43,7 @@ export default function ContactPage() {
       role: "Managing Director",
       org: "Lakhani Mart & Cosmetics, Hyderabad",
       rating: 5,
-      text: "The NADICO deployment team visited our retail mart in person, calibrated our barcode hardware, and thoroughly trained our cashier staff. Even years after deployment, their helpline is consistently reliable.",
+      text: "The NadiCo deployment team visited our retail mart in person, calibrated our barcode hardware, and thoroughly trained our cashier staff. Even years after deployment, their helpline is consistently reliable.",
       tag: "Dedicated On-Site Support"
     },
     {
@@ -87,7 +87,7 @@ export default function ContactPage() {
             </div>
 
             <h1 className="font-heading font-extrabold text-3xl sm:text-5xl lg:text-6xl text-slate-900 tracking-tight leading-[1.15]">
-              Get in Touch with <span className="text-brand-teal">NADICO Technologies</span>
+              Get in Touch with <span className="text-brand-teal">NadiCo Technologies</span>
             </h1>
 
             <p className="text-slate-600 text-sm sm:text-lg leading-relaxed max-w-2xl mx-auto">
@@ -96,7 +96,7 @@ export default function ContactPage() {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-3">
               <a
-                href="https://wa.me/923337221552?text=Hello%20NADICO%20Technologies,%20I%20want%20to%20connect%20with%20your%20team."
+                href="https://wa.me/923337221552?text=Hello%20NadiCo%20Technologies,%20I%20want%20to%20connect%20with%20your%20team."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto px-7 py-3.5 rounded-xl font-bold text-xs sm:text-sm text-white bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:opacity-95 transition-all shadow-[0_4px_16px_rgba(37,211,102,0.4)] hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2.5"

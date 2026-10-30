@@ -28,7 +28,7 @@ export default function WebDevelopmentPage() {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    const msg = `Hello NADICO Technologies! I want a project estimate for Web Development.%0A%0A*Name:* ${formData.name}%0A*Phone:* ${formData.phone}%0A*Company:* ${formData.companyName}%0A*Project:* ${formData.projectType}%0A*Budget:* ${formData.budgetRange}%0A*Timeline:* ${formData.timeline}%0A*City:* ${formData.city}%0A*Details:* ${formData.requirements || 'N/A'}`;
+    const msg = `Hello NadiCo Technologies! I want a project estimate for Web Development.%0A%0A*Name:* ${formData.name}%0A*Phone:* ${formData.phone}%0A*Company:* ${formData.companyName}%0A*Project:* ${formData.projectType}%0A*Budget:* ${formData.budgetRange}%0A*Timeline:* ${formData.timeline}%0A*City:* ${formData.city}%0A*Details:* ${formData.requirements || 'N/A'}`;
     window.open(`https://wa.me/923337221552?text=${msg}`, '_blank');
     setFormSubmitted(true);
   };
@@ -39,7 +39,7 @@ export default function WebDevelopmentPage() {
       role: "Managing Director",
       company: "Indus Valley Textiles (Exporter), Karachi",
       rating: 5,
-      text: "Our international wholesale buyers are based across Europe and the GCC. NADICO engineered our custom product catalog and B2B export inquiry portal. The site loads in under a second and is so fluid on mobile devices that we closed 4 major new export contracts within our first month.",
+      text: "Our international wholesale buyers are based across Europe and the GCC. NadiCo engineered our custom product catalog and B2B export inquiry portal. The site loads in under a second and is so fluid on mobile devices that we closed 4 major new export contracts within our first month.",
       tag: "B2B Export Portal • Sub-Second Speed"
     },
     {
@@ -47,7 +47,7 @@ export default function WebDevelopmentPage() {
       role: "Chief Executive Officer",
       company: "PakCargo Logistics & Supply Chain, Lahore",
       rating: 5,
-      text: "We previously hired two separate freelance developers who abandoned our logistics project midway. NADICO stepped in, signed a clear milestone agreement, and engineered our customer shipment tracking portal using React and Node.js on schedule. Their technical discipline is outstanding.",
+      text: "We previously hired two separate freelance developers who abandoned our logistics project midway. NadiCo stepped in, signed a clear milestone agreement, and engineered our customer shipment tracking portal using React and Node.js on schedule. Their technical discipline is outstanding.",
       tag: "Custom Web Application • Real-time Tracking"
     },
     {
@@ -104,7 +104,7 @@ export default function WebDevelopmentPage() {
     },
     {
       q: "How do we make updates or modifications after the website goes live?",
-      a: "Every NADICO web project includes a lightweight, secure content management dashboard where you can edit text, phone numbers, and images without writing a single line of code. Additionally, all packages include 6 months of complimentary technical support."
+      a: "Every NadiCo web project includes a lightweight, secure content management dashboard where you can edit text, phone numbers, and images without writing a single line of code. Additionally, all packages include 6 months of complimentary technical support."
     },
     {
       q: "Will our website be optimized for high Google search engine rankings?",
@@ -144,7 +144,7 @@ export default function WebDevelopmentPage() {
                 <ArrowRight className="w-4 h-4" />
               </a>
               <a
-                href="https://wa.me/923337221552?text=Hello%20NADICO%20Technologies,%20I%20want%20to%20discuss%20a%20website%20project."
+                href="https://wa.me/923337221552?text=Hello%20NadiCo%20Technologies,%20I%20want%20to%20discuss%20a%20website%20project."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto px-6 py-3.5 rounded-xl font-bold text-xs sm:text-sm text-slate-800 bg-white hover:bg-emerald-50/60 border border-slate-300 hover:border-emerald-500 transition-all shadow-xs flex items-center justify-center gap-2 group"
@@ -254,7 +254,7 @@ export default function WebDevelopmentPage() {
               Modern Tech Stack
             </span>
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 tracking-tight">
-              Why NADICO Websites Generate More Inquiries
+              Why NadiCo Websites Generate More Inquiries
             </h2>
             <p className="text-slate-600 text-sm leading-relaxed">
               We don't use slow, bloated templates that break after 2 months. We engineer sleek, modern web applications that give your brand supreme authority and credibility.

@@ -149,7 +149,7 @@ function ComparisonTypewriterTable() {
             <tr>
               <th className="p-5 w-1/4">Capability / Requirement</th>
               <th className="p-5 w-3/8 text-rose-700 bg-rose-50/50">Old Desktop / Excel Software</th>
-              <th className="p-5 w-3/8 text-emerald-800 bg-emerald-50">NADICO School ERP (The Readly)</th>
+              <th className="p-5 w-3/8 text-emerald-800 bg-emerald-50">NadiCo School ERP (The Readly)</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-slate-100 text-slate-600">
@@ -193,7 +193,7 @@ export default function SchoolErpPage() {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    const msg = `Hello NADICO Technologies! I want a live demo & quotation for School Management ERP.%0A%0A*Name:* ${formData.name}%0A*Phone:* ${formData.phone}%0A*School:* ${formData.schoolName}%0A*Students:* ${formData.studentCount}%0A*City:* ${formData.city}%0A*Notes:* ${formData.notes || 'N/A'}`;
+    const msg = `Hello NadiCo Technologies! I want a live demo & quotation for School Management ERP.%0A%0A*Name:* ${formData.name}%0A*Phone:* ${formData.phone}%0A*School:* ${formData.schoolName}%0A*Students:* ${formData.studentCount}%0A*City:* ${formData.city}%0A*Notes:* ${formData.notes || 'N/A'}`;
     window.open(`https://wa.me/923337221552?text=${msg}`, '_blank');
     setFormSubmitted(true);
   };
@@ -322,7 +322,7 @@ export default function SchoolErpPage() {
               </span>
             </div>
             <p className="text-xs text-slate-700 leading-relaxed italic mb-4">
-              "NADICO School ERP eliminated all our fee collection headaches. Every month, 3-part bank deposit slips in official Meezan Bank and HBL formats are generated in minutes, and automated overdue fee alerts are dispatched via WhatsApp. It is a truly dependable campus management system."
+              "NadiCo School ERP eliminated all our fee collection headaches. Every month, 3-part bank deposit slips in official Meezan Bank and HBL formats are generated in minutes, and automated overdue fee alerts are dispatched via WhatsApp. It is a truly dependable campus management system."
             </p>
           </div>
           <div className="pt-3 border-t border-slate-100">
@@ -405,7 +405,7 @@ export default function SchoolErpPage() {
           cursorColor="bg-emerald-400"
         />
         <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-          Your school holds sensitive student records, fee collection details, and staff payroll. NADICO ERP protects your data with bank-standard encryption, Two-Factor Authentication (2FA), and complete audit logs so no unauthorized person can ever access or alter your files.
+          Your school holds sensitive student records, fee collection details, and staff payroll. NadiCo ERP protects your data with bank-standard encryption, Two-Factor Authentication (2FA), and complete audit logs so no unauthorized person can ever access or alter your files.
         </p>
       </div>
 
@@ -523,7 +523,7 @@ export default function SchoolErpPage() {
           highlightClass="teal-gradient-text"
         />
         <p className="text-slate-600 text-base leading-relaxed">
-          Explore all 14 integrated modules available inside The Readly ERP / NADICO School ERP dashboard.
+          Explore all 14 integrated modules available inside The Readly ERP / NadiCo School ERP dashboard.
         </p>
       </div>
 
@@ -774,7 +774,7 @@ export default function SchoolErpPage() {
                 <span>Launch Live Rehan School Instance</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
-              <a href="https://wa.me/923337221552?text=Hello%20NADICO%20Technologies,%20I%20would%20like%20to%20request%20credentials%20for%20The%20Readly%20ERP%20demo." target="_blank" className="px-6 py-3.5 rounded-xl font-bold text-xs sm:text-sm text-white bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:opacity-95 shadow-[0_4px_14px_rgba(37,211,102,0.35)] hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center gap-2">
+              <a href="https://wa.me/923337221552?text=Hello%20NadiCo%20Technologies,%20I%20would%20like%20to%20request%20credentials%20for%20The%20Readly%20ERP%20demo." target="_blank" className="px-6 py-3.5 rounded-xl font-bold text-xs sm:text-sm text-white bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:opacity-95 shadow-[0_4px_14px_rgba(37,211,102,0.35)] hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center gap-2">
                 <WhatsAppIcon className="w-4 h-4 text-white" />
                 <span>Request Custom Demo on WhatsApp</span>
               </a>
@@ -820,7 +820,7 @@ export default function SchoolErpPage() {
   </section>
 
   {/* ========================================================================= */}
-  {/* WHY PAKISTANI SCHOOLS CHOOSE NADICO ERP (COMPARISON TABLE) */}
+  {/* WHY PAKISTANI SCHOOLS CHOOSE NadiCo ERP (COMPARISON TABLE) */}
   {/* ========================================================================= */}
   <section id="comparison" className="py-20 lg:py-28 bg-[#fafcfa]">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -830,12 +830,12 @@ export default function SchoolErpPage() {
         <ScrollTypewriterTitle
           as="h2"
           className="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 tracking-tight"
-          prefix="How NADICO ERP Outperforms "
+          prefix="How NadiCo ERP Outperforms "
           highlight="Outdated Legacy Systems"
           highlightClass="teal-gradient-text"
         />
         <p className="text-slate-600 text-base">
-          See why 250+ campuses across Pakistan have left old desktop software behind and switched to NADICO ERP.
+          See why 250+ campuses across Pakistan have left old desktop software behind and switched to NadiCo ERP.
         </p>
       </div>
 
@@ -1057,7 +1057,7 @@ export default function SchoolErpPage() {
             Schedule a Free Live School ERP Walkthrough
           </h2>
           <p className="text-xs text-slate-600 leading-relaxed">
-            Fill this quick form and our educational deployment engineer will show you how NADICO ERP generates your school's bank challans and report cards live on Zoom or WhatsApp.
+            Fill this quick form and our educational deployment engineer will show you how NadiCo ERP generates your school's bank challans and report cards live on Zoom or WhatsApp.
           </p>
         </div>
 
@@ -1194,7 +1194,7 @@ export default function SchoolErpPage() {
       </div>
 
       <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs reveal-on-scroll reveal-left">
-        <h4 className="font-heading font-bold text-slate-900 text-sm">How does Two-Factor Authentication (2FA) work in NADICO ERP?</h4>
+        <h4 className="font-heading font-bold text-slate-900 text-sm">How does Two-Factor Authentication (2FA) work in NadiCo ERP?</h4>
         <p className="text-xs text-slate-600 mt-2 leading-relaxed">
           When 2FA is enabled, administrators and accountants log in using their password plus a 6-digit dynamic passcode generated on their smartphone (Google Authenticator) or sent via SMS. This ensures that even if someone discovers a password, they cannot breach your school's records.
         </p>
@@ -1230,7 +1230,7 @@ export default function SchoolErpPage() {
         as="h2"
         className="font-heading font-extrabold text-3xl sm:text-5xl text-white tracking-tight leading-tight"
         prefix="Ready to Modernize Your School with "
-        highlight="NADICO ERP"
+        highlight="NadiCo ERP"
         highlightClass="text-brand-limeLight"
         suffix="?"
         cursorColor="bg-brand-lime"
@@ -1241,7 +1241,7 @@ export default function SchoolErpPage() {
       </p>
 
       <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-        <a href="https://wa.me/923337221552?text=Hello%20NADICO%20Technologies,%20I%20would%20like%20to%20schedule%20a%20demo%20for%20NADICO%20School%20ERP." target="_blank" className="w-full sm:w-auto px-8 py-4 rounded-xl font-bold text-xs sm:text-sm text-white bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:opacity-95 transition-all shadow-[0_4px_18px_rgba(37,211,102,0.4)] hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2">
+        <a href="https://wa.me/923337221552?text=Hello%20NadiCo%20Technologies,%20I%20would%20like%20to%20schedule%20a%20demo%20for%20NadiCo%20School%20ERP." target="_blank" className="w-full sm:w-auto px-8 py-4 rounded-xl font-bold text-xs sm:text-sm text-white bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:opacity-95 transition-all shadow-[0_4px_18px_rgba(37,211,102,0.4)] hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2">
           <WhatsAppIcon className="w-5 h-5 text-white" />
           <span>Schedule Walkthrough on WhatsApp (+92 333 722 1552)</span>
         </a>

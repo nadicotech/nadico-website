@@ -23,7 +23,7 @@ export default function AboutPage() {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    const msg = `Hello NADICO Technologies! I want to discuss a corporate inquiry / partnership.%0A%0A*Name:* ${formData.name}%0A*Phone:* ${formData.phone}%0A*Organization:* ${formData.organization}%0A*Type:* ${formData.inquiryType}%0A*City:* ${formData.city}%0A*Message:* ${formData.message || 'N/A'}`;
+    const msg = `Hello NadiCo Technologies! I want to discuss a corporate inquiry / partnership.%0A%0A*Name:* ${formData.name}%0A*Phone:* ${formData.phone}%0A*Organization:* ${formData.organization}%0A*Type:* ${formData.inquiryType}%0A*City:* ${formData.city}%0A*Message:* ${formData.message || 'N/A'}`;
     window.open(`https://wa.me/923337221552?text=${msg}`, '_blank');
     setFormSubmitted(true);
   };
@@ -34,7 +34,7 @@ export default function AboutPage() {
       role: "Director of Education",
       org: "Cambridge Grammar Network (8 Campuses), Karachi",
       rating: 5,
-      text: "We have partnered with NADICO Technologies for over 3 years. Their support engineers are readily accessible on WhatsApp even late in the evening. No foreign software provider understands Pakistani educational workflows—from bank challan formats to load-shedding resilience—better than NADICO.",
+      text: "We have partnered with NadiCo Technologies for over 3 years. Their support engineers are readily accessible on WhatsApp even late in the evening. No foreign software provider understands Pakistani educational workflows—from bank challan formats to load-shedding resilience—better than NadiCo.",
       metric: "3+ Years Client • 8 Campuses Sync"
     },
     {
@@ -42,7 +42,7 @@ export default function AboutPage() {
       role: "Chief Executive",
       org: "Al-Shifa Healthcare Center, Hyderabad",
       rating: 5,
-      text: "Too many software vendors collect payments and vanish. NADICO's engineering team spent 3 full days on-site at our healthcare center training our receptionists, nurses, and consulting doctors step by step. It is refreshing to work with such a dedicated Pakistani technology partner.",
+      text: "Too many software vendors collect payments and vanish. NadiCo's engineering team spent 3 full days on-site at our healthcare center training our receptionists, nurses, and consulting doctors step by step. It is refreshing to work with such a dedicated Pakistani technology partner.",
       metric: "On-Site Staff Training • Zero Friction"
     },
     {
@@ -50,7 +50,7 @@ export default function AboutPage() {
       role: "Chief Financial Officer",
       org: "Pak Steel & Hardware Corp, Lahore",
       rating: 5,
-      text: "NADICO's integrated cloud accounting and multi-warehouse inventory engine automated our monthly financial reconciliations completely. Their data encryption and two-factor authentication meet true bank standards.",
+      text: "NadiCo's integrated cloud accounting and multi-warehouse inventory engine automated our monthly financial reconciliations completely. Their data encryption and two-factor authentication meet true bank standards.",
       metric: "Full Financial Audit • 100% Accurate"
     }
   ];
@@ -67,7 +67,7 @@ export default function AboutPage() {
           <div className="max-w-3xl mx-auto text-center space-y-4">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-tealSoft text-brand-teal text-xs font-bold uppercase tracking-wider border border-brand-tealBorder shadow-xs">
               <Building2 className="w-3.5 h-3.5 text-brand-teal" />
-              <span>About NADICO Technologies (NADICO TECH) • Karachi, Pakistan</span>
+              <span>About NadiCo Technologies (NadiCo Tech) • Karachi, Pakistan</span>
             </div>
 
             <h1 className="font-heading font-extrabold text-3xl sm:text-5xl lg:text-6xl text-slate-900 tracking-tight leading-[1.15]">
@@ -83,7 +83,7 @@ export default function AboutPage() {
                 href="#contact"
                 className="w-full sm:w-auto px-7 py-3.5 rounded-xl font-bold text-xs sm:text-sm text-white bg-brand-teal hover:bg-brand-tealDark transition-all shadow-button flex items-center justify-center gap-2"
               >
-                <span>Partner with NADICO</span>
+                <span>Partner with NadiCo</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
               <a
@@ -201,7 +201,7 @@ export default function AboutPage() {
                 Most international software was never built for Pakistani business conditions. They don't support 3-part bank fee challans, they freeze when load-shedding interrupts your internet, and they charge thousands of dollars in foreign currency with zero local customer support.
               </p>
               <p className="text-slate-600 text-sm leading-relaxed">
-                NADICO Technologies was founded in Karachi to fix this once and for all. We combine Silicon-Valley engineering standards (React, Next.js, Node, PostgreSQL, multi-region cloud snapshots) with direct on-the-ground support in Urdu and English.
+                NadiCo Technologies was founded in Karachi to fix this once and for all. We combine Silicon-Valley engineering standards (React, Next.js, Node, PostgreSQL, multi-region cloud snapshots) with direct on-the-ground support in Urdu and English.
               </p>
 
               <div className="space-y-3 pt-2">
@@ -245,7 +245,7 @@ export default function AboutPage() {
                   <ShieldCheck className="w-6 h-6" />
                 </div>
                 <div>
-                  <h3 className="font-heading font-bold text-xl text-white">NADICO Security Guarantee</h3>
+                  <h3 className="font-heading font-bold text-xl text-white">NadiCo Security Guarantee</h3>
                   <p className="text-xs text-slate-400">Strict Data Privacy & Sovereignty</p>
                 </div>
               </div>
@@ -275,7 +275,7 @@ export default function AboutPage() {
 
               <div className="pt-2">
                 <a
-                  href="https://wa.me/923337221552?text=Hello%20NADICO%20Technologies,%20I%20would%20like%20to%20learn%20more%20about%20your%20company%20services."
+                  href="https://wa.me/923337221552?text=Hello%20NadiCo%20Technologies,%20I%20would%20like%20to%20learn%20more%20about%20your%20company%20services."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full py-3.5 rounded-xl bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:opacity-95 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all shadow-[0_4px_14px_rgba(37,211,102,0.35)] hover:scale-[1.02] active:scale-[0.98]"
@@ -304,7 +304,7 @@ export default function AboutPage() {
                 Corporate Headquarters
               </span>
               <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-slate-900 tracking-tight">
-                Start a Conversation with NADICO TECH
+                Start a Conversation with NadiCo Tech
               </h2>
               <p className="text-xs text-slate-600 leading-relaxed">
                 Whether you are an educational board, medical director, retail chain owner, or technology partner, we welcome direct discussions.
