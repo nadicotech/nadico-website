@@ -4,6 +4,7 @@ import ScrollTypewriterTitle from '../components/ScrollTypewriterTitle.jsx';
 import Header from '../components/Header.jsx';
 import Footer from '../components/Footer.jsx';
 import FloatingWhatsApp from '../components/FloatingWhatsApp.jsx';
+import WhatsAppIcon from '../components/WhatsAppIcon.jsx';
 import { initScrollReveal } from '../utils/useScrollReveal.js';
 
 const comparisonRows = [
@@ -773,8 +774,8 @@ export default function SchoolErpPage() {
                 <span>Launch Live Rehan School Instance</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
-              <a href="https://wa.me/923337221552?text=Hello%20NADICO%20Technologies,%20I%20would%20like%20to%20request%20credentials%20for%20The%20Readly%20ERP%20demo." target="_blank" className="px-6 py-3.5 rounded-xl font-bold text-xs sm:text-sm text-white bg-white/10 hover:bg-white/20 border border-white/25 transition-all flex items-center gap-2">
-                <MessageCircle className="w-4 h-4 text-emerald-400" />
+              <a href="https://wa.me/923337221552?text=Hello%20NADICO%20Technologies,%20I%20would%20like%20to%20request%20credentials%20for%20The%20Readly%20ERP%20demo." target="_blank" className="px-6 py-3.5 rounded-xl font-bold text-xs sm:text-sm text-white bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:opacity-95 shadow-[0_4px_14px_rgba(37,211,102,0.35)] hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center gap-2">
+                <WhatsAppIcon className="w-4 h-4 text-white" />
                 <span>Request Custom Demo on WhatsApp</span>
               </a>
             </div>
@@ -1155,9 +1156,9 @@ export default function SchoolErpPage() {
               </div>
               <button
                 type="submit"
-                className="w-full sm:w-auto px-8 py-3.5 rounded-xl font-bold text-xs text-white bg-brand-teal hover:bg-brand-tealDark transition-all shadow-button flex items-center justify-center gap-2"
+                className="w-full sm:w-auto px-8 py-3.5 rounded-xl font-bold text-xs text-white bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:opacity-95 shadow-[0_4px_16px_rgba(37,211,102,0.35)] hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2"
               >
-                <MessageCircle className="w-4 h-4" />
+                <WhatsAppIcon className="w-4 h-4 text-white" />
                 <span>Request Campus Walkthrough on WhatsApp</span>
               </button>
             </div>
@@ -1240,8 +1241,8 @@ export default function SchoolErpPage() {
       </p>
 
       <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-        <a href="https://wa.me/923337221552?text=Hello%20NADICO%20Technologies,%20I%20would%20like%20to%20schedule%20a%20demo%20for%20NADICO%20School%20ERP." target="_blank" className="w-full sm:w-auto px-8 py-4 rounded-xl font-bold text-xs sm:text-sm text-brand-charcoal bg-brand-lime hover:bg-brand-limeLight transition-all shadow-button-lime flex items-center justify-center gap-2">
-          <MessageCircle className="w-4 h-4" />
+        <a href="https://wa.me/923337221552?text=Hello%20NADICO%20Technologies,%20I%20would%20like%20to%20schedule%20a%20demo%20for%20NADICO%20School%20ERP." target="_blank" className="w-full sm:w-auto px-8 py-4 rounded-xl font-bold text-xs sm:text-sm text-white bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:opacity-95 transition-all shadow-[0_4px_18px_rgba(37,211,102,0.4)] hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2">
+          <WhatsAppIcon className="w-5 h-5 text-white" />
           <span>Schedule Walkthrough on WhatsApp (+92 333 722 1552)</span>
         </a>
         <a href="/#contact" className="w-full sm:w-auto px-7 py-4 rounded-xl font-bold text-xs sm:text-sm text-white bg-white/10 hover:bg-white/20 border border-white/25 transition-all flex items-center justify-center gap-2">

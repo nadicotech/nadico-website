@@ -1,6 +1,7 @@
 import { Activity, ArrowLeft, ArrowRight, Calendar, CheckCircle, ChevronDown, ExternalLink, GraduationCap, HelpCircle, Layers, Layout, Mail, Menu, MessageCircle, PhoneCall, Shield, ShoppingCart, TrendingUp, X } from 'lucide-react';
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import WhatsAppIcon from './WhatsAppIcon.jsx';
 
 export default function Header() {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -190,9 +191,9 @@ export default function Header() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Chat on WhatsApp"
-            className="w-10 h-10 rounded-xl bg-[#25D366] text-white flex items-center justify-center shadow-sm hover:scale-105 active:scale-95 transition-transform"
+            className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#128C7E] to-[#25D366] text-white flex items-center justify-center shadow-[0_4px_12px_rgba(37,211,102,0.35)] hover:scale-105 active:scale-95 transition-transform"
           >
-            <MessageCircle className="w-5 h-5" />
+            <WhatsAppIcon className="w-5 h-5 text-white" />
           </a>
 
           <button
@@ -481,10 +482,10 @@ export default function Header() {
           href="https://wa.me/923337221552?text=Hello%20NADICO%20Technologies,%20I%20want%20to%20consult%20regarding%20ERP%20software."
           target="_blank"
           rel="noopener noreferrer"
-          className="py-2.5 rounded-xl text-xs font-bold text-white bg-[#25D366] hover:bg-[#20ba59] text-center flex items-center justify-center gap-1.5 shadow-xs transition-colors"
+          className="py-2.5 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:opacity-95 text-center flex items-center justify-center gap-1.5 shadow-[0_4px_14px_rgba(37,211,102,0.35)] transition-all"
         >
-          <MessageCircle className="w-3.5 h-3.5" />
-          <span>WhatsApp</span>
+          <WhatsAppIcon className="w-4 h-4 text-white" />
+          <span>Chat on WhatsApp</span>
         </a>
       </div>
     </div>

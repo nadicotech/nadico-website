@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 import Header from '../components/Header.jsx';
 import Footer from '../components/Footer.jsx';
 import FloatingWhatsApp from '../components/FloatingWhatsApp.jsx';
+import WhatsAppIcon from '../components/WhatsAppIcon.jsx';
 
 export default function DigitalMarketingPage() {
   const [selectedTier, setSelectedTier] = useState('growth');
@@ -146,9 +147,11 @@ export default function DigitalMarketingPage() {
                 href="https://wa.me/923337221552?text=Hello%20NADICO%20Technologies,%20I%20want%20a%20free%20audit%20of%20my%20digital%20marketing%20campaigns."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto px-6 py-3.5 rounded-xl font-bold text-xs sm:text-sm text-slate-800 bg-white hover:bg-slate-50 border border-slate-300 transition-all shadow-xs flex items-center justify-center gap-2"
+                className="w-full sm:w-auto px-6 py-3.5 rounded-xl font-bold text-xs sm:text-sm text-slate-800 bg-white hover:bg-emerald-50/60 border border-slate-300 hover:border-emerald-500 transition-all shadow-xs flex items-center justify-center gap-2 group"
               >
-                <MessageCircle className="w-4 h-4 text-emerald-600" />
+                <div className="w-5 h-5 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-xs shrink-0 group-hover:scale-110 transition-transform">
+                  <WhatsAppIcon className="w-3.5 h-3.5 text-white" />
+                </div>
                 <span>Get Free Marketing Audit on WhatsApp</span>
               </a>
             </div>
@@ -611,9 +614,9 @@ export default function DigitalMarketingPage() {
                   </div>
                   <button
                     type="submit"
-                    className="w-full sm:w-auto px-8 py-3.5 rounded-xl font-bold text-xs text-brand-charcoal bg-brand-lime hover:bg-brand-limeDark transition-all shadow-button-lime flex items-center justify-center gap-2"
+                    className="w-full sm:w-auto px-8 py-3.5 rounded-xl font-bold text-xs text-white bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:opacity-95 transition-all shadow-[0_4px_16px_rgba(37,211,102,0.35)] hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2"
                   >
-                    <MessageCircle className="w-4 h-4 text-brand-charcoal" />
+                    <WhatsAppIcon className="w-4 h-4 text-white" />
                     <span>Request Free Audit on WhatsApp</span>
                   </button>
                 </div>

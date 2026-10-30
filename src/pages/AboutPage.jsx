@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 import Header from '../components/Header.jsx';
 import Footer from '../components/Footer.jsx';
 import FloatingWhatsApp from '../components/FloatingWhatsApp.jsx';
+import WhatsAppIcon from '../components/WhatsAppIcon.jsx';
 
 export default function AboutPage() {
   const [formData, setFormData] = useState({
@@ -277,10 +278,10 @@ export default function AboutPage() {
                   href="https://wa.me/923337221552?text=Hello%20NADICO%20Technologies,%20I%20would%20like%20to%20learn%20more%20about%20your%20company%20services."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full py-3 rounded-xl bg-brand-lime hover:bg-brand-limeDark text-brand-charcoal font-bold text-xs flex items-center justify-center gap-2 transition-colors shadow-button-lime"
+                  className="w-full py-3.5 rounded-xl bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:opacity-95 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all shadow-[0_4px_14px_rgba(37,211,102,0.35)] hover:scale-[1.02] active:scale-[0.98]"
                 >
-                  <MessageCircle className="w-4 h-4" />
-                  <span>Connect with Engineering Leadership</span>
+                  <WhatsAppIcon className="w-4 h-4 text-white" />
+                  <span>Connect with Engineering Leadership on WhatsApp</span>
                 </a>
               </div>
             </div>
@@ -389,9 +390,9 @@ export default function AboutPage() {
                   </div>
                   <button
                     type="submit"
-                    className="w-full sm:w-auto px-8 py-3.5 rounded-xl font-bold text-xs text-white bg-brand-teal hover:bg-brand-tealDark transition-all shadow-button flex items-center justify-center gap-2"
+                    className="w-full sm:w-auto px-8 py-3.5 rounded-xl font-bold text-xs text-white bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:opacity-95 transition-all shadow-[0_4px_16px_rgba(37,211,102,0.35)] hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2"
                   >
-                    <MessageCircle className="w-4 h-4" />
+                    <WhatsAppIcon className="w-4 h-4 text-white" />
                     <span>Send Inquiry on WhatsApp</span>
                   </button>
                 </div>

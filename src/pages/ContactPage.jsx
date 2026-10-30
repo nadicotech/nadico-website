@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 import Header from '../components/Header.jsx';
 import Footer from '../components/Footer.jsx';
 import FloatingWhatsApp from '../components/FloatingWhatsApp.jsx';
+import WhatsAppIcon from '../components/WhatsAppIcon.jsx';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -98,9 +99,9 @@ export default function ContactPage() {
                 href="https://wa.me/923337221552?text=Hello%20NADICO%20Technologies,%20I%20want%20to%20connect%20with%20your%20team."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto px-7 py-3.5 rounded-xl font-bold text-xs sm:text-sm text-white bg-emerald-600 hover:bg-emerald-700 transition-all shadow-button flex items-center justify-center gap-2"
+                className="w-full sm:w-auto px-7 py-3.5 rounded-xl font-bold text-xs sm:text-sm text-white bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:opacity-95 transition-all shadow-[0_4px_16px_rgba(37,211,102,0.4)] hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2.5"
               >
-                <MessageCircle className="w-4 h-4" />
+                <WhatsAppIcon className="w-4 h-4 text-white" />
                 <span>Chat on WhatsApp (+92 333 722 1552)</span>
               </a>
               <a
@@ -314,9 +315,9 @@ export default function ContactPage() {
                   </div>
                   <button
                     type="submit"
-                    className="w-full sm:w-auto px-8 py-3.5 rounded-xl font-bold text-xs text-white bg-brand-teal hover:bg-brand-tealDark transition-all shadow-button flex items-center justify-center gap-2"
+                    className="w-full sm:w-auto px-8 py-3.5 rounded-xl font-bold text-xs text-white bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:opacity-95 transition-all shadow-[0_4px_16px_rgba(37,211,102,0.35)] hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2"
                   >
-                    <MessageCircle className="w-4 h-4" />
+                    <WhatsAppIcon className="w-4 h-4 text-white" />
                     <span>Send Message on WhatsApp</span>
                   </button>
                 </div>

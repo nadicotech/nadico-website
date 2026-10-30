@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 import Header from '../components/Header.jsx';
 import Footer from '../components/Footer.jsx';
 import FloatingWhatsApp from '../components/FloatingWhatsApp.jsx';
+import WhatsAppIcon from '../components/WhatsAppIcon.jsx';
 
 export default function InventoryPosPage() {
   const [selectedTier, setSelectedTier] = useState('retail');
@@ -145,9 +146,11 @@ export default function InventoryPosPage() {
                 href="https://wa.me/923337221552?text=Hello%20NADICO%20Technologies,%20I%20want%20a%20live%20demo%20of%20Inventory%20and%20POS%20System."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto px-6 py-3.5 rounded-xl font-bold text-xs sm:text-sm text-slate-800 bg-white hover:bg-slate-50 border border-slate-300 transition-all shadow-xs flex items-center justify-center gap-2"
+                className="w-full sm:w-auto px-6 py-3.5 rounded-xl font-bold text-xs sm:text-sm text-slate-800 bg-white hover:bg-emerald-50/60 border border-slate-300 hover:border-emerald-500 transition-all shadow-xs flex items-center justify-center gap-2 group"
               >
-                <MessageCircle className="w-4 h-4 text-emerald-600" />
+                <div className="w-5 h-5 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-xs shrink-0 group-hover:scale-110 transition-transform">
+                  <WhatsAppIcon className="w-3.5 h-3.5 text-white" />
+                </div>
                 <span>Chat on WhatsApp (+92 333 722 1552)</span>
               </a>
             </div>
@@ -610,9 +613,9 @@ export default function InventoryPosPage() {
                   </div>
                   <button
                     type="submit"
-                    className="w-full sm:w-auto px-8 py-3.5 rounded-xl font-bold text-xs text-white bg-emerald-700 hover:bg-emerald-800 transition-all shadow-button flex items-center justify-center gap-2"
+                    className="w-full sm:w-auto px-8 py-3.5 rounded-xl font-bold text-xs text-white bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:opacity-95 transition-all shadow-[0_4px_16px_rgba(37,211,102,0.35)] hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2"
                   >
-                    <MessageCircle className="w-4 h-4" />
+                    <WhatsAppIcon className="w-4 h-4 text-white" />
                     <span>Request WhatsApp Consultation</span>
                   </button>
                 </div>

@@ -1,6 +1,7 @@
 import { Activity, AlertCircle, AlertTriangle, ArrowDown, ArrowLeftRight, ArrowRight, Banknote, BarChart2, BarChart3, Bed, BedDouble, Bell, BookMarked, BookOpen, Boxes, Briefcase, Building2, Calendar, CalendarCheck, CheckCircle, CheckSquare, ChevronLeft, ChevronRight, CircleDollarSign, ClipboardList, ClipboardPlus, Code, CreditCard, ExternalLink, FileCheck, FileSpreadsheet, FileText, Fingerprint, FlaskConical, Gauge, Globe, GraduationCap, HeartPulse, Home, Layers, LayoutDashboard, ListOrdered, Lock, LogOut, MessageCircle, Pill, Plus, Printer, Receipt, Scan, ScanBarcode, ScanLine, Scissors, Search, Settings, Shield, ShieldCheck, ShoppingBag, ShoppingCart, Smartphone, Sparkles, Stethoscope, TrendingUp, Truck, UserCheck, Users, Wallet, Zap } from 'lucide-react';
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import WhatsAppIcon from './WhatsAppIcon.jsx';
 
 const suites = ['school', 'hospital', 'inventory', 'web'];
 
@@ -244,9 +245,9 @@ export default function HeroSection() {
                 <span>View Live School Portal</span>
                 <ExternalLink className="w-4 h-4 text-slate-400 group-hover:text-brand-teal transition-transform" />
               </a>
-              <a href="https://wa.me/923337221552?text=Hello%20NADICO%20Technologies,%20I%20would%20like%20to%20schedule%20a%20demo%20for%20NADICO%20School%20ERP." target="_blank" className="px-5 sm:px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-brand-lime hover:bg-brand-limeDark transition-all duration-200 shadow-button-lime flex items-center gap-2">
-                <MessageCircle className="w-4 h-4 text-brand-charcoal" />
-                <span className="text-brand-charcoal">Consult on WhatsApp</span>
+              <a href="https://wa.me/923337221552?text=Hello%20NADICO%20Technologies,%20I%20would%20like%20to%20schedule%20a%20demo%20for%20NADICO%20School%20ERP." target="_blank" className="px-5 sm:px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:opacity-95 transition-all duration-200 shadow-[0_4px_14px_rgba(37,211,102,0.35)] hover:scale-[1.03] active:scale-[0.98] flex items-center gap-2">
+                <WhatsAppIcon className="w-4 h-4 text-white" />
+                <span>Consult on WhatsApp</span>
               </a>
             </div>
 
@@ -284,8 +285,8 @@ export default function HeroSection() {
                 <span className="w-2.5 h-2.5 rounded-full bg-sky-600"></span>
                 <span>Request Clinical HMS Walkthrough</span>
               </a>
-              <a href="https://wa.me/923337221552?text=Hello%20NADICO%20Technologies,%20I%20would%20like%20to%20inquire%20about%20Hospital%20Management%20System." target="_blank" className="px-5 sm:px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-emerald-600 hover:bg-emerald-700 transition-all duration-200 shadow-button flex items-center gap-2">
-                <MessageCircle className="w-4 h-4" />
+              <a href="https://wa.me/923337221552?text=Hello%20NADICO%20Technologies,%20I%20would%20like%20to%20inquire%20about%20Hospital%20Management%20System." target="_blank" className="px-5 sm:px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:opacity-95 transition-all duration-200 shadow-[0_4px_14px_rgba(37,211,102,0.35)] hover:scale-[1.03] active:scale-[0.98] flex items-center gap-2">
+                <WhatsAppIcon className="w-4 h-4 text-white" />
                 <span>Consult on WhatsApp</span>
               </a>
             </div>
@@ -324,9 +325,9 @@ export default function HeroSection() {
                 <span className="w-2.5 h-2.5 rounded-full bg-emerald-600"></span>
                 <span>Request Retail POS Demo</span>
               </a>
-              <a href="https://wa.me/923337221552?text=Hello%20NADICO%20Technologies,%20I%20would%20like%20to%20inquire%20about%20POS%20and%20Inventory%20System." target="_blank" className="px-5 sm:px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-brand-lime hover:bg-brand-limeDark transition-all duration-200 shadow-button-lime flex items-center gap-2">
-                <MessageCircle className="w-4 h-4 text-brand-charcoal" />
-                <span className="text-brand-charcoal">Consult on WhatsApp</span>
+              <a href="https://wa.me/923337221552?text=Hello%20NADICO%20Technologies,%20I%20would%20like%20to%20inquire%20about%20POS%20and%20Inventory%20System." target="_blank" className="px-5 sm:px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:opacity-95 transition-all duration-200 shadow-[0_4px_14px_rgba(37,211,102,0.35)] hover:scale-[1.03] active:scale-[0.98] flex items-center gap-2">
+                <WhatsAppIcon className="w-4 h-4 text-white" />
+                <span>Consult on WhatsApp</span>
               </a>
             </div>
 
@@ -364,9 +365,9 @@ export default function HeroSection() {
                 <span className="w-2.5 h-2.5 rounded-full bg-brand-lime"></span>
                 <span>Digital Marketing & SEO</span>
               </a>
-              <a href="https://wa.me/923337221552?text=Hello%20NADICO%20Technologies,%20I%20would%20like%20to%20discuss%20a%20new%20website%20project." target="_blank" className="px-5 sm:px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-brand-lime hover:bg-brand-limeDark transition-all duration-200 shadow-button-lime flex items-center gap-2">
-                <MessageCircle className="w-4 h-4 text-brand-charcoal" />
-                <span className="text-brand-charcoal">Start Web Consultation</span>
+              <a href="https://wa.me/923337221552?text=Hello%20NADICO%20Technologies,%20I%20would%20like%20to%20discuss%20a%20new%20website%20project." target="_blank" className="px-5 sm:px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:opacity-95 transition-all duration-200 shadow-[0_4px_14px_rgba(37,211,102,0.35)] hover:scale-[1.03] active:scale-[0.98] flex items-center gap-2">
+                <WhatsAppIcon className="w-4 h-4 text-white" />
+                <span>Start Web Consultation</span>
               </a>
             </div>
 

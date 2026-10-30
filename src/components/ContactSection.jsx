@@ -1,6 +1,7 @@
 import { Mail, MapPin, MessageCircle, MessageSquare, Phone, PhoneCall, Send } from 'lucide-react';
 import React, { useState } from 'react';
 import ScrollTypewriterTitle from './ScrollTypewriterTitle.jsx';
+import WhatsAppIcon from './WhatsAppIcon.jsx';
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -70,13 +71,16 @@ export default function ContactSection() {
               </a>
 
               {/* WhatsApp */}
-              <a href="https://wa.me/923337221552?text=Hello%20NADICO%20Technologies,%20I%20would%20like%20to%20request%20a%20live%20demo%20and%20consultation." target="_blank" className="p-4 rounded-2xl bg-emerald-50/60 border border-emerald-200 hover:border-emerald-500 flex items-center gap-4 transition-all group">
-                <div className="w-12 h-12 rounded-xl bg-[#25D366] text-white flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform shadow-xs">
-                  <MessageSquare className="w-5 h-5" />
+              <a href="https://wa.me/923337221552?text=Hello%20NADICO%20Technologies,%20I%20would%20like%20to%20request%20a%20live%20demo%20and%20consultation." target="_blank" className="p-4 rounded-2xl bg-emerald-50/70 border border-emerald-200 hover:border-emerald-500 hover:shadow-md flex items-center gap-4 transition-all group">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-tr from-[#128C7E] to-[#25D366] text-white flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform shadow-[0_4px_12px_rgba(37,211,102,0.35)]">
+                  <WhatsAppIcon className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <div className="text-xs text-emerald-800 font-medium">Instant WhatsApp Chat</div>
-                  <div className="text-base sm:text-lg font-bold text-slate-900">+92 333 722 1552</div>
+                  <div className="text-xs text-emerald-800 font-bold flex items-center gap-1.5">
+                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <span>Instant WhatsApp Chat</span>
+                  </div>
+                  <div className="text-base sm:text-lg font-bold text-slate-900 group-hover:text-emerald-700 transition-colors">+92 333 722 1552</div>
                 </div>
               </a>
 
@@ -151,8 +155,8 @@ export default function ContactSection() {
                   <Send className="w-4 h-4" />
                   <span>Submit Demo Request</span>
                 </button>
-                <button type="button" onClick={handleSubmit} className="py-3.5 px-6 rounded-xl bg-[#25D366] hover:bg-[#1ebd59] text-white font-bold text-xs flex items-center justify-center gap-2 transition-all shadow-sm">
-                  <MessageCircle className="w-4 h-4" />
+                <button type="button" onClick={handleSubmit} className="py-3.5 px-6 rounded-xl bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:opacity-95 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all shadow-[0_4px_14px_rgba(37,211,102,0.35)] hover:scale-[1.02] active:scale-[0.98]">
+                  <WhatsAppIcon className="w-4 h-4 text-white" />
                   <span>Send via WhatsApp</span>
                 </button>
               </div>

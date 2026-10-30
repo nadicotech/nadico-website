@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 import Header from '../components/Header.jsx';
 import Footer from '../components/Footer.jsx';
 import FloatingWhatsApp from '../components/FloatingWhatsApp.jsx';
+import WhatsAppIcon from '../components/WhatsAppIcon.jsx';
 
 export default function HospitalHmsPage() {
   const [selectedTier, setSelectedTier] = useState('clinic');
@@ -207,9 +208,9 @@ export default function HospitalHmsPage() {
                   href="https://wa.me/923337221552?text=Hello%20NADICO%20Technologies,%20I%20want%20to%20see%20a%20live%20walkthrough%20of%20Hospital%20HMS."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs flex items-center justify-center gap-2 transition-colors shadow-sm"
+                  className="w-full py-3.5 rounded-xl bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:opacity-95 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-[0_4px_14px_rgba(37,211,102,0.35)] hover:scale-[1.02] active:scale-[0.98] transition-all"
                 >
-                  <MessageCircle className="w-4 h-4" />
+                  <WhatsAppIcon className="w-4 h-4 text-white" />
                   <span>Direct WhatsApp Consultation: +92 333 722 1552</span>
                 </a>
               </div>
@@ -604,9 +605,9 @@ export default function HospitalHmsPage() {
                 <div className="sm:col-span-2 pt-2">
                   <button 
                     type="submit"
-                    className="w-full py-3.5 rounded-xl bg-sky-500 hover:bg-sky-600 text-white font-bold text-sm transition-colors shadow-lg flex items-center justify-center gap-2"
+                    className="w-full py-3.5 rounded-xl bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:opacity-95 text-white font-bold text-sm shadow-[0_4px_16px_rgba(37,211,102,0.4)] hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2"
                   >
-                    <MessageCircle className="w-4 h-4" />
+                    <WhatsAppIcon className="w-5 h-5 text-white" />
                     <span>Submit & Connect with HMS Consultant on WhatsApp</span>
                   </button>
                 </div>
