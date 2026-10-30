@@ -35,10 +35,10 @@ export default function Header() {
   {/* ========================================================================= */}
   {/* MAIN NAVIGATION (FIXED FLOATING ROUNDED CAPSULE PATTI STYLE - SAME ON ALL PAGES) */}
   {/* ========================================================================= */}
-  <header id="mainHeader" className="fixed top-2 sm:top-3 left-0 right-0 z-50 px-2.5 sm:px-6 lg:px-8 transition-all duration-300 pointer-events-none">
+  <header id="mainHeader" className="fixed top-2.5 sm:top-3.5 left-0 right-0 z-50 px-3 sm:px-6 lg:px-8 transition-all duration-300 pointer-events-none">
     <div className={`max-w-7xl mx-auto bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl sm:rounded-3xl shadow-lg transition-all duration-300 pointer-events-auto ${scrolled ? 'shadow-xl bg-white/98 border-slate-300' : ''}`}>
-      <div className="px-3 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-13 sm:h-15 lg:h-17">
+      <div className="px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 sm:h-18 lg:h-20">
           
           {/* LOGO & BRANDING (SILVER SWEEP EFFECT) */}
           <Link to="/" className="flex items-center gap-3.5 group py-1">
@@ -46,7 +46,7 @@ export default function Header() {
               <img
                 src="/LOGO.png"
                 alt="NADICO Global Technologies"
-                className="h-8 sm:h-10 lg:h-13 w-auto object-contain drop-shadow-sm"
+                className="h-11 sm:h-13 lg:h-15 w-auto object-contain drop-shadow-sm"
               />
               <div className="silver-sheen-overlay" aria-hidden="true"></div>
             </div>
@@ -202,7 +202,7 @@ export default function Header() {
 </header>
 
 {/* Spacer so page content starts cleanly below the fixed floating header */}
-<div className="h-18 sm:h-22 lg:h-24 w-full pointer-events-none" aria-hidden="true" />
+<div className="h-22 sm:h-26 lg:h-28 w-full pointer-events-none" aria-hidden="true" />
 
   {/* ========================================================================= */}
   {/* MOBILE SLIDE-OUT DRAWER (PREMIUM MODERN APP-LIKE EXPERIENCE) */}
