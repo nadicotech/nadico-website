@@ -35,10 +35,10 @@ export default function Header() {
   {/* ========================================================================= */}
   {/* MAIN NAVIGATION (FIXED FLOATING ROUNDED CAPSULE PATTI STYLE - SAME ON ALL PAGES) */}
   {/* ========================================================================= */}
-  <header id="mainHeader" className="fixed top-3 sm:top-4 left-0 right-0 z-50 px-3 sm:px-6 lg:px-8 transition-all duration-300 pointer-events-none">
+  <header id="mainHeader" className="fixed top-2 sm:top-3 left-0 right-0 z-50 px-2.5 sm:px-6 lg:px-8 transition-all duration-300 pointer-events-none">
     <div className={`max-w-7xl mx-auto bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl sm:rounded-3xl shadow-lg transition-all duration-300 pointer-events-auto ${scrolled ? 'shadow-xl bg-white/98 border-slate-300' : ''}`}>
-      <div className="px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20 sm:h-22">
+      <div className="px-3 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-13 sm:h-15 lg:h-17">
           
           {/* LOGO & BRANDING (SILVER SWEEP EFFECT) */}
           <Link to="/" className="flex items-center gap-3.5 group py-1">
@@ -46,7 +46,7 @@ export default function Header() {
               <img
                 src="/LOGO.png"
                 alt="NADICO Global Technologies"
-                className="h-14 sm:h-16 w-auto object-contain drop-shadow-sm"
+                className="h-8 sm:h-10 lg:h-13 w-auto object-contain drop-shadow-sm"
               />
               <div className="silver-sheen-overlay" aria-hidden="true"></div>
             </div>
@@ -184,23 +184,13 @@ export default function Header() {
           )}
         </div>
 
-        {/* MOBILE ACTIONS: DIRECT WHATSAPP & HAMBURGER */}
-        <div className="flex lg:hidden items-center gap-2">
-          <a
-            href="https://wa.me/923337221552?text=Hello%20NADICO%20Technologies,%20I%20am%20inquiring%20from%20your%20website."
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Chat on WhatsApp"
-            className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#128C7E] to-[#25D366] text-white flex items-center justify-center shadow-[0_4px_12px_rgba(37,211,102,0.35)] hover:scale-105 active:scale-95 transition-transform"
-          >
-            <WhatsAppIcon className="w-5 h-5 text-white" />
-          </a>
-
+        {/* MOBILE ACTIONS: HAMBURGER */}
+        <div className="flex lg:hidden items-center">
           <button
             id="mobileMenuBtn"
             onClick={() => setDrawerOpen(true)}
             aria-label="Open Navigation Menu"
-            className="w-10 h-10 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-200/80 flex items-center justify-center focus:outline-none transition-colors"
+            className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-200/80 flex items-center justify-center focus:outline-none transition-colors"
           >
             <Menu className="w-5 h-5" />
           </button>
@@ -212,7 +202,7 @@ export default function Header() {
 </header>
 
 {/* Spacer so page content starts cleanly below the fixed floating header */}
-<div className="h-28 sm:h-32 w-full pointer-events-none" aria-hidden="true" />
+<div className="h-18 sm:h-22 lg:h-24 w-full pointer-events-none" aria-hidden="true" />
 
   {/* ========================================================================= */}
   {/* MOBILE SLIDE-OUT DRAWER (PREMIUM MODERN APP-LIKE EXPERIENCE) */}
