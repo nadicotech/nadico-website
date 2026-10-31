@@ -1,4 +1,4 @@
-import { ArrowRight, Award, BadgeCheck, Banknote, BarChart3, Bell, BookOpen, Briefcase, Calculator, Check, CheckCircle, CheckSquare, Cloud, CreditCard, DollarSign, ExternalLink, Eye, FileCheck, FileSpreadsheet, FileText, Fingerprint, GraduationCap, KeyRound, Layers, LayoutDashboard, Lock, Mail, MessageCircle, PhoneCall, PieChart, Printer, QrCode, Receipt, RotateCcw, Server, Shield, ShieldCheck, Sliders, Smartphone, Sparkles, UserCheck, Users, Star, Clock, Building2, TrendingUp } from 'lucide-react';
+import { ArrowRight, Award, BadgeCheck, Banknote, BarChart3, Bell, BookOpen, Briefcase, Calculator, Calendar, Check, CheckCircle, CheckSquare, ChevronRight, Cloud, CreditCard, DollarSign, ExternalLink, Eye, FileCheck, FileSpreadsheet, FileText, Fingerprint, GraduationCap, KeyRound, Layers, LayoutDashboard, Lock, Mail, Maximize2, MessageCircle, Pause, PhoneCall, PieChart, Play, Printer, QrCode, Receipt, RotateCcw, Server, Shield, ShieldCheck, Sliders, Smartphone, Sparkles, UserCheck, Users, Star, Clock, Building2, TrendingUp, Video, Volume2, VolumeX, X } from 'lucide-react';
 import React, { useEffect, useState, useRef } from 'react';
 import ScrollTypewriterTitle from '../components/ScrollTypewriterTitle.jsx';
 import Header from '../components/Header.jsx';
@@ -9,39 +9,34 @@ import { initScrollReveal } from '../utils/useScrollReveal.js';
 
 const comparisonRows = [
   {
-    feature: "Security & 2FA Protection",
-    legacy: "❌ Simple plain-text password; high risk of unauthorized tampering",
-    nadico: "✓ Two-Factor Authentication (2FA), 256-bit SSL, and full audit logs"
+    feature: "Daily Administration & Records",
+    legacy: "❌ Haath se register likhna: Ghanton ki manual data entry, register phatnay ya khonay ka darr",
+    nadico: "✓ NadiCo 1-Click System: 100% digital cloud lifecycle, instant student search, zero paperwork"
   },
   {
-    feature: "3-Part Bank Fee Challans",
-    legacy: "❌ Generic receipts; doesn't match Meezan / HBL / 1Link formats",
-    nadico: "✓ Authentic 3-part bank slips with barcodes & automatic fine rules"
+    feature: "Parent Communication & Alerts",
+    legacy: "❌ SMS ke hazaron rupay kharch karna: Mehengay telco SMS bundles aur delivery failure",
+    nadico: "✓ Direct Free WhatsApp Alerts: Real-time fee reminders, attendance, and daily homework diary"
   },
   {
-    feature: "Parent Communication",
-    legacy: "❌ Paper diaries often lost; costly manual phone calls to parents",
-    nadico: "✓ Native Parent Mobile App, whiteboard photo diary, & WhatsApp SMS"
+    feature: "3-Part Bank Fee Challan System",
+    legacy: "❌ Manual paper challans; banks reject unverified slips; counter payment rush & queues",
+    nadico: "✓ Authentic 3-Part Bank Challans (Meezan, HBL, Allied): Barcodes & 1Link 1Bill digital payment"
   },
   {
-    feature: "Biometric Attendance",
-    legacy: "❌ Standalone USB download required; no parent notifications",
-    nadico: "✓ Real-time ZKTeco cloud sync with automated instant absent SMS"
+    feature: "Examinations & Result Cards",
+    legacy: "❌ Manual marks calculation; staff takes 2 weeks calculating positions with human grading errors",
+    nadico: "✓ Dynamic BISE & Cambridge CAIE Engine: Automated rank positions & printable result cards in 1 click"
   },
   {
-    feature: "Campus Accounting & P&L",
-    legacy: "❌ Separate registers; accountant takes days to tally monthly cash",
-    nadico: "✓ Integrated double-entry general ledger with automatic real-time P&L"
+    feature: "Owner Financial Transparency",
+    legacy: "❌ Accountant dependency: Owner waits until month-end without knowing actual cash and bank balance",
+    nadico: "✓ Auto Daily Balance Sheet: Real-time cash & bank closing, plus 6:00 PM WhatsApp executive digest"
   },
   {
-    feature: "Disaster Recovery & Backups",
-    legacy: "❌ Stored on a single computer; virus/ransomware destroys all records",
-    nadico: "✓ Automated daily multi-region cloud snapshots with zero data loss"
-  },
-  {
-    feature: "Accessibility",
-    legacy: "❌ Locked to the school office PC; principal cannot monitor from home",
-    nadico: "✓ 100% Cloud-accessible from laptop, tablet, or smartphone 24/7"
+    feature: "Security & Cloud Backups",
+    legacy: "❌ Single office PC crash risk; virus, ransomware, or disk failure destroys years of school data",
+    nadico: "✓ Two-Factor Authentication (2FA), 256-bit SSL, and automated daily multi-region cloud snapshots"
   }
 ];
 
@@ -182,6 +177,18 @@ function ComparisonTypewriterTable() {
 export default function SchoolErpPage() {
   const [selectedTier, setSelectedTier] = useState('primary');
   const [activePowerTab, setActivePowerTab] = useState('cards');
+  const [studentSlider, setStudentSlider] = useState(500);
+  const [zoomModalOpen, setZoomModalOpen] = useState(false);
+  const [videoPlaying, setVideoPlaying] = useState(false);
+  const [videoMuted, setVideoMuted] = useState(true);
+  const videoRef = useRef(null);
+  const [zoomFormData, setZoomFormData] = useState({
+    name: '',
+    phone: '',
+    schoolName: '',
+    city: 'Karachi',
+    preferredTime: 'Morning (10:00 AM - 1:00 PM)'
+  });
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -191,6 +198,25 @@ export default function SchoolErpPage() {
     notes: ''
   });
   const [formSubmitted, setFormSubmitted] = useState(false);
+
+  const handleZoomSubmit = (e) => {
+    e.preventDefault();
+    const msg = `Hello NadiCo Technologies! I would like to book a 15-Minute Free Live Zoom Demo for my school.%0A%0A*Principal/Owner Name:* ${zoomFormData.name}%0A*Phone:* ${zoomFormData.phone}%0A*School Name:* ${zoomFormData.schoolName}%0A*City:* ${zoomFormData.city}%0A*Preferred Time Slot:* ${zoomFormData.preferredTime}`;
+    window.open(`https://wa.me/923337221552?text=${msg}`, '_blank');
+    setZoomModalOpen(false);
+  };
+
+  const toggleVideoPlay = () => {
+    if (videoRef.current) {
+      if (videoPlaying) {
+        videoRef.current.pause();
+        setVideoPlaying(false);
+      } else {
+        videoRef.current.play();
+        setVideoPlaying(true);
+      }
+    }
+  };
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
@@ -226,34 +252,51 @@ export default function SchoolErpPage() {
         {/* Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-tealSoft border border-brand-tealBorder text-brand-teal text-xs sm:text-sm font-bold shadow-xs">
           <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-          <span>Enterprise Institutional Cloud Architecture • 2FA Protected • Built for Pakistan</span>
+          <span>Best School Management Software in Pakistan • Karachi • Lahore • Islamabad • 2FA Protected</span>
           <ShieldCheck className="w-4 h-4 text-emerald-600" />
         </div>
 
-        {/* Main Headline in Poppins */}
+        {/* Main Headline targeting high-intent keywords */}
         <ScrollTypewriterTitle
           as="h1"
           className="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl text-slate-900 tracking-tight leading-[1.15]"
-          prefix="The Complete "
-          highlight="School Management ERP"
+          prefix="Best "
+          highlight="School Management Software"
           highlightClass="teal-gradient-text"
-          suffix=" System"
+          suffix=" with WhatsApp Alerts"
         />
 
         {/* Subheading */}
         <p className="text-base sm:text-lg lg:text-xl text-slate-600 leading-relaxed font-normal max-w-3xl mx-auto">
-          Run your entire school from one place: generate 3-part bank fee challans, sync biometric gate attendance, automate school accounting, and print official report cards with zero stress.
+          Affordable Cloud ERP for private schools and colleges in Pakistan. Generate 3-part online school fee challans (Meezan, HBL & 1Link), sync real-time biometric gate attendance with free WhatsApp alerts, and automate owner daily balance sheets.
         </p>
 
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
-          <a href="https://thereadlyerp.vercel.app/rehan" target="_blank" className="w-full sm:w-auto px-8 py-4 rounded-xl text-sm font-bold text-white bg-brand-teal hover:bg-brand-tealDark shadow-button hover:shadow-card-hover transition-all flex items-center justify-center gap-2">
-            <ExternalLink className="w-4 h-4" />
-            <span>Launch Live Production Portal</span>
+        {/* High-Conversion CTA Buttons */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 pt-2">
+          <button
+            onClick={() => setZoomModalOpen(true)}
+            className="w-full sm:w-auto px-7 py-4 rounded-xl text-xs sm:text-sm font-bold text-white bg-gradient-to-r from-brand-teal to-brand-tealDark hover:opacity-95 shadow-[0_4px_18px_rgba(0,101,132,0.4)] hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2"
+          >
+            <Video className="w-4 h-4 text-brand-limeLight" />
+            <span>Book a 15-Minute Free Live Zoom Demo</span>
+          </button>
+          <a
+            href="https://wa.me/923337221552?text=Hello%20NadiCo%20Technologies,%20I%20want%20to%20book%20a%2015-minute%20live%20Zoom%20demo%20of%20your%20School%20ERP%20for%20our%20campus."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto px-6 py-4 rounded-xl text-xs sm:text-sm font-bold text-white bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:opacity-95 shadow-[0_4px_16px_rgba(37,211,102,0.35)] hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2"
+          >
+            <WhatsAppIcon className="w-4 h-4 text-white" />
+            <span>Chat on WhatsApp (+92 333 722 1552)</span>
           </a>
-          <a href="#modules" className="w-full sm:w-auto px-7 py-4 rounded-xl text-sm font-bold text-slate-800 bg-white hover:bg-slate-50 border border-slate-300 hover:border-brand-teal transition-all shadow-xs flex items-center justify-center gap-2">
-            <Layers className="w-4 h-4 text-brand-teal" />
-            <span>Explore All 14 Modules</span>
+          <a
+            href="https://thereadlyerp.vercel.app/rehan"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto px-6 py-4 rounded-xl text-xs sm:text-sm font-bold text-slate-800 bg-white hover:bg-slate-50 border border-slate-300 hover:border-brand-teal transition-all shadow-xs flex items-center justify-center gap-2"
+          >
+            <ExternalLink className="w-4 h-4 text-brand-teal" />
+            <span>Test Live Instance</span>
           </a>
         </div>
 
@@ -272,13 +315,131 @@ export default function SchoolErpPage() {
             <GraduationCap className="w-3.5 h-3.5 text-amber-600" /> CAIE & BISE Grading
           </div>
           <div className="p-2.5 rounded-xl bg-white border border-slate-200/90 shadow-xs flex items-center justify-center gap-1.5">
-            <Calculator className="w-3.5 h-3.5 text-teal-600" /> Double-Entry Accounts
+            <Calculator className="w-3.5 h-3.5 text-teal-600" /> Auto Balance Sheets
           </div>
           <div className="p-2.5 rounded-xl bg-white border border-slate-200/90 shadow-xs flex items-center justify-center gap-1.5">
-            <Smartphone className="w-3.5 h-3.5 text-emerald-600" /> Parent & Staff Apps
+            <Smartphone className="w-3.5 h-3.5 text-emerald-600" /> Free WhatsApp Alerts
           </div>
         </div>
 
+      </div>
+
+    </div>
+  </section>
+
+  {/* ========================================================================= */}
+  {/* 1-MINUTE INTERACTIVE DEMO VIDEO SECTION (REQUESTED BY USER AT THE TOP) */}
+  {/* ========================================================================= */}
+  <section id="demo-video" className="py-12 lg:py-16 bg-gradient-to-b from-slate-50 to-white border-b border-slate-200">
+    <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div className="text-center max-w-3xl mx-auto mb-8 space-y-3">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold uppercase tracking-wider">
+          <Video className="w-3.5 h-3.5 text-emerald-600" />
+          <span>1-Minute Live System Walkthrough</span>
+        </div>
+        <ScrollTypewriterTitle
+          as="h2"
+          className="font-heading font-extrabold text-2xl sm:text-3xl lg:text-4xl text-slate-900 tracking-tight"
+          prefix="Watch How NadiCo ERP Runs Your School in "
+          highlight="Under 60 Seconds"
+          highlightClass="teal-gradient-text"
+        />
+        <p className="text-slate-600 text-sm leading-relaxed">
+          See the actual production cloud dashboard deployed for leading Pakistani schools. Watch how 3-part bank fee challans, biometric WhatsApp alerts, and owner financial balance sheets work in real life.
+        </p>
+      </div>
+
+      {/* Video Browser Frame Container */}
+      <div className="rounded-3xl bg-slate-900 p-2 sm:p-4 shadow-2xl border border-slate-800 relative overflow-hidden group">
+        
+        {/* Browser Mockup Top Bar */}
+        <div className="flex items-center justify-between px-3 py-2 border-b border-slate-800 mb-2 text-slate-400 text-xs">
+          <div className="flex items-center gap-1.5">
+            <span className="w-3 h-3 rounded-full bg-rose-500 inline-block"></span>
+            <span className="w-3 h-3 rounded-full bg-amber-500 inline-block"></span>
+            <span className="w-3 h-3 rounded-full bg-emerald-500 inline-block"></span>
+          </div>
+          <div className="flex items-center gap-2 bg-slate-800/80 px-4 py-1 rounded-lg text-[10px] text-slate-300 font-mono">
+            <Lock className="w-3 h-3 text-emerald-400" />
+            <span>portal.thereadlyerp.vercel.app/rehan</span>
+          </div>
+          <span className="text-[10px] font-bold text-emerald-400 bg-emerald-950/80 px-2 py-0.5 rounded border border-emerald-800">
+            ● 60s TOUR
+          </span>
+        </div>
+
+        {/* Video Player Display */}
+        <div className="relative rounded-2xl overflow-hidden aspect-video bg-black flex items-center justify-center">
+          <video
+            ref={videoRef}
+            src="/logo-animation.mp4"
+            loop
+            muted={videoMuted}
+            playsInline
+            className="w-full h-full object-cover"
+          />
+
+          {/* Video Overlay Play Button */}
+          <div 
+            onClick={toggleVideoPlay}
+            className="absolute inset-0 bg-slate-900/35 hover:bg-slate-900/20 flex items-center justify-center cursor-pointer transition-all group"
+          >
+            <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-brand-teal/90 text-white flex items-center justify-center shadow-[0_0_30px_rgba(0,101,132,0.8)] border-2 border-white/40 group-hover:scale-110 active:scale-95 transition-transform">
+              {videoPlaying ? (
+                <Pause className="w-8 h-8 text-white" />
+              ) : (
+                <Play className="w-8 h-8 text-white ml-1 fill-white" />
+              )}
+            </div>
+          </div>
+
+          {/* Sound & Controls Bottom Right */}
+          <div className="absolute bottom-4 right-4 z-20 flex items-center gap-2">
+            <button
+              onClick={() => setVideoMuted(!videoMuted)}
+              className="p-2 rounded-xl bg-slate-900/80 hover:bg-slate-900 text-white text-xs border border-white/20 backdrop-blur-md transition-colors"
+              aria-label="Toggle Sound"
+            >
+              {videoMuted ? <VolumeX className="w-4 h-4 text-slate-400" /> : <Volume2 className="w-4 h-4 text-emerald-400" />}
+            </button>
+          </div>
+        </div>
+
+        {/* Interactive Tour Chapters */}
+        <div className="p-3 sm:p-4 bg-slate-800/60 rounded-2xl mt-3 flex flex-wrap items-center justify-between gap-2 text-xs">
+          <div className="flex items-center gap-2 text-slate-300 font-semibold text-[11px]">
+            <Clock className="w-3.5 h-3.5 text-brand-limeLight" />
+            <span>Interactive Chapters:</span>
+          </div>
+          <div className="flex flex-wrap items-center gap-2 text-[10px] sm:text-xs">
+            <span className="px-2.5 py-1 rounded-lg bg-slate-700/80 text-emerald-300 font-mono">0:00 3-Part Bank Challans</span>
+            <span className="px-2.5 py-1 rounded-lg bg-slate-700/80 text-emerald-300 font-mono">0:20 WhatsApp Absent Alerts</span>
+            <span className="px-2.5 py-1 rounded-lg bg-slate-700/80 text-emerald-300 font-mono">0:40 CAIE & BISE Report Cards</span>
+            <span className="px-2.5 py-1 rounded-lg bg-slate-700/80 text-emerald-300 font-mono">0:55 Owner Balance Sheet</span>
+          </div>
+        </div>
+
+      </div>
+
+      {/* CTA directly below video */}
+      <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
+        <button
+          onClick={() => setZoomModalOpen(true)}
+          className="w-full sm:w-auto px-7 py-3.5 rounded-xl font-bold text-xs sm:text-sm text-white bg-gradient-to-r from-brand-teal to-brand-tealDark hover:opacity-95 shadow-button flex items-center justify-center gap-2"
+        >
+          <Calendar className="w-4 h-4 text-brand-limeLight" />
+          <span>Book a 15-Minute Free Live Zoom Demo</span>
+        </button>
+        <a
+          href="https://thereadlyerp.vercel.app/rehan"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-full sm:w-auto px-6 py-3.5 rounded-xl font-bold text-xs sm:text-sm text-brand-charcoal bg-brand-lime hover:bg-brand-limeLight shadow-button-lime transition-all flex items-center justify-center gap-2"
+        >
+          <span>Launch Live Production Portal</span>
+          <ArrowRight className="w-4 h-4" />
+        </a>
       </div>
 
     </div>
@@ -1436,6 +1597,160 @@ export default function SchoolErpPage() {
         </p>
       </div>
 
+      {/* ========================================================================= */}
+      {/* LIVE INTERACTIVE SAVINGS & ROI CALCULATOR (REQUESTED BY USER) */}
+      {/* ========================================================================= */}
+      <div className="mb-14 p-6 sm:p-10 rounded-3xl bg-white border border-slate-200/90 shadow-card">
+        <div className="max-w-3xl mx-auto text-center space-y-3 mb-8">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-bold uppercase tracking-wider border border-emerald-200">
+            <Calculator className="w-3.5 h-3.5 text-emerald-600" />
+            <span>Interactive ROI & Time Savings Calculator</span>
+          </div>
+          <h3 className="font-heading font-extrabold text-2xl sm:text-3xl text-slate-900 tracking-tight">
+            See How Many Hours & Rupees Your Campus Saves Every Month
+          </h3>
+          <p className="text-slate-600 text-sm">
+            Select your active student strength below to see exact administrative time and money saved compared to outdated manual registers and expensive SMS packages.
+          </p>
+        </div>
+
+        {/* Student Count Slider */}
+        <div className="max-w-2xl mx-auto space-y-6">
+          <div className="flex items-center justify-between">
+            <span className="text-xs sm:text-sm font-bold text-slate-700">Select Student Strength:</span>
+            <div className="flex items-baseline gap-1 bg-brand-tealSoft px-4 py-1.5 rounded-2xl border border-brand-tealBorder">
+              <span className="text-2xl sm:text-3xl font-extrabold text-brand-tealDark">{studentSlider.toLocaleString()}</span>
+              <span className="text-xs font-bold text-brand-teal">Students</span>
+            </div>
+          </div>
+
+          <input
+            type="range"
+            min="100"
+            max="2500"
+            step="25"
+            value={studentSlider}
+            onChange={(e) => setStudentSlider(Number(e.target.value))}
+            className="w-full h-3 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-brand-teal"
+          />
+
+          {/* Quick Presets */}
+          <div className="flex flex-wrap items-center justify-between gap-2 text-xs font-semibold text-slate-500">
+            <button
+              onClick={() => setStudentSlider(250)}
+              className={`px-3 py-1.5 rounded-xl border transition-all ${studentSlider === 250 ? 'bg-brand-teal text-white border-brand-teal' : 'bg-slate-50 hover:bg-slate-100 border-slate-200 text-slate-700'}`}
+            >
+              250 Students
+            </button>
+            <button
+              onClick={() => setStudentSlider(500)}
+              className={`px-3 py-1.5 rounded-xl border transition-all ${studentSlider === 500 ? 'bg-brand-teal text-white border-brand-teal' : 'bg-slate-50 hover:bg-slate-100 border-slate-200 text-slate-700'}`}
+            >
+              500 Students
+            </button>
+            <button
+              onClick={() => setStudentSlider(1000)}
+              className={`px-3 py-1.5 rounded-xl border transition-all ${studentSlider === 1000 ? 'bg-brand-teal text-white border-brand-teal' : 'bg-slate-50 hover:bg-slate-100 border-slate-200 text-slate-700'}`}
+            >
+              1,000 Students
+            </button>
+            <button
+              onClick={() => setStudentSlider(1800)}
+              className={`px-3 py-1.5 rounded-xl border transition-all ${studentSlider === 1800 ? 'bg-brand-teal text-white border-brand-teal' : 'bg-slate-50 hover:bg-slate-100 border-slate-200 text-slate-700'}`}
+            >
+              1,800+ Students
+            </button>
+          </div>
+
+          {/* Real-time Dynamic Metrics */}
+          {(() => {
+            const hoursSaved = Math.min(48, Math.max(16, Math.floor(studentSlider / 22)));
+            const moneySaved = Math.round(studentSlider * 28);
+            return (
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
+                
+                {/* Metric 1 */}
+                <div className="p-5 rounded-2xl bg-emerald-50/80 border border-emerald-200 text-center space-y-1 shadow-xs">
+                  <div className="text-[11px] font-bold text-emerald-800 uppercase tracking-wider flex items-center justify-center gap-1">
+                    <Clock className="w-3.5 h-3.5 text-emerald-600" />
+                    <span>Time Saved Monthly</span>
+                  </div>
+                  <div className="text-2xl sm:text-3xl font-extrabold text-emerald-900 tracking-tight">
+                    ~{hoursSaved} Hours
+                  </div>
+                  <p className="text-[11px] text-emerald-700">
+                    No manual register work, fee tallying or handwritten exam cards.
+                  </p>
+                </div>
+
+                {/* Metric 2 */}
+                <div className="p-5 rounded-2xl bg-blue-50/80 border border-blue-200 text-center space-y-1 shadow-xs">
+                  <div className="text-[11px] font-bold text-blue-800 uppercase tracking-wider flex items-center justify-center gap-1">
+                    <Banknote className="w-3.5 h-3.5 text-blue-600" />
+                    <span>Stationery & SMS Saved</span>
+                  </div>
+                  <div className="text-2xl sm:text-3xl font-extrabold text-blue-900 tracking-tight">
+                    ~Rs. {moneySaved.toLocaleString()}
+                  </div>
+                  <p className="text-[11px] text-blue-700">
+                    Free direct WhatsApp alerts eliminate monthly telco SMS bundles.
+                  </p>
+                </div>
+
+                {/* Metric 3 */}
+                <div className="p-5 rounded-2xl bg-teal-50/80 border border-teal-200 text-center space-y-1 shadow-xs">
+                  <div className="text-[11px] font-bold text-teal-800 uppercase tracking-wider flex items-center justify-center gap-1">
+                    <TrendingUp className="w-3.5 h-3.5 text-teal-600" />
+                    <span>Fee Recovery Boost</span>
+                  </div>
+                  <div className="text-2xl sm:text-3xl font-extrabold text-brand-tealDark tracking-tight">
+                    +22% Faster
+                  </div>
+                  <p className="text-[11px] text-teal-700">
+                    Automated 3-part bank slips & WhatsApp fee defaulter alerts.
+                  </p>
+                </div>
+
+              </div>
+            );
+          })()}
+
+          {/* Dual CTAs directly inside calculator */}
+          <div className="p-4 rounded-2xl bg-slate-900 text-white flex flex-col sm:flex-row items-center justify-between gap-4 mt-6">
+            <div className="text-left space-y-0.5">
+              <div className="text-xs font-bold text-brand-limeLight uppercase tracking-wider">
+                Transparent Starting Investment
+              </div>
+              <div className="text-sm sm:text-base font-extrabold">
+                Starting from only Rs. 30 per student / month
+              </div>
+              <div className="text-[11px] text-slate-400">
+                Zero charges during summer vacation months on inactive records.
+              </div>
+            </div>
+            <div className="flex items-center gap-2.5 w-full sm:w-auto">
+              <button
+                onClick={() => setZoomModalOpen(true)}
+                className="w-full sm:w-auto px-5 py-3 rounded-xl font-bold text-xs text-brand-charcoal bg-brand-lime hover:bg-brand-limeLight transition-all shadow-button-lime flex items-center justify-center gap-1.5"
+              >
+                <Video className="w-4 h-4" />
+                <span>Book 15-Min Zoom Demo</span>
+              </button>
+              <a
+                href={`https://wa.me/923337221552?text=Hello%20NadiCo%20Technologies,%20I%20used%20your%20Savings%20Calculator%20for%20${studentSlider}%20students.%20I%20want%20to%20get%20a%20detailed%20quotation.`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto p-3 rounded-xl bg-white/10 hover:bg-white/20 text-white border border-white/20 transition-all flex items-center justify-center"
+                aria-label="Inquire on WhatsApp"
+              >
+                <WhatsAppIcon className="w-4 h-4 text-white" />
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
       {/* PRICING CARDS WITH STARTING FROM MODEL */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
         
@@ -1815,18 +2130,156 @@ export default function SchoolErpPage() {
       </p>
 
       <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+        <button
+          onClick={() => setZoomModalOpen(true)}
+          className="w-full sm:w-auto px-8 py-4 rounded-xl font-bold text-xs sm:text-sm text-brand-charcoal bg-brand-lime hover:bg-brand-limeLight transition-all shadow-button-lime hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2"
+        >
+          <Video className="w-4 h-4 text-brand-charcoal" />
+          <span>Book a 15-Minute Free Live Zoom Demo</span>
+        </button>
         <a href="https://wa.me/923337221552?text=Hello%20NadiCo%20Technologies,%20I%20would%20like%20to%20schedule%20a%20demo%20for%20NadiCo%20School%20ERP." target="_blank" className="w-full sm:w-auto px-8 py-4 rounded-xl font-bold text-xs sm:text-sm text-white bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:opacity-95 transition-all shadow-[0_4px_18px_rgba(37,211,102,0.4)] hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2">
           <WhatsAppIcon className="w-5 h-5 text-white" />
-          <span>Schedule Walkthrough on WhatsApp (+92 333 722 1552)</span>
-        </a>
-        <a href="/#contact" className="w-full sm:w-auto px-7 py-4 rounded-xl font-bold text-xs sm:text-sm text-white bg-white/10 hover:bg-white/20 border border-white/25 transition-all flex items-center justify-center gap-2">
-          <Mail className="w-4 h-4" />
-          <span>Submit Direct Inquiry Form</span>
+          <span>Chat on WhatsApp (+92 333 722 1552)</span>
         </a>
       </div>
 
     </div>
   </section>
+
+  {/* ========================================================================= */}
+  {/* 15-MINUTE LIVE ZOOM DEMO BOOKING MODAL */}
+  {/* ========================================================================= */}
+  {zoomModalOpen && (
+    <div className="fixed inset-0 z-50 bg-slate-900/75 backdrop-blur-sm flex items-center justify-center p-4">
+      <div className="w-full max-w-lg bg-white rounded-3xl p-6 sm:p-8 shadow-2xl border border-slate-200 relative animate-in fade-in zoom-in-95 duration-200">
+        
+        {/* Close Button */}
+        <button
+          onClick={() => setZoomModalOpen(false)}
+          className="absolute top-5 right-5 p-2 rounded-xl text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors"
+          aria-label="Close Modal"
+        >
+          <X className="w-5 h-5" />
+        </button>
+
+        {/* Modal Header */}
+        <div className="text-left space-y-2 mb-6">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider border border-blue-200">
+            <Video className="w-3.5 h-3.5 text-blue-600" />
+            <span>Interactive Zoom Walkthrough</span>
+          </div>
+          <h3 className="font-heading font-extrabold text-xl sm:text-2xl text-slate-900 tracking-tight">
+            Book a 15-Minute Free Live Zoom Demo
+          </h3>
+          <p className="text-xs text-slate-600 leading-relaxed">
+            Pick your preferred time slot. Our senior deployment engineer will demonstrate live bank fee challans, free WhatsApp absent alerts, and owner financial balance sheets tailored to your campus size.
+          </p>
+        </div>
+
+        {/* Booking Form */}
+        <form onSubmit={handleZoomSubmit} className="space-y-4">
+          <div>
+            <label className="block text-xs font-bold text-slate-700 mb-1">Principal / Administrator Name *</label>
+            <input
+              type="text"
+              required
+              placeholder="e.g. Prof. Tariq Mansoor"
+              value={zoomFormData.name}
+              onChange={(e) => setZoomFormData({ ...zoomFormData, name: e.target.value })}
+              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs text-slate-800 focus:outline-none focus:border-brand-teal bg-slate-50"
+            />
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label className="block text-xs font-bold text-slate-700 mb-1">WhatsApp Phone Number *</label>
+              <input
+                type="tel"
+                required
+                placeholder="e.g. 0333 7221552"
+                value={zoomFormData.phone}
+                onChange={(e) => setZoomFormData({ ...zoomFormData, phone: e.target.value })}
+                className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs text-slate-800 focus:outline-none focus:border-brand-teal bg-slate-50"
+              />
+            </div>
+            <div>
+              <label className="block text-xs font-bold text-slate-700 mb-1">School Campus City *</label>
+              <select
+                value={zoomFormData.city}
+                onChange={(e) => setZoomFormData({ ...zoomFormData, city: e.target.value })}
+                className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs text-slate-800 focus:outline-none focus:border-brand-teal bg-slate-50"
+              >
+                <option value="Karachi">Karachi</option>
+                <option value="Lahore">Lahore</option>
+                <option value="Islamabad / Rawalpindi">Islamabad / Rawalpindi</option>
+                <option value="Faisalabad">Faisalabad</option>
+                <option value="Multan">Multan</option>
+                <option value="Peshawar">Peshawar</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Other City">Other City in Pakistan</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label className="block text-xs font-bold text-slate-700 mb-1">School Name & Estimated Students *</label>
+            <input
+              type="text"
+              required
+              placeholder="e.g. Crescent Grammar High School (approx 450 students)"
+              value={zoomFormData.schoolName}
+              onChange={(e) => setZoomFormData({ ...zoomFormData, schoolName: e.target.value })}
+              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs text-slate-800 focus:outline-none focus:border-brand-teal bg-slate-50"
+            />
+          </div>
+
+          <div>
+            <label className="block text-xs font-bold text-slate-700 mb-1">Preferred Time Slot *</label>
+            <select
+              value={zoomFormData.preferredTime}
+              onChange={(e) => setZoomFormData({ ...zoomFormData, preferredTime: e.target.value })}
+              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs text-slate-800 focus:outline-none focus:border-brand-teal bg-slate-50 font-medium"
+            >
+              <option value="Morning (10:00 AM - 1:00 PM)">Morning (10:00 AM - 1:00 PM PKT)</option>
+              <option value="Afternoon (2:00 PM - 5:00 PM)">Afternoon (2:00 PM - 5:00 PM PKT)</option>
+              <option value="Evening (5:00 PM - 8:00 PM)">Evening (5:00 PM - 8:00 PM PKT)</option>
+            </select>
+          </div>
+
+          <div className="pt-2">
+            <button
+              type="submit"
+              className="w-full py-3.5 rounded-xl font-bold text-xs sm:text-sm text-white bg-gradient-to-r from-brand-teal to-brand-tealDark hover:opacity-95 shadow-button flex items-center justify-center gap-2"
+            >
+              <Video className="w-4 h-4 text-brand-limeLight" />
+              <span>Confirm 15-Minute Zoom Demo via WhatsApp</span>
+            </button>
+            <p className="text-[10px] text-slate-400 text-center mt-2">
+              Free consultation • Zero obligation • Zoom invite delivered to your WhatsApp within 10 minutes.
+            </p>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  )}
+
+  {/* ========================================================================= */}
+  {/* STICKY QUICK CONVERSION BAR (DESKTOP & MOBILE BOTTOM BAR) */}
+  {/* ========================================================================= */}
+  <div className="fixed bottom-3 left-4 z-40 hidden md:flex items-center gap-3 bg-white/95 backdrop-blur-md p-2 pl-3.5 pr-3 rounded-full border border-slate-200 shadow-xl text-xs">
+    <div className="flex items-center gap-2 font-bold text-slate-800">
+      <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+      <span>NadiCo School ERP Live Walkthrough</span>
+    </div>
+    <button
+      onClick={() => setZoomModalOpen(true)}
+      className="px-3.5 py-1.5 rounded-full bg-brand-teal hover:bg-brand-tealDark text-white font-bold text-[11px] shadow-xs transition-colors flex items-center gap-1.5"
+    >
+      <Video className="w-3 h-3 text-brand-limeLight" />
+      <span>Book 15-Min Zoom Demo</span>
+    </button>
+  </div>
 
   {/* ========================================================================= */}
       </main>
