@@ -117,7 +117,7 @@ export default function WebDevelopmentPage() {
       <Header />
 
       {/* TOP HERO BANNER */}
-      <section className="relative pt-32 pb-16 lg:pt-36 lg:pb-20 overflow-hidden bg-gradient-to-b from-teal-50/60 via-white to-white">
+      <section className="relative pt-10 pb-16 lg:pt-16 lg:pb-20 overflow-hidden bg-gradient-to-b from-teal-50/60 via-white to-white">
         <div className="absolute inset-0 pointer-events-none opacity-40 bg-tech-circuit-overlay"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           

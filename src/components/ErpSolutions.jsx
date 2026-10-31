@@ -1,10 +1,12 @@
-import { Activity, ArrowRight, Calendar, Check, Cpu, ExternalLink, GraduationCap, MessageCircle, Play, ShoppingBag, Sparkles } from 'lucide-react';
-import React from 'react';
+import { Activity, ArrowRight, Calendar, Check, ChevronDown, Cpu, ExternalLink, FileSpreadsheet, GraduationCap, MessageCircle, Play, ShieldCheck, ShoppingBag, Sparkles } from 'lucide-react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import ScrollTypewriterTitle from './ScrollTypewriterTitle.jsx';
 import WhatsAppIcon from './WhatsAppIcon.jsx';
+import SchoolSavingsCalculator from './SchoolSavingsCalculator.jsx';
 
 export default function ErpSolutions() {
+  const [showMoreFeatures, setShowMoreFeatures] = useState(false);
   return (
     <>
 {/* ========================================================================= */}
@@ -60,35 +62,7 @@ export default function ErpSolutions() {
               Designed specifically for school owners, principals, and accountants to stop manual registers, issue 1-click bank fee challans, mark attendance, and print report cards without confusion.
             </p>
 
-            {/* Real Feature Checklist */}
-            <ul className="space-y-3 text-xs text-slate-700 pt-3 border-t border-slate-100">
-              <li className="flex items-start gap-2.5">
-                <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                <span><strong>Multi-Campus Cloud Network:</strong> Manage multiple branches or a single campus from one secure login with full staff access controls.</span>
-              </li>
-              <li className="flex items-start gap-2.5">
-                <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                <span><strong>Automated 3-Part Bank Challans:</strong> Authentic Meezan, HBL, Allied Bank & 1Link 1Bill deposit slips with barcode tracking.</span>
-              </li>
-              <li className="flex items-start gap-2.5">
-                <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                <span><strong>Smart ID Cards & Exam Admit Slips:</strong> 1-click printable student PVC cards with barcode, faculty badges, and term exam roll no. slips.</span>
-              </li>
-              <li className="flex items-start gap-2.5">
-                <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                <span><strong>Official Certificate Studio with QR:</strong> Instant School Leaving (SLC), Character, and Merit certificates with public anti-fraud QR verification.</span>
-              </li>
-              <li className="flex items-start gap-2.5">
-                <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                <span><strong>Autonomous Owner Balance Sheets:</strong> Real-time cash & bank balances, automated P&L, aging defaulters, and 6:00 PM WhatsApp executive summary.</span>
-              </li>
-              <li className="flex items-start gap-2.5">
-                <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                <span><strong>Biometric & WhatsApp Alerts:</strong> Hardware gate sync (ZKTeco) with instant automated absent notifications to parents.</span>
-              </li>
-            </ul>
-
-            {/* Core 3 USPs Guarantee Box (Requested by User) */}
+            {/* 100% Risk-Free Guarantees / Main Benefits at the Top (English Version) */}
             <div className="p-4 rounded-2xl bg-gradient-to-r from-emerald-50 via-teal-50 to-white border border-emerald-300/80 shadow-xs space-y-2.5">
               <div className="flex items-center gap-1.5 text-[11px] font-extrabold uppercase tracking-wider text-emerald-900">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
@@ -99,24 +73,72 @@ export default function ErpSolutions() {
                   <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
                   <div>
                     <strong className="text-slate-900">Free Data Migration:</strong>{' '}
-                    <span className="text-emerald-950 font-semibold italic">"Aap ke bachon ka purana Excel data hum khud software mein daal kar denge."</span>
+                    <span className="text-emerald-950 font-medium">"We personally format, validate, and import all your students' past Excel records completely free."</span>
                   </div>
                 </div>
                 <div className="flex items-start gap-2">
                   <Check className="w-3.5 h-3.5 text-brand-teal shrink-0 mt-0.5" />
                   <div>
                     <strong className="text-slate-900">Free 30-Day Full Trial:</strong>{' '}
-                    <span className="text-brand-tealDark font-semibold italic">"Pehle 1 maheena bilkul muft istemal karein, pasand aaye to agle maheene se monthly subscription dein."</span>
+                    <span className="text-brand-tealDark font-medium">"Experience 1 month completely free; subscribe only if you are 100% satisfied with the software."</span>
                   </div>
                 </div>
                 <div className="flex items-start gap-2">
                   <Check className="w-3.5 h-3.5 text-amber-600 shrink-0 mt-0.5" />
                   <div>
                     <strong className="text-slate-900">Free Teacher Training:</strong>{' '}
-                    <span className="text-amber-950 font-semibold italic">"Aap ke staff ko hum khud online / physically train karenge."</span>
+                    <span className="text-amber-950 font-medium">"We personally train your teachers, accountants, and staff online or physically on-site."</span>
                   </div>
                 </div>
               </div>
+            </div>
+
+            {/* Primary Core Features List */}
+            <ul className="space-y-3 text-xs text-slate-700 pt-1">
+              <li className="flex items-start gap-2.5">
+                <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                <span><strong>Automated 3-Part Bank Challans:</strong> Authentic Meezan, HBL, Allied Bank & 1Link 1Bill deposit slips with barcode tracking.</span>
+              </li>
+              <li className="flex items-start gap-2.5">
+                <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                <span><strong>Biometric & WhatsApp Alerts:</strong> Hardware gate sync (ZKTeco) with instant automated absent notifications to parents.</span>
+              </li>
+            </ul>
+
+            {/* Expandable More Features Down Arrow Toggle */}
+            <div className="pt-1">
+              <button
+                type="button"
+                onClick={() => setShowMoreFeatures(!showMoreFeatures)}
+                className="w-full py-2.5 px-3 rounded-xl bg-slate-50 hover:bg-slate-100 border border-slate-200 text-slate-700 font-bold text-xs flex items-center justify-between transition-colors group/btn"
+              >
+                <span className="flex items-center gap-1.5 text-brand-teal">
+                  <Sparkles className="w-3.5 h-3.5 text-brand-limeDark" />
+                  <span>{showMoreFeatures ? 'Hide Additional Features' : 'View More Features (ID Cards, Balance Sheets...)'}</span>
+                </span>
+                <ChevronDown className={`w-4 h-4 text-brand-teal transition-transform duration-200 ${showMoreFeatures ? 'rotate-180' : ''}`} />
+              </button>
+
+              {showMoreFeatures && (
+                <ul className="space-y-3 text-xs text-slate-700 pt-3 mt-3 border-t border-slate-100 animate-fadeIn">
+                  <li className="flex items-start gap-2.5">
+                    <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                    <span><strong>Smart ID Cards & Exam Admit Slips:</strong> 1-click printable student PVC cards with barcode, faculty badges, and term exam roll no. slips.</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                    <span><strong>Official Certificate Studio with QR:</strong> Instant School Leaving (SLC), Character, and Merit certificates with public anti-fraud QR verification.</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                    <span><strong>Autonomous Owner Balance Sheets:</strong> Real-time cash & bank balances, automated P&L, aging defaulters, and 6:00 PM WhatsApp executive summary.</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                    <span><strong>Multi-Campus Cloud Network:</strong> Manage multiple branches or a single campus from one secure login with full staff access controls.</span>
+                  </li>
+                </ul>
+              )}
             </div>
 
           </div>
@@ -260,6 +282,11 @@ export default function ErpSolutions() {
           </div>
         </div>
 
+      </div>
+
+      {/* INTERACTIVE SCHOOL SAVINGS & ROI CALCULATOR ON MAIN PAGE (REQUESTED BY USER) */}
+      <div className="mt-16 reveal-on-scroll reveal-up">
+        <SchoolSavingsCalculator showExploreLink={true} />
       </div>
 
     </div>
