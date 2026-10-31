@@ -234,20 +234,23 @@ export default function HeroSection() {
               paragraph="Trusted by 250+ campuses across Pakistan. Automated 3-part bank fee challans, instant WhatsApp parent alerts, 1-tap biometric attendance, and board-compliant exam report cards."
             />
 
-            <div className="flex flex-wrap items-center justify-center gap-3.5 pt-2">
-              <a href="/school-erp" className="px-6 sm:px-7 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-brand-teal hover:bg-brand-tealDark transition-all duration-200 shadow-button flex items-center gap-2">
-                <Sparkles className="w-4 h-4 text-brand-limeLight" />
-                <span>Explore School ERP Modules</span>
-                <ArrowRight className="w-4 h-4" />
+            <div className="flex flex-row items-center justify-center gap-1.5 sm:gap-3.5 pt-2 w-full max-w-full">
+              <a href="/school-erp" className="flex-1 sm:flex-none px-2 sm:px-7 py-2 sm:py-3.5 rounded-lg sm:rounded-xl text-[10px] xs:text-[11px] sm:text-xs md:text-sm font-bold text-white bg-brand-teal hover:bg-brand-tealDark transition-all duration-200 shadow-button flex items-center justify-center gap-1 sm:gap-2 whitespace-nowrap">
+                <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-brand-limeLight shrink-0" />
+                <span className="sm:hidden">School ERP</span>
+                <span className="hidden sm:inline">Explore School ERP Modules</span>
+                <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 shrink-0 hidden md:inline" />
               </a>
-              <a href="https://thereadlyerp.vercel.app/rehan" target="_blank" className="px-6 sm:px-7 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-slate-800 bg-white hover:bg-slate-50 border border-slate-300 hover:border-brand-teal transition-all duration-200 shadow-sm flex items-center gap-2 group">
-                <span className="w-2.5 h-2.5 rounded-full bg-brand-lime"></span>
-                <span>View Live School Portal</span>
-                <ExternalLink className="w-4 h-4 text-slate-400 group-hover:text-brand-teal transition-transform" />
+              <a href="https://thereadlyerp.vercel.app/rehan" target="_blank" className="flex-1 sm:flex-none px-2 sm:px-7 py-2 sm:py-3.5 rounded-lg sm:rounded-xl text-[10px] xs:text-[11px] sm:text-xs md:text-sm font-bold text-slate-800 bg-white hover:bg-slate-50 border border-slate-300 hover:border-brand-teal transition-all duration-200 shadow-sm flex items-center justify-center gap-1 sm:gap-2 group whitespace-nowrap">
+                <span className="w-2 h-2 rounded-full bg-brand-lime shrink-0"></span>
+                <span className="sm:hidden">Live Demo</span>
+                <span className="hidden sm:inline">View Live School Portal</span>
+                <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 text-slate-400 group-hover:text-brand-teal transition-transform shrink-0 hidden md:inline" />
               </a>
-              <a href="https://wa.me/923337221552?text=Hello%20NadiCo%20Technologies,%20I%20would%20like%20to%20schedule%20a%20demo%20for%20NadiCo%20School%20ERP." target="_blank" className="px-5 sm:px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:opacity-95 transition-all duration-200 shadow-[0_4px_14px_rgba(37,211,102,0.35)] hover:scale-[1.03] active:scale-[0.98] flex items-center gap-2">
-                <WhatsAppIcon className="w-4 h-4 text-white" />
-                <span>Consult on WhatsApp</span>
+              <a href="https://wa.me/923337221552?text=Hello%20NadiCo%20Technologies,%20I%20would%20like%20to%20schedule%20a%20demo%20for%20NadiCo%20School%20ERP." target="_blank" className="flex-1 sm:flex-none px-2 sm:px-6 py-2 sm:py-3.5 rounded-lg sm:rounded-xl text-[10px] xs:text-[11px] sm:text-xs md:text-sm font-bold text-white bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:opacity-95 transition-all duration-200 shadow-[0_4px_14px_rgba(37,211,102,0.35)] flex items-center justify-center gap-1 sm:gap-2 whitespace-nowrap">
+                <WhatsAppIcon className="w-3 h-3 sm:w-4 sm:h-4 text-white shrink-0" />
+                <span className="sm:hidden">WhatsApp</span>
+                <span className="hidden sm:inline">Consult on WhatsApp</span>
               </a>
             </div>
 
@@ -275,19 +278,22 @@ export default function HeroSection() {
               paragraph="A complete hospital system that runs smoothly without paper files: organize OPD tokens, manage patient admissions and beds, link pharmacy billing, and generate lab reports instantly."
             />
 
-            <div className="flex flex-wrap items-center justify-center gap-3.5 pt-2">
-              <a href="#hospital-hms" className="px-6 sm:px-7 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-sky-700 hover:bg-sky-800 transition-all duration-200 shadow-button flex items-center gap-2">
-                <Activity className="w-4 h-4" />
-                <span>Explore Hospital HMS Modules</span>
-                <ArrowDown className="w-4 h-4" />
+            <div className="flex flex-row items-center justify-center gap-1.5 sm:gap-3.5 pt-2 w-full max-w-full">
+              <a href="#hospital-hms" className="flex-1 sm:flex-none px-2 sm:px-7 py-2 sm:py-3.5 rounded-lg sm:rounded-xl text-[10px] xs:text-[11px] sm:text-xs md:text-sm font-bold text-white bg-sky-700 hover:bg-sky-800 transition-all duration-200 shadow-button flex items-center justify-center gap-1 sm:gap-2 whitespace-nowrap">
+                <Activity className="w-3 h-3 sm:w-4 sm:h-4 shrink-0" />
+                <span className="sm:hidden">Hospital HMS</span>
+                <span className="hidden sm:inline">Explore Hospital HMS Modules</span>
+                <ArrowDown className="w-3 h-3 sm:w-4 sm:h-4 shrink-0 hidden md:inline" />
               </a>
-              <a href="#contact" className="px-6 sm:px-7 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-slate-800 bg-white hover:bg-slate-50 border border-slate-300 hover:border-sky-700 transition-all duration-200 shadow-sm flex items-center gap-2">
-                <span className="w-2.5 h-2.5 rounded-full bg-sky-600"></span>
-                <span>Request Clinical HMS Walkthrough</span>
+              <a href="#contact" className="flex-1 sm:flex-none px-2 sm:px-7 py-2 sm:py-3.5 rounded-lg sm:rounded-xl text-[10px] xs:text-[11px] sm:text-xs md:text-sm font-bold text-slate-800 bg-white hover:bg-slate-50 border border-slate-300 hover:border-sky-700 transition-all duration-200 shadow-sm flex items-center justify-center gap-1 sm:gap-2 whitespace-nowrap">
+                <span className="w-2 h-2 rounded-full bg-sky-600 shrink-0"></span>
+                <span className="sm:hidden">Book Demo</span>
+                <span className="hidden sm:inline">Request Clinical HMS Walkthrough</span>
               </a>
-              <a href="https://wa.me/923337221552?text=Hello%20NadiCo%20Technologies,%20I%20would%20like%20to%20inquire%20about%20Hospital%20Management%20System." target="_blank" className="px-5 sm:px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:opacity-95 transition-all duration-200 shadow-[0_4px_14px_rgba(37,211,102,0.35)] hover:scale-[1.03] active:scale-[0.98] flex items-center gap-2">
-                <WhatsAppIcon className="w-4 h-4 text-white" />
-                <span>Consult on WhatsApp</span>
+              <a href="https://wa.me/923337221552?text=Hello%20NadiCo%20Technologies,%20I%20would%20like%20to%20inquire%20about%20Hospital%20Management%20System." target="_blank" className="flex-1 sm:flex-none px-2 sm:px-6 py-2 sm:py-3.5 rounded-lg sm:rounded-xl text-[10px] xs:text-[11px] sm:text-xs md:text-sm font-bold text-white bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:opacity-95 transition-all duration-200 shadow-[0_4px_14px_rgba(37,211,102,0.35)] flex items-center justify-center gap-1 sm:gap-2 whitespace-nowrap">
+                <WhatsAppIcon className="w-3 h-3 sm:w-4 sm:h-4 text-white shrink-0" />
+                <span className="sm:hidden">WhatsApp</span>
+                <span className="hidden sm:inline">Consult on WhatsApp</span>
               </a>
             </div>
 
@@ -315,19 +321,22 @@ export default function HeroSection() {
               paragraph="Built for fast retail and wholesale counters: scan barcodes in a split second, track inventory across multiple branches, maintain customer credit khatas, and generate FBR-compliant invoices."
             />
 
-            <div className="flex flex-wrap items-center justify-center gap-3.5 pt-2">
-              <a href="#inventory-pos" className="px-6 sm:px-7 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-emerald-700 hover:bg-emerald-800 transition-all duration-200 shadow-button flex items-center gap-2">
-                <ShoppingCart className="w-4 h-4" />
-                <span>Explore POS & Inventory Engine</span>
-                <ArrowDown className="w-4 h-4" />
+            <div className="flex flex-row items-center justify-center gap-1.5 sm:gap-3.5 pt-2 w-full max-w-full">
+              <a href="#inventory-pos" className="flex-1 sm:flex-none px-2 sm:px-7 py-2 sm:py-3.5 rounded-lg sm:rounded-xl text-[10px] xs:text-[11px] sm:text-xs md:text-sm font-bold text-white bg-emerald-700 hover:bg-emerald-800 transition-all duration-200 shadow-button flex items-center justify-center gap-1 sm:gap-2 whitespace-nowrap">
+                <ShoppingCart className="w-3 h-3 sm:w-4 sm:h-4 shrink-0" />
+                <span className="sm:hidden">Explore POS</span>
+                <span className="hidden sm:inline">Explore POS & Inventory Engine</span>
+                <ArrowDown className="w-3 h-3 sm:w-4 sm:h-4 shrink-0 hidden md:inline" />
               </a>
-              <a href="#contact" className="px-6 sm:px-7 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-slate-800 bg-white hover:bg-slate-50 border border-slate-300 hover:border-emerald-700 transition-all duration-200 shadow-sm flex items-center gap-2">
-                <span className="w-2.5 h-2.5 rounded-full bg-emerald-600"></span>
-                <span>Request Retail POS Demo</span>
+              <a href="#contact" className="flex-1 sm:flex-none px-2 sm:px-7 py-2 sm:py-3.5 rounded-lg sm:rounded-xl text-[10px] xs:text-[11px] sm:text-xs md:text-sm font-bold text-slate-800 bg-white hover:bg-slate-50 border border-slate-300 hover:border-emerald-700 transition-all duration-200 shadow-sm flex items-center justify-center gap-1 sm:gap-2 whitespace-nowrap">
+                <span className="w-2.5 h-2.5 rounded-full bg-emerald-600 shrink-0"></span>
+                <span className="sm:hidden">POS Demo</span>
+                <span className="hidden sm:inline">Request Retail POS Demo</span>
               </a>
-              <a href="https://wa.me/923337221552?text=Hello%20NadiCo%20Technologies,%20I%20would%20like%20to%20inquire%20about%20POS%20and%20Inventory%20System." target="_blank" className="px-5 sm:px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:opacity-95 transition-all duration-200 shadow-[0_4px_14px_rgba(37,211,102,0.35)] hover:scale-[1.03] active:scale-[0.98] flex items-center gap-2">
-                <WhatsAppIcon className="w-4 h-4 text-white" />
-                <span>Consult on WhatsApp</span>
+              <a href="https://wa.me/923337221552?text=Hello%20NadiCo%20Technologies,%20I%20would%20like%20to%20inquire%20about%20POS%20and%20Inventory%20System." target="_blank" className="flex-1 sm:flex-none px-2 sm:px-6 py-2 sm:py-3.5 rounded-lg sm:rounded-xl text-[10px] xs:text-[11px] sm:text-xs md:text-sm font-bold text-white bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:opacity-95 transition-all duration-200 shadow-[0_4px_14px_rgba(37,211,102,0.35)] flex items-center justify-center gap-1 sm:gap-2 whitespace-nowrap">
+                <WhatsAppIcon className="w-3 h-3 sm:w-4 sm:h-4 text-white shrink-0" />
+                <span className="sm:hidden">WhatsApp</span>
+                <span className="hidden sm:inline">Consult on WhatsApp</span>
               </a>
             </div>
 
@@ -355,19 +364,22 @@ export default function HeroSection() {
               paragraph="We build fast, secure custom websites and customer portals from scratch, coupled with high-converting Google and social media marketing to help your business win real, paying clients."
             />
 
-            <div className="flex flex-wrap items-center justify-center gap-3.5 pt-2">
-              <a href="#web-development" className="px-6 sm:px-7 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-brand-teal hover:bg-brand-tealDark transition-all duration-200 shadow-button flex items-center gap-2">
-                <Globe className="w-4 h-4" />
-                <span>Explore Web Engineering</span>
-                <ArrowDown className="w-4 h-4" />
+            <div className="flex flex-row items-center justify-center gap-1.5 sm:gap-3.5 pt-2 w-full max-w-full">
+              <a href="#web-development" className="flex-1 sm:flex-none px-2 sm:px-7 py-2 sm:py-3.5 rounded-lg sm:rounded-xl text-[10px] xs:text-[11px] sm:text-xs md:text-sm font-bold text-white bg-brand-teal hover:bg-brand-tealDark transition-all duration-200 shadow-button flex items-center justify-center gap-1 sm:gap-2 whitespace-nowrap">
+                <Globe className="w-3 h-3 sm:w-4 sm:h-4 shrink-0" />
+                <span className="sm:hidden">Web Dev</span>
+                <span className="hidden sm:inline">Explore Web Engineering</span>
+                <ArrowDown className="w-3 h-3 sm:w-4 sm:h-4 shrink-0 hidden md:inline" />
               </a>
-              <a href="#digital-marketing" className="px-6 sm:px-7 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-slate-800 bg-white hover:bg-slate-50 border border-slate-300 hover:border-brand-teal transition-all duration-200 shadow-sm flex items-center gap-2">
-                <span className="w-2.5 h-2.5 rounded-full bg-brand-lime"></span>
-                <span>Digital Marketing & SEO</span>
+              <a href="#digital-marketing" className="flex-1 sm:flex-none px-2 sm:px-7 py-2 sm:py-3.5 rounded-lg sm:rounded-xl text-[10px] xs:text-[11px] sm:text-xs md:text-sm font-bold text-slate-800 bg-white hover:bg-slate-50 border border-slate-300 hover:border-brand-teal transition-all duration-200 shadow-sm flex items-center justify-center gap-1 sm:gap-2 whitespace-nowrap">
+                <span className="w-2 h-2 rounded-full bg-brand-lime shrink-0"></span>
+                <span className="sm:hidden">Marketing</span>
+                <span className="hidden sm:inline">Digital Marketing & SEO</span>
               </a>
-              <a href="https://wa.me/923337221552?text=Hello%20NadiCo%20Technologies,%20I%20would%20like%20to%20discuss%20a%20new%20website%20project." target="_blank" className="px-5 sm:px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:opacity-95 transition-all duration-200 shadow-[0_4px_14px_rgba(37,211,102,0.35)] hover:scale-[1.03] active:scale-[0.98] flex items-center gap-2">
-                <WhatsAppIcon className="w-4 h-4 text-white" />
-                <span>Start Web Consultation</span>
+              <a href="https://wa.me/923337221552?text=Hello%20NadiCo%20Technologies,%20I%20would%20like%20to%20discuss%20a%20new%20website%20project." target="_blank" className="flex-1 sm:flex-none px-2 sm:px-6 py-2 sm:py-3.5 rounded-lg sm:rounded-xl text-[10px] xs:text-[11px] sm:text-xs md:text-sm font-bold text-white bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:opacity-95 transition-all duration-200 shadow-[0_4px_14px_rgba(37,211,102,0.35)] flex items-center justify-center gap-1 sm:gap-2 whitespace-nowrap">
+                <WhatsAppIcon className="w-3 h-3 sm:w-4 sm:h-4 text-white shrink-0" />
+                <span className="sm:hidden">WhatsApp</span>
+                <span className="hidden sm:inline">Start Web Consultation</span>
               </a>
             </div>
 

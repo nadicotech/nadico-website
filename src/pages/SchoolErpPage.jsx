@@ -256,32 +256,35 @@ export default function SchoolErpPage() {
           Affordable Cloud ERP for private schools and colleges in Pakistan. Generate 3-part online school fee challans (Meezan, HBL & 1Link), sync real-time biometric gate attendance with free WhatsApp alerts, and automate owner daily balance sheets.
         </p>
 
-        {/* High-Conversion CTA Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 pt-2">
+        {/* High-Conversion CTA Buttons (1 Row on Mobile & Desktop) */}
+        <div className="flex flex-row items-center justify-center gap-1.5 sm:gap-3.5 pt-2 w-full max-w-full">
           <button
             onClick={() => setZoomModalOpen(true)}
-            className="w-full sm:w-auto px-7 py-4 rounded-xl text-xs sm:text-sm font-bold text-white bg-gradient-to-r from-brand-teal to-brand-tealDark hover:opacity-95 shadow-[0_4px_18px_rgba(0,101,132,0.4)] hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2"
+            className="flex-1 sm:flex-none px-2 sm:px-7 py-2 sm:py-4 rounded-lg sm:rounded-xl text-[10px] xs:text-[11px] sm:text-xs md:text-sm font-bold text-white bg-gradient-to-r from-brand-teal to-brand-tealDark hover:opacity-95 shadow-[0_4px_18px_rgba(0,101,132,0.4)] transition-all flex items-center justify-center gap-1 sm:gap-2 whitespace-nowrap"
           >
-            <Video className="w-4 h-4 text-brand-limeLight" />
-            <span>Book a 15-Minute Free Live Zoom Demo</span>
+            <Video className="w-3 h-3 sm:w-4 sm:h-4 text-brand-limeLight shrink-0" />
+            <span className="sm:hidden">Zoom Demo</span>
+            <span className="hidden sm:inline">Book a 15-Minute Free Live Zoom Demo</span>
           </button>
           <a
             href="https://wa.me/923337221552?text=Hello%20NadiCo%20Technologies,%20I%20want%20to%20book%20a%2015-minute%20live%20Zoom%20demo%20of%20your%20School%20ERP%20for%20our%20campus."
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto px-6 py-4 rounded-xl text-xs sm:text-sm font-bold text-white bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:opacity-95 shadow-[0_4px_16px_rgba(37,211,102,0.35)] hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2"
+            className="flex-1 sm:flex-none px-2 sm:px-6 py-2 sm:py-4 rounded-lg sm:rounded-xl text-[10px] xs:text-[11px] sm:text-xs md:text-sm font-bold text-white bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:opacity-95 shadow-[0_4px_16px_rgba(37,211,102,0.35)] transition-all flex items-center justify-center gap-1 sm:gap-2 whitespace-nowrap"
           >
-            <WhatsAppIcon className="w-4 h-4 text-white" />
-            <span>Chat on WhatsApp (+92 333 722 1552)</span>
+            <WhatsAppIcon className="w-3 h-3 sm:w-4 sm:h-4 text-white shrink-0" />
+            <span className="sm:hidden">WhatsApp</span>
+            <span className="hidden sm:inline">Chat on WhatsApp (+92 333 722 1552)</span>
           </a>
           <a
             href="https://thereadlyerp.vercel.app/rehan"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto px-6 py-4 rounded-xl text-xs sm:text-sm font-bold text-slate-800 bg-white hover:bg-slate-50 border border-slate-300 hover:border-brand-teal transition-all shadow-xs flex items-center justify-center gap-2"
+            className="flex-1 sm:flex-none px-2 sm:px-6 py-2 sm:py-4 rounded-lg sm:rounded-xl text-[10px] xs:text-[11px] sm:text-xs md:text-sm font-bold text-slate-800 bg-white hover:bg-slate-50 border border-slate-300 hover:border-brand-teal transition-all shadow-xs flex items-center justify-center gap-1 sm:gap-2 whitespace-nowrap"
           >
-            <ExternalLink className="w-4 h-4 text-brand-teal" />
-            <span>Test Live Instance</span>
+            <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 text-brand-teal shrink-0" />
+            <span className="sm:hidden">Live Demo</span>
+            <span className="hidden sm:inline">Test Live Instance</span>
           </a>
         </div>
 
