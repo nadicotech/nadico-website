@@ -1,4 +1,4 @@
-import { ArrowRight, BadgeCheck, Banknote, BarChart3, Bell, BookOpen, Briefcase, Calculator, Check, CheckCircle, CheckSquare, Cloud, ExternalLink, FileSpreadsheet, FileText, Fingerprint, GraduationCap, KeyRound, Layers, LayoutDashboard, Lock, Mail, MessageCircle, Receipt, RotateCcw, Server, Shield, ShieldCheck, Smartphone, UserCheck, Users, Star, Clock, Building2, TrendingUp } from 'lucide-react';
+import { ArrowRight, Award, BadgeCheck, Banknote, BarChart3, Bell, BookOpen, Briefcase, Calculator, Check, CheckCircle, CheckSquare, Cloud, CreditCard, DollarSign, ExternalLink, Eye, FileCheck, FileSpreadsheet, FileText, Fingerprint, GraduationCap, KeyRound, Layers, LayoutDashboard, Lock, Mail, MessageCircle, PhoneCall, PieChart, Printer, QrCode, Receipt, RotateCcw, Server, Shield, ShieldCheck, Sliders, Smartphone, Sparkles, UserCheck, Users, Star, Clock, Building2, TrendingUp } from 'lucide-react';
 import React, { useEffect, useState, useRef } from 'react';
 import ScrollTypewriterTitle from '../components/ScrollTypewriterTitle.jsx';
 import Header from '../components/Header.jsx';
@@ -181,6 +181,7 @@ function ComparisonTypewriterTable() {
 
 export default function SchoolErpPage() {
   const [selectedTier, setSelectedTier] = useState('primary');
+  const [activePowerTab, setActivePowerTab] = useState('cards');
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -741,6 +742,579 @@ export default function SchoolErpPage() {
         </div>
 
       </div>
+
+    </div>
+  </section>
+
+  {/* ========================================================================= */}
+  {/* EXCLUSIVE POWER FEATURES: ID CARDS, CERTIFICATE STUDIO & OWNER BALANCE SHEETS */}
+  {/* ========================================================================= */}
+  <section id="power-features" className="py-20 lg:py-28 bg-white border-t border-slate-200/80 relative overflow-hidden">
+    <div className="absolute top-0 right-0 w-96 h-96 bg-brand-limeLight/15 rounded-full blur-3xl pointer-events-none"></div>
+    <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand-tealSoft/30 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      {/* Section Heading */}
+      <div className="text-center max-w-3xl mx-auto mb-14 space-y-4">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-bold uppercase tracking-wider shadow-xs">
+          <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
+          <span>Specialized Institutional Engines • Built for Pakistan</span>
+        </div>
+        <ScrollTypewriterTitle
+          as="h2"
+          className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-slate-900 tracking-tight"
+          prefix="Unique Power Highlights: "
+          highlight="Cards, Certificates & Owner Financials"
+          highlightClass="teal-gradient-text"
+        />
+        <p className="text-slate-600 text-base leading-relaxed">
+          Go far beyond generic data entry. Experience purpose-built tools designed from real feedback across 250+ Pakistani school campuses—from PVC student card printing to instant daily WhatsApp financial balance sheets for the school chairman.
+        </p>
+      </div>
+
+      {/* 3 Interactive Tab Selector */}
+      <div className="flex flex-wrap items-center justify-center gap-3 mb-12">
+        <button
+          onClick={() => setActivePowerTab('cards')}
+          className={`flex items-center gap-2.5 px-5 py-3 rounded-2xl font-bold text-xs sm:text-sm transition-all duration-200 border ${
+            activePowerTab === 'cards'
+              ? 'bg-brand-teal text-white border-brand-teal shadow-[0_4px_16px_rgba(0,101,132,0.35)] scale-105'
+              : 'bg-white hover:bg-slate-50 text-slate-700 border-slate-200 shadow-xs'
+          }`}
+        >
+          <CreditCard className={`w-4 h-4 ${activePowerTab === 'cards' ? 'text-brand-limeLight' : 'text-slate-500'}`} />
+          <span>1. Smart ID Cards & Admit Slips</span>
+        </button>
+
+        <button
+          onClick={() => setActivePowerTab('certificates')}
+          className={`flex items-center gap-2.5 px-5 py-3 rounded-2xl font-bold text-xs sm:text-sm transition-all duration-200 border ${
+            activePowerTab === 'certificates'
+              ? 'bg-brand-teal text-white border-brand-teal shadow-[0_4px_16px_rgba(0,101,132,0.35)] scale-105'
+              : 'bg-white hover:bg-slate-50 text-slate-700 border-slate-200 shadow-xs'
+          }`}
+        >
+          <Award className={`w-4 h-4 ${activePowerTab === 'certificates' ? 'text-brand-limeLight' : 'text-slate-500'}`} />
+          <span>2. Official Certificate Studio (with QR)</span>
+        </button>
+
+        <button
+          onClick={() => setActivePowerTab('owner-finance')}
+          className={`flex items-center gap-2.5 px-5 py-3 rounded-2xl font-bold text-xs sm:text-sm transition-all duration-200 border ${
+            activePowerTab === 'owner-finance'
+              ? 'bg-brand-teal text-white border-brand-teal shadow-[0_4px_16px_rgba(0,101,132,0.35)] scale-105'
+              : 'bg-white hover:bg-slate-50 text-slate-700 border-slate-200 shadow-xs'
+          }`}
+        >
+          <BarChart3 className={`w-4 h-4 ${activePowerTab === 'owner-finance' ? 'text-brand-limeLight' : 'text-slate-500'}`} />
+          <span>3. Autonomous Owner Balance Sheets</span>
+        </button>
+      </div>
+
+      {/* ========================================================================= */}
+      {/* TAB 1: SMART ID CARDS & EXAM ADMIT SLIPS */}
+      {/* ========================================================================= */}
+      {activePowerTab === 'cards' && (
+        <div className="bg-[#fafcfa] rounded-3xl p-6 sm:p-10 lg:p-12 border border-slate-200/90 shadow-card">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            
+            {/* Left Content */}
+            <div className="lg:col-span-7 space-y-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100/80 text-emerald-800 text-xs font-bold uppercase">
+                <Printer className="w-3.5 h-3.5 text-emerald-600" />
+                <span>Zero Graphic Designer Cost • Print-Ready</span>
+              </div>
+              <h3 className="font-heading font-extrabold text-2xl sm:text-3xl text-slate-900 tracking-tight">
+                Automated Student & Staff Identity System
+              </h3>
+              <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+                Stop paying outside graphic designers and waiting weeks for annual student cards. NadiCo School ERP auto-populates student portraits, names, GR numbers, blood groups, emergency parent numbers, and scannable barcodes with zero manual formatting.
+              </p>
+
+              <div className="space-y-3.5 pt-2">
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5">
+                    <Check className="w-3.5 h-3.5" />
+                  </div>
+                  <div>
+                    <h4 className="text-xs sm:text-sm font-bold text-slate-900">1-Click Bulk Student PVC Cards</h4>
+                    <p className="text-xs text-slate-600 mt-0.5">
+                      Formats to standard CR80 credit-card dimensions (85.6mm x 54mm) compatible with thermal ID card printers (Zebra, Evolis, Fargo) or pre-punched 8-card A4 sheets.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5">
+                    <Check className="w-3.5 h-3.5" />
+                  </div>
+                  <div>
+                    <h4 className="text-xs sm:text-sm font-bold text-slate-900">Faculty & Employee Identity Badges</h4>
+                    <p className="text-xs text-slate-600 mt-0.5">
+                      Professional badges with teacher designations, staff employee numbers, blood groups, and RFID turnstile mapping for campus security.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5">
+                    <Check className="w-3.5 h-3.5" />
+                  </div>
+                  <div>
+                    <h4 className="text-xs sm:text-sm font-bold text-slate-900">Board & Term Exam Roll Number Slips</h4>
+                    <p className="text-xs text-slate-600 mt-0.5">
+                      Generates term examination admit cards automatically with student photograph, assigned roll number, exam hall number, datesheet timetable, and invigilator signature boxes.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5">
+                    <Check className="w-3.5 h-3.5" />
+                  </div>
+                  <div>
+                    <h4 className="text-xs sm:text-sm font-bold text-slate-900">Parent Dismissal & Van Gate Passes</h4>
+                    <p className="text-xs text-slate-600 mt-0.5">
+                      QR-linked security cards for parents and school van drivers to ensure child safety and organized gate dismissal procedures.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-3 pt-3">
+                <a
+                  href="https://wa.me/923337221552?text=Hello%20NadiCo%20Technologies,%20I%20would%20like%20to%20see%20sample%20Student%20ID%20Card%20layouts%20in%20School%20ERP."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-5 py-3 rounded-xl font-bold text-xs text-white bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:opacity-95 shadow-[0_4px_14px_rgba(37,211,102,0.35)] flex items-center gap-2"
+                >
+                  <WhatsAppIcon className="w-4 h-4 text-white" />
+                  <span>Request Sample Card Layouts</span>
+                </a>
+                <a
+                  href="https://thereadlyerp.vercel.app/rehan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-5 py-3 rounded-xl font-bold text-xs text-slate-700 bg-white border border-slate-200 hover:border-brand-teal hover:text-brand-teal transition-all flex items-center gap-2"
+                >
+                  <Eye className="w-3.5 h-3.5" />
+                  <span>Test in Live Instance</span>
+                </a>
+              </div>
+            </div>
+
+            {/* Right Visual Mockup (Rendered Realistic PVC ID Card) */}
+            <div className="lg:col-span-5 flex flex-col items-center justify-center">
+              <div className="w-full max-w-sm rounded-2xl bg-white p-5 border-2 border-slate-300 shadow-2xl relative overflow-hidden transition-transform hover:scale-[1.02] duration-300">
+                {/* Lanyard Slot Punch Hole */}
+                <div className="w-10 h-2 rounded-full bg-slate-300 mx-auto mb-4 border border-slate-400"></div>
+
+                {/* Card Header */}
+                <div className="bg-gradient-to-r from-brand-charcoal to-brand-teal rounded-xl p-3 text-white text-center shadow-xs">
+                  <div className="text-[10px] font-extrabold uppercase tracking-wider text-brand-limeLight">
+                    The Readly Campus Network
+                  </div>
+                  <div className="text-xs font-bold tracking-tight mt-0.5">
+                    CRESCENT GRAMMAR HIGHER SECONDARY SCHOOL
+                  </div>
+                  <div className="text-[8px] text-slate-300 mt-0.5">
+                    Affiliated with BISE Karachi • Reg # 2026-KHI-4902
+                  </div>
+                </div>
+
+                {/* Card Body */}
+                <div className="flex items-center gap-4 py-4 border-b border-slate-100">
+                  <div className="w-20 h-24 rounded-xl bg-slate-100 border-2 border-brand-teal/30 p-1 flex flex-col items-center justify-center shrink-0 shadow-inner relative">
+                    <GraduationCap className="w-10 h-10 text-brand-teal" />
+                    <span className="text-[7.5px] font-extrabold uppercase tracking-wider text-emerald-800 bg-emerald-100 px-1 py-0.5 rounded mt-1">
+                      VERIFIED
+                    </span>
+                  </div>
+                  <div className="space-y-1 text-left">
+                    <div className="text-sm font-extrabold text-slate-900 leading-tight">
+                      Muhammad Hamza Khan
+                    </div>
+                    <div className="text-[10px] font-bold text-brand-teal">
+                      Class: Grade 9 - Science (Sec A)
+                    </div>
+                    <div className="grid grid-cols-2 gap-x-2 text-[9px] text-slate-600 pt-1">
+                      <div><strong className="text-slate-800">Roll No:</strong> 2026-0842</div>
+                      <div><strong className="text-slate-800">GR No:</strong> 4192</div>
+                      <div><strong className="text-slate-800">Blood Grp:</strong> O+ (Pos)</div>
+                      <div><strong className="text-slate-800">Session:</strong> 2026-27</div>
+                    </div>
+                    <div className="text-[8.5px] text-slate-500 pt-0.5">
+                      <strong>Emergency:</strong> +92 300 1234567
+                    </div>
+                  </div>
+                </div>
+
+                {/* Card Footer: 1D Barcode & QR Code */}
+                <div className="pt-3 flex items-center justify-between">
+                  <div className="space-y-1">
+                    <div className="font-mono text-[7px] text-slate-400 tracking-widest">
+                      ||| |||| || ||||| |||| ||| |||||||
+                    </div>
+                    <div className="text-[8px] font-mono text-slate-500 font-bold">
+                      *GR-4192-KHI*
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-8 h-8 rounded bg-slate-100 border border-slate-300 flex items-center justify-center text-slate-800">
+                      <QrCode className="w-6 h-6" />
+                    </div>
+                    <div className="text-right">
+                      <div className="text-[7.5px] font-bold text-slate-700">Principal Seal</div>
+                      <div className="text-[6.5px] text-emerald-600 font-bold">✓ Authenticated</div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              {/* Specs Badge */}
+              <div className="mt-4 flex items-center gap-2 text-[11px] font-semibold text-slate-600 bg-white px-3.5 py-1.5 rounded-full border border-slate-200 shadow-xs">
+                <CheckCircle className="w-3.5 h-3.5 text-emerald-600" />
+                <span>CR80 PVC Ready • 300 DPI Export • 1-Click Batch Printing</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      )}
+
+      {/* ========================================================================= */}
+      {/* TAB 2: OFFICIAL CERTIFICATE STUDIO */}
+      {/* ========================================================================= */}
+      {activePowerTab === 'certificates' && (
+        <div className="bg-[#fafcfa] rounded-3xl p-6 sm:p-10 lg:p-12 border border-slate-200/90 shadow-card">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            
+            {/* Left Content */}
+            <div className="lg:col-span-7 space-y-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100/80 text-amber-900 text-xs font-bold uppercase">
+                <Award className="w-3.5 h-3.5 text-amber-700" />
+                <span>Board & Government Accredited • Anti-Fraud Security</span>
+              </div>
+              <h3 className="font-heading font-extrabold text-2xl sm:text-3xl text-slate-900 tracking-tight">
+                Official Smart Certificate Studio (with Public QR)
+              </h3>
+              <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+                Issuing school leaving certificates (SLC) and character testimonials used to require searching dusty physical registers and hours of handwriting. NadiCo School ERP generates legally compliant, verified certificates in 3 seconds directly from student records.
+              </p>
+
+              <div className="space-y-3.5 pt-2">
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-lg bg-amber-100 text-amber-800 flex items-center justify-center shrink-0 mt-0.5">
+                    <Check className="w-3.5 h-3.5" />
+                  </div>
+                  <div>
+                    <h4 className="text-xs sm:text-sm font-bold text-slate-900">School Leaving Certificates (SLC / Transfer)</h4>
+                    <p className="text-xs text-slate-600 mt-0.5">
+                      Fully pre-populated with enrollment date, leaving date, fee clearance stamp, academic progress, and sequential government register number.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-lg bg-amber-100 text-amber-800 flex items-center justify-center shrink-0 mt-0.5">
+                    <Check className="w-3.5 h-3.5" />
+                  </div>
+                  <div>
+                    <h4 className="text-xs sm:text-sm font-bold text-slate-900">Character & Conduct Certificates</h4>
+                    <p className="text-xs text-slate-600 mt-0.5">
+                      Formal legal testimonials with customizable school watermark, crest, principal endorsement, and standardized board-accredited wording.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-lg bg-amber-100 text-amber-800 flex items-center justify-center shrink-0 mt-0.5">
+                    <Check className="w-3.5 h-3.5" />
+                  </div>
+                  <div>
+                    <h4 className="text-xs sm:text-sm font-bold text-slate-900">Annual Academic Merit & Sports Diplomas</h4>
+                    <p className="text-xs text-slate-600 mt-0.5">
+                      1-Click automated batch creation for annual prize distribution ceremonies, position holders (1st, 2nd, 3rd rank), and sports tournament achievements.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-lg bg-amber-100 text-amber-800 flex items-center justify-center shrink-0 mt-0.5">
+                    <Check className="w-3.5 h-3.5" />
+                  </div>
+                  <div>
+                    <h4 className="text-xs sm:text-sm font-bold text-slate-900">Public Anti-Fraud QR Verification</h4>
+                    <p className="text-xs text-slate-600 mt-0.5">
+                      Every issued certificate contains an encrypted verification QR code. College admission officers or border authorities can scan it with their smartphone camera to instantly verify genuine records online, eliminating fraudulent copies.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-3 pt-3">
+                <a
+                  href="https://wa.me/923337221552?text=Hello%20NadiCo%20Technologies,%20I%20would%20like%20to%20see%20sample%20School%20Leaving%20Certificates%20generated%20by%20School%20ERP."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-5 py-3 rounded-xl font-bold text-xs text-white bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:opacity-95 shadow-[0_4px_14px_rgba(37,211,102,0.35)] flex items-center gap-2"
+                >
+                  <WhatsAppIcon className="w-4 h-4 text-white" />
+                  <span>Request Sample Certificate PDFs</span>
+                </a>
+                <a
+                  href="https://thereadlyerp.vercel.app/rehan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-5 py-3 rounded-xl font-bold text-xs text-slate-700 bg-white border border-slate-200 hover:border-brand-teal hover:text-brand-teal transition-all flex items-center gap-2"
+                >
+                  <Eye className="w-3.5 h-3.5" />
+                  <span>Inspect Certificate Module</span>
+                </a>
+              </div>
+            </div>
+
+            {/* Right Visual Mockup (Rendered Elegant Certificate) */}
+            <div className="lg:col-span-5 flex flex-col items-center justify-center">
+              <div className="w-full max-w-sm rounded-2xl bg-gradient-to-b from-amber-50/50 via-white to-amber-50/30 p-5 border-4 border-double border-amber-600/40 shadow-2xl relative text-center">
+                
+                {/* Certificate Crest */}
+                <div className="w-12 h-12 rounded-full bg-amber-100 border border-amber-300 mx-auto flex items-center justify-center shadow-xs mb-2">
+                  <Award className="w-7 h-7 text-amber-700" />
+                </div>
+
+                <div className="text-[9px] font-bold uppercase tracking-wider text-amber-800">
+                  THE READLY ACADEMY & COLLEGE SYSTEM
+                </div>
+                <div className="font-heading text-xs font-extrabold uppercase tracking-tight text-slate-900 border-b border-amber-200 pb-2 mt-1">
+                  School Leaving & Character Certificate
+                </div>
+
+                <div className="flex items-center justify-between text-[8px] text-slate-500 py-1.5 font-mono">
+                  <span>Serial: <strong>SLC-2026/0482</strong></span>
+                  <span>Date: <strong>31-Oct-2026</strong></span>
+                </div>
+
+                {/* Body Text */}
+                <div className="text-[9.5px] text-slate-700 leading-relaxed text-justify py-3 space-y-1.5 font-serif italic border-y border-dashed border-amber-200">
+                  <p>
+                    This is to certify that <strong>Muhammad Hamza Khan</strong>, son of <strong>Tariq Khan</strong>, bearing General Register No. <strong>4192</strong>, was a bonafide student of this institution from <strong>April 2021</strong> to <strong>March 2026</strong>.
+                  </p>
+                  <p>
+                    He appeared in the annual examination of <strong>Grade 9 (Science)</strong> and was promoted. All school dues have been cleared. His date of birth according to the school admission register is <strong>14-Aug-2011</strong>.
+                  </p>
+                  <p className="font-bold text-emerald-800 not-italic font-sans text-[9px]">
+                    General Conduct & Character: EXEMPLARY & PRAISEWORTHY.
+                  </p>
+                </div>
+
+                {/* Footer with QR & Stamp */}
+                <div className="pt-3 flex items-center justify-between">
+                  <div className="w-12 h-12 rounded-lg bg-white border border-slate-300 p-1 flex flex-col items-center justify-center shadow-xs">
+                    <QrCode className="w-8 h-8 text-slate-900" />
+                    <span className="text-[5.5px] font-bold text-slate-600">Scan to Verify</span>
+                  </div>
+
+                  <div className="text-center space-y-0.5">
+                    <div className="w-10 h-10 rounded-full border-2 border-emerald-600/40 border-dashed mx-auto flex items-center justify-center text-[6px] font-bold text-emerald-800">
+                      OFFICIAL SEAL
+                    </div>
+                    <div className="text-[7.5px] font-bold text-slate-800">Principal Endorsement</div>
+                  </div>
+                </div>
+
+              </div>
+
+              {/* Specs Badge */}
+              <div className="mt-4 flex items-center gap-2 text-[11px] font-semibold text-slate-600 bg-white px-3.5 py-1.5 rounded-full border border-slate-200 shadow-xs">
+                <BadgeCheck className="w-3.5 h-3.5 text-amber-600" />
+                <span>Anti-Fraud Online QR Verification • Board Accredited</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      )}
+
+      {/* ========================================================================= */}
+      {/* TAB 3: AUTONOMOUS OWNER BALANCE SHEETS */}
+      {/* ========================================================================= */}
+      {activePowerTab === 'owner-finance' && (
+        <div className="bg-[#fafcfa] rounded-3xl p-6 sm:p-10 lg:p-12 border border-slate-200/90 shadow-card">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            
+            {/* Left Content */}
+            <div className="lg:col-span-7 space-y-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100/80 text-blue-900 text-xs font-bold uppercase">
+                <BarChart3 className="w-3.5 h-3.5 text-blue-700" />
+                <span>Executive Transparency • No Accountant Dependency</span>
+              </div>
+              <h3 className="font-heading font-extrabold text-2xl sm:text-3xl text-slate-900 tracking-tight">
+                Autonomous Owner Balance Sheets & WhatsApp Digest
+              </h3>
+              <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+                As a school owner or chairman, you should never have to wait days for your accountant to calculate your school's actual financial status. NadiCo School ERP automates daily cash book tallies, monthly P&L statements, and sends an executive financial briefing straight to your personal WhatsApp every evening.
+              </p>
+
+              <div className="space-y-3.5 pt-2">
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-lg bg-blue-100 text-blue-800 flex items-center justify-center shrink-0 mt-0.5">
+                    <Check className="w-3.5 h-3.5" />
+                  </div>
+                  <div>
+                    <h4 className="text-xs sm:text-sm font-bold text-slate-900">Autonomous Daily Closing Balance Sheet</h4>
+                    <p className="text-xs text-slate-600 mt-0.5">
+                      Automatically tallies physical cash collections, online bank challan deposits (Meezan, HBL, Allied, JazzCash), and petty cash expenses at 5:00 PM down to the last rupee.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-lg bg-blue-100 text-blue-800 flex items-center justify-center shrink-0 mt-0.5">
+                    <Check className="w-3.5 h-3.5" />
+                  </div>
+                  <div>
+                    <h4 className="text-xs sm:text-sm font-bold text-slate-900">Real-Time Profit & Loss (P&L) Statement</h4>
+                    <p className="text-xs text-slate-600 mt-0.5">
+                      Live comparison of institutional tuition revenues against staff payroll deductions, building rent, electricity/generator fuel, exam stationery, and vendor payables.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-lg bg-blue-100 text-blue-800 flex items-center justify-center shrink-0 mt-0.5">
+                    <Check className="w-3.5 h-3.5" />
+                  </div>
+                  <div>
+                    <h4 className="text-xs sm:text-sm font-bold text-slate-900">Defaulter Aging Recovery Engine</h4>
+                    <p className="text-xs text-slate-600 mt-0.5">
+                      Color-coded 30-day, 60-day, and 90+ day overdue fee backlogs with 1-click bulk WhatsApp payment reminders and direct bank digital links.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-lg bg-blue-100 text-blue-800 flex items-center justify-center shrink-0 mt-0.5">
+                    <Check className="w-3.5 h-3.5" />
+                  </div>
+                  <div>
+                    <h4 className="text-xs sm:text-sm font-bold text-slate-900">Daily 6:00 PM WhatsApp Digest to Owner's Phone</h4>
+                    <p className="text-xs text-slate-600 mt-0.5">
+                      An encrypted evening summary sent straight to your phone with today's fee collections, bank balances, student attendance percentage, and defaulter recovery rate.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-3 pt-3">
+                <a
+                  href="https://wa.me/923337221552?text=Hello%20NadiCo%20Technologies,%20I%20want%20to%20see%20a%20demo%20of%20the%20Owner%20Financial%20Balance%20Sheet%20and%20Daily%20WhatsApp%20Summary."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-5 py-3 rounded-xl font-bold text-xs text-white bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:opacity-95 shadow-[0_4px_14px_rgba(37,211,102,0.35)] flex items-center gap-2"
+                >
+                  <WhatsAppIcon className="w-4 h-4 text-white" />
+                  <span>Get Owner Financial Walkthrough</span>
+                </a>
+                <a
+                  href="https://thereadlyerp.vercel.app/rehan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-5 py-3 rounded-xl font-bold text-xs text-slate-700 bg-white border border-slate-200 hover:border-brand-teal hover:text-brand-teal transition-all flex items-center gap-2"
+                >
+                  <Eye className="w-3.5 h-3.5" />
+                  <span>Inspect Accounting Engine</span>
+                </a>
+              </div>
+            </div>
+
+            {/* Right Visual Mockup (Rendered Financial Balance Sheet + WhatsApp Evening Pulse) */}
+            <div className="lg:col-span-5 flex flex-col items-center justify-center space-y-4">
+              
+              {/* Financial Balance Card */}
+              <div className="w-full max-w-sm rounded-2xl bg-white p-5 border border-slate-200 shadow-xl space-y-3.5">
+                <div className="flex items-center justify-between pb-2 border-b border-slate-100">
+                  <div className="flex items-center gap-2">
+                    <div className="w-7 h-7 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center">
+                      <Banknote className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <div className="text-xs font-extrabold text-slate-900">Owner Financial Ledger</div>
+                      <div className="text-[9px] text-slate-400">Daily Balance Sheet • Real-time</div>
+                    </div>
+                  </div>
+                  <span className="text-[9px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
+                    Auto-Tallied
+                  </span>
+                </div>
+
+                {/* 3 Metrics */}
+                <div className="grid grid-cols-3 gap-2 text-center">
+                  <div className="p-2 rounded-xl bg-slate-50 border border-slate-100">
+                    <div className="text-[8px] font-bold text-slate-500 uppercase">Cash In Hand</div>
+                    <div className="text-xs font-extrabold text-slate-900 mt-0.5">Rs. 32,500</div>
+                  </div>
+                  <div className="p-2 rounded-xl bg-emerald-50/70 border border-emerald-200">
+                    <div className="text-[8px] font-bold text-emerald-700 uppercase">Meezan Bank</div>
+                    <div className="text-xs font-extrabold text-emerald-800 mt-0.5">Rs. 150,000</div>
+                  </div>
+                  <div className="p-2 rounded-xl bg-blue-50/70 border border-blue-200">
+                    <div className="text-[8px] font-bold text-blue-700 uppercase">Fee Collected</div>
+                    <div className="text-xs font-extrabold text-blue-800 mt-0.5">Rs. 182,500</div>
+                  </div>
+                </div>
+
+                {/* Ledger Rows */}
+                <div className="space-y-1.5 text-[10px] text-slate-600 pt-1">
+                  <div className="flex justify-between py-1 border-b border-slate-50">
+                    <span>Tuition Fees Billed (Oct 2026):</span>
+                    <span className="font-bold text-slate-800">Rs. 920,000</span>
+                  </div>
+                  <div className="flex justify-between py-1 border-b border-slate-50">
+                    <span>Total Recovery to Date:</span>
+                    <span className="font-bold text-emerald-600">Rs. 874,000 (95%)</span>
+                  </div>
+                  <div className="flex justify-between py-1 border-b border-slate-50">
+                    <span>Staff Payroll Disbursed:</span>
+                    <span className="font-bold text-rose-600">-Rs. 430,000</span>
+                  </div>
+                  <div className="flex justify-between py-1 pt-1.5 font-bold text-[11px] text-slate-900 border-t border-slate-200">
+                    <span>Net Operating Surplus:</span>
+                    <span className="text-emerald-700 font-extrabold">+Rs. 444,000</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* WhatsApp Evening Alert Mockup Bubble */}
+              <div className="w-full max-w-sm rounded-2xl bg-[#075E54] p-3 text-white shadow-lg space-y-2 relative">
+                <div className="flex items-center justify-between text-[10px] pb-1 border-b border-white/20">
+                  <div className="flex items-center gap-1.5 font-bold">
+                    <WhatsAppIcon className="w-3.5 h-3.5 text-[#25D366]" fill="currentColor" />
+                    <span>NadiCo Daily Campus Pulse</span>
+                  </div>
+                  <span className="text-[8px] text-emerald-200">6:00 PM Daily</span>
+                </div>
+                <div className="bg-[#128C7E]/70 rounded-xl p-2.5 text-[9.5px] leading-relaxed space-y-1">
+                  <div className="font-bold text-brand-limeLight">Respected Chairman, today's briefing:</div>
+                  <div>• Total Fee Receipts: <strong>Rs. 182,500</strong> (43 Students)</div>
+                  <div>• Bank Deposits: <strong>Meezan Bank Rs. 150,000</strong></div>
+                  <div>• Student Attendance: <strong>95.4%</strong> (Gate synced)</div>
+                  <div className="text-[8px] text-emerald-200 pt-1">Tap to review full audit ledger securely.</div>
+                </div>
+              </div>
+
+              {/* Specs Badge */}
+              <div className="flex items-center gap-2 text-[11px] font-semibold text-slate-600 bg-white px-3.5 py-1.5 rounded-full border border-slate-200 shadow-xs">
+                <CheckCircle className="w-3.5 h-3.5 text-blue-600" />
+                <span>Zero Manual Accounting • Direct Daily WhatsApp Dispatch</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      )}
 
     </div>
   </section>

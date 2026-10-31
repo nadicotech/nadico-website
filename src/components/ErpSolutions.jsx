@@ -68,19 +68,23 @@ export default function ErpSolutions() {
               </li>
               <li className="flex items-start gap-2.5">
                 <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                <span><strong>Automated Bank Challans:</strong> 3-part bank slips (Meezan, HBL, Allied), track defaulters, and collect fees on time.</span>
+                <span><strong>Automated 3-Part Bank Challans:</strong> Authentic Meezan, HBL, Allied Bank & 1Link 1Bill deposit slips with barcode tracking.</span>
               </li>
               <li className="flex items-start gap-2.5">
                 <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                <span><strong>Board-Standard Report Cards:</strong> Dynamic marks grading, position ranking, and printable result cards in minutes.</span>
+                <span><strong>Smart ID Cards & Exam Admit Slips:</strong> 1-click printable student PVC cards with barcode, faculty badges, and term exam roll no. slips.</span>
               </li>
               <li className="flex items-start gap-2.5">
                 <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                <span><strong>Biometric & WhatsApp Alerts:</strong> Real-time hardware attendance sync with instant WhatsApp alerts to parents.</span>
+                <span><strong>Official Certificate Studio with QR:</strong> Instant School Leaving (SLC), Character, and Merit certificates with public anti-fraud QR verification.</span>
               </li>
               <li className="flex items-start gap-2.5">
                 <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                <span><strong>Smart ID & Certificate Engine:</strong> 1-click printable student ID cards, character certificates, and leaving forms.</span>
+                <span><strong>Autonomous Owner Balance Sheets:</strong> Real-time cash & bank balances, automated P&L, aging defaulters, and 6:00 PM WhatsApp executive summary.</span>
+              </li>
+              <li className="flex items-start gap-2.5">
+                <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                <span><strong>Biometric & WhatsApp Alerts:</strong> Hardware gate sync (ZKTeco) with instant automated absent notifications to parents.</span>
               </li>
             </ul>
 

@@ -1,4 +1,4 @@
-import { Activity, ArrowLeft, ArrowRight, Calendar, CheckCircle, ChevronDown, ExternalLink, GraduationCap, HelpCircle, Layers, Layout, Mail, Menu, MessageCircle, PhoneCall, Shield, ShoppingCart, TrendingUp, X } from 'lucide-react';
+import { Activity, ArrowLeft, ArrowRight, Calendar, CheckCircle, ChevronDown, ExternalLink, GraduationCap, HelpCircle, Layers, Layout, Mail, Menu, MessageCircle, PhoneCall, Shield, ShoppingCart, Sparkles, TrendingUp, X } from 'lucide-react';
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import WhatsAppIcon from './WhatsAppIcon.jsx';
@@ -68,6 +68,10 @@ export default function Header() {
               <a href="#modules" className="hover:text-brand-teal transition-colors flex items-center gap-1.5">
                 <Layers className="w-4 h-4 text-brand-teal" />
                 <span>14 Modules</span>
+              </a>
+              <a href="#power-features" className="hover:text-brand-teal transition-colors flex items-center gap-1.5 text-brand-teal font-bold">
+                <Sparkles className="w-4 h-4 text-brand-limeDark" />
+                <span>Cards & Owner Hub</span>
               </a>
               <a href="#comparison" className="hover:text-brand-teal transition-colors">
                 Why NadiCo
@@ -290,6 +294,15 @@ export default function Header() {
           >
             <Layers className="w-4 h-4 text-brand-teal shrink-0" />
             <span>All 14 Modules</span>
+          </a>
+
+          <a
+            href="#power-features"
+            onClick={() => setDrawerOpen(false)}
+            className="flex items-center gap-3 p-3 rounded-xl bg-emerald-50/70 border border-emerald-200 text-emerald-900 font-bold text-xs transition-colors"
+          >
+            <Sparkles className="w-4 h-4 text-emerald-600 shrink-0" />
+            <span>Cards, Certificates & Owner Hub</span>
           </a>
 
           <a
