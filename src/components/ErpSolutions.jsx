@@ -88,6 +88,37 @@ export default function ErpSolutions() {
               </li>
             </ul>
 
+            {/* Core 3 USPs Guarantee Box (Requested by User) */}
+            <div className="p-4 rounded-2xl bg-gradient-to-r from-emerald-50 via-teal-50 to-white border border-emerald-300/80 shadow-xs space-y-2.5">
+              <div className="flex items-center gap-1.5 text-[11px] font-extrabold uppercase tracking-wider text-emerald-900">
+                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+                <span>100% Risk-Free Campus Onboarding Guarantee</span>
+              </div>
+              <div className="space-y-2 text-xs">
+                <div className="flex items-start gap-2">
+                  <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
+                  <div>
+                    <strong className="text-slate-900">Free Data Migration:</strong>{' '}
+                    <span className="text-emerald-950 font-semibold italic">"Aap ke bachon ka purana Excel data hum khud software mein daal kar denge."</span>
+                  </div>
+                </div>
+                <div className="flex items-start gap-2">
+                  <Check className="w-3.5 h-3.5 text-brand-teal shrink-0 mt-0.5" />
+                  <div>
+                    <strong className="text-slate-900">Free 30-Day Full Trial:</strong>{' '}
+                    <span className="text-brand-tealDark font-semibold italic">"Pehle 1 maheena bilkul muft istemal karein, pasand aaye to agle maheene se monthly subscription dein."</span>
+                  </div>
+                </div>
+                <div className="flex items-start gap-2">
+                  <Check className="w-3.5 h-3.5 text-amber-600 shrink-0 mt-0.5" />
+                  <div>
+                    <strong className="text-slate-900">Free Teacher Training:</strong>{' '}
+                    <span className="text-amber-950 font-semibold italic">"Aap ke staff ko hum khud online / physically train karenge."</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
 
           <div className="pt-8 space-y-3">

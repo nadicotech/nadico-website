@@ -322,6 +322,104 @@ export default function SchoolErpPage() {
           </div>
         </div>
 
+        {/* ========================================================================= */}
+        {/* 3 CORE CLIENT GUARANTEES (MAIN USP: FREE MIGRATION, 30-DAY TRIAL, FREE TRAINING) */}
+        {/* ========================================================================= */}
+        <div className="pt-8">
+          <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-emerald-50 via-white to-teal-50 border-2 border-emerald-500/35 shadow-[0_10px_35px_rgba(16,185,129,0.15)] relative overflow-hidden">
+            
+            <div className="flex items-center justify-center gap-2 mb-6">
+              <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
+              <span className="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-emerald-900 bg-emerald-100/90 px-4 py-1.5 rounded-full border border-emerald-300 shadow-xs">
+                ⭐ 100% Risk-Free Campus Onboarding Guarantee
+              </span>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 text-left">
+              
+              {/* USP 1: Free Data Migration */}
+              <div className="p-5 rounded-2xl bg-white border border-emerald-200/90 shadow-xs hover:shadow-card hover:-translate-y-0.5 transition-all space-y-2.5 flex flex-col justify-between">
+                <div>
+                  <div className="w-11 h-11 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center shadow-xs mb-3">
+                    <FileSpreadsheet className="w-5 h-5 text-emerald-700" />
+                  </div>
+                  <div className="text-[10px] font-extrabold text-emerald-700 uppercase tracking-wider">
+                    Zero Setup Work
+                  </div>
+                  <h3 className="font-heading font-extrabold text-base sm:text-lg text-slate-900 mt-0.5">
+                    Free Data Migration
+                  </h3>
+                  <div className="p-2.5 rounded-xl bg-emerald-50/70 border border-emerald-200/80 text-[11px] font-bold text-emerald-900 italic my-2">
+                    "Aap ke bachon ka purana Excel data hum khud software mein daal kar denge."
+                  </div>
+                  <p className="text-xs text-slate-600 leading-relaxed">
+                    Zero manual entry for your staff. Send us your students' existing Excel files, family records, and fee history—our technical migration team formats, validates, and uploads everything completely free.
+                  </p>
+                </div>
+                <div className="pt-2 text-[11px] font-bold text-emerald-700 flex items-center gap-1.5 border-t border-slate-100">
+                  <CheckCircle className="w-3.5 h-3.5 text-emerald-600" />
+                  <span>100% Free Data Import Service</span>
+                </div>
+              </div>
+
+              {/* USP 2: Free 30-Day Trial */}
+              <div className="p-5 rounded-2xl bg-white border-2 border-brand-teal/40 shadow-card hover:shadow-card-hover hover:-translate-y-0.5 transition-all space-y-2.5 flex flex-col justify-between relative ring-2 ring-brand-teal/15">
+                <div className="absolute -top-3 right-4 px-2.5 py-0.5 rounded-full bg-brand-teal text-white text-[9px] font-extrabold uppercase tracking-wider shadow-xs">
+                  Zero Financial Risk
+                </div>
+                <div>
+                  <div className="w-11 h-11 rounded-2xl bg-teal-100 text-brand-teal flex items-center justify-center shadow-xs mb-3">
+                    <ShieldCheck className="w-5 h-5 text-brand-teal" />
+                  </div>
+                  <div className="text-[10px] font-extrabold text-brand-teal uppercase tracking-wide">
+                    1 Month Free Access
+                  </div>
+                  <h3 className="font-heading font-extrabold text-base sm:text-lg text-slate-900 mt-0.5">
+                    Free 30-Day Full Trial
+                  </h3>
+                  <div className="p-2.5 rounded-xl bg-teal-50 border border-brand-tealBorder text-[11px] font-bold text-brand-tealDark italic my-2">
+                    "Pehle 1 maheena bilkul muft istemal karein, pasand aaye to agle maheene se monthly subscription dein."
+                  </div>
+                  <p className="text-xs text-slate-600 leading-relaxed">
+                    Test complete 3-part bank fee challans, biometric gate attendance, WhatsApp notifications, and owner balance sheets with zero upfront cost or commitment.
+                  </p>
+                </div>
+                <div className="pt-2 text-[11px] font-bold text-brand-teal flex items-center gap-1.5 border-t border-slate-100">
+                  <CheckCircle className="w-3.5 h-3.5 text-brand-teal" />
+                  <span>No Upfront Payment Required</span>
+                </div>
+              </div>
+
+              {/* USP 3: Free Teacher Training */}
+              <div className="p-5 rounded-2xl bg-white border border-emerald-200/90 shadow-xs hover:shadow-card hover:-translate-y-0.5 transition-all space-y-2.5 flex flex-col justify-between">
+                <div>
+                  <div className="w-11 h-11 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center shadow-xs mb-3">
+                    <GraduationCap className="w-5 h-5 text-amber-700" />
+                  </div>
+                  <div className="text-[10px] font-extrabold text-amber-700 uppercase tracking-wider">
+                    Hands-On Onboarding
+                  </div>
+                  <h3 className="font-heading font-extrabold text-base sm:text-lg text-slate-900 mt-0.5">
+                    Free Teacher & Staff Training
+                  </h3>
+                  <div className="p-2.5 rounded-xl bg-amber-50/70 border border-amber-200/80 text-[11px] font-bold text-amber-900 italic my-2">
+                    "Aap ke staff ko hum khud online / physically train karenge."
+                  </div>
+                  <p className="text-xs text-slate-600 leading-relaxed">
+                    Our educational engineers conduct hands-on interactive training sessions for teachers, accountants, and campus administrators—conducted live online or physically on-site at your campus.
+                  </p>
+                </div>
+                <div className="pt-2 text-[11px] font-bold text-amber-700 flex items-center gap-1.5 border-t border-slate-100">
+                  <CheckCircle className="w-3.5 h-3.5 text-amber-600" />
+                  <span>Live Online or On-Site Physical Training</span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
       </div>
 
     </div>
@@ -1746,6 +1844,82 @@ export default function SchoolErpPage() {
                 <WhatsAppIcon className="w-4 h-4 text-white" />
               </a>
             </div>
+          </div>
+
+        </div>
+      </div>
+
+      {/* ========================================================================= */}
+      {/* 3 CORE CLIENT GUARANTEES BANNER (PRICING SECTION USP) */}
+      {/* ========================================================================= */}
+      <div className="mb-12 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-emerald-50 via-teal-50 to-amber-50 border-2 border-emerald-500/30 shadow-card">
+        <div className="text-center max-w-2xl mx-auto mb-6">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-900 text-[11px] font-extrabold uppercase tracking-wider border border-emerald-300 shadow-xs mb-2">
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+            <span>Included With Every Single Campus Plan</span>
+          </div>
+          <h3 className="font-heading font-extrabold text-xl sm:text-2xl text-slate-900">
+            100% Risk-Free Guarantees for Pakistani School Owners
+          </h3>
+          <p className="text-xs text-slate-600 mt-1">
+            Zero technical stress, zero migration fees, and zero upfront payment risk.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          
+          <div className="p-4 rounded-2xl bg-white border border-emerald-200/90 shadow-2xs space-y-2">
+            <div className="flex items-center gap-2.5">
+              <div className="w-9 h-9 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
+                <FileSpreadsheet className="w-4 h-4 text-emerald-700" />
+              </div>
+              <div>
+                <div className="text-[10px] font-extrabold text-emerald-700 uppercase tracking-wider">Free Service</div>
+                <div className="font-heading font-bold text-sm text-slate-900">Free Data Migration</div>
+              </div>
+            </div>
+            <p className="text-xs text-emerald-950 font-bold italic bg-emerald-50/70 p-2 rounded-lg border border-emerald-100">
+              "Aap ke bachon ka purana Excel data hum khud software mein daal kar denge."
+            </p>
+            <p className="text-[11px] text-slate-500 leading-normal">
+              No staff headache. We convert your old student lists, family records & fee ledger into NadiCo ERP free.
+            </p>
+          </div>
+
+          <div className="p-4 rounded-2xl bg-white border-2 border-brand-teal/40 shadow-xs space-y-2 relative ring-1 ring-brand-teal/20">
+            <div className="flex items-center gap-2.5">
+              <div className="w-9 h-9 rounded-xl bg-teal-100 text-brand-teal flex items-center justify-center shrink-0">
+                <ShieldCheck className="w-4 h-4 text-brand-teal" />
+              </div>
+              <div>
+                <div className="text-[10px] font-extrabold text-brand-teal uppercase tracking-wider">30 Days 100% Free</div>
+                <div className="font-heading font-bold text-sm text-slate-900">Free 30-Day Full Trial</div>
+              </div>
+            </div>
+            <p className="text-xs text-brand-tealDark font-bold italic bg-teal-50 p-2 rounded-lg border border-brand-tealBorder">
+              "Pehle 1 maheena bilkul muft istemal karein, pasand aaye to agle maheene se monthly subscription dein."
+            </p>
+            <p className="text-[11px] text-slate-500 leading-normal">
+              Full access to gate attendance, 3-part bank challans & WhatsApp alerts with zero advance deposit.
+            </p>
+          </div>
+
+          <div className="p-4 rounded-2xl bg-white border border-amber-200/90 shadow-2xs space-y-2">
+            <div className="flex items-center gap-2.5">
+              <div className="w-9 h-9 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center shrink-0">
+                <GraduationCap className="w-4 h-4 text-amber-700" />
+              </div>
+              <div>
+                <div className="text-[10px] font-extrabold text-amber-700 uppercase tracking-wider">Hands-On Onboarding</div>
+                <div className="font-heading font-bold text-sm text-slate-900">Free Teacher Training</div>
+              </div>
+            </div>
+            <p className="text-xs text-amber-950 font-bold italic bg-amber-50/70 p-2 rounded-lg border border-amber-100">
+              "Aap ke staff ko hum khud online / physically train karenge."
+            </p>
+            <p className="text-[11px] text-slate-500 leading-normal">
+              Our experts personally train your teachers, accountants, and principals via live Zoom or at your campus.
+            </p>
           </div>
 
         </div>
